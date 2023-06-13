@@ -12,15 +12,15 @@
   </docinfo>
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>CM111 Introduction to Java</title>
+    <subtitle>A free textbook to accompany CM111 Introduction to Structured Programming at Washburn University</subtitle>
 
     <frontmatter xml:id="frontmatter">
       <titlepage>
         <author>
-          <personname>You</personname>
-          <department>Your department</department>
-          <institution>Your institution</institution>
+          <personname>Joseph Kendall-Morwick</personname>
+          <department>Computer and Information Sciences</department>
+          <institution>Washburn University</institution>
         </author>
         <date>
           <today />
@@ -31,14 +31,14 @@
 
         <website>
           <name>
-            <c>example.org</c>
+            <c>github.org</c>
           </name>
-          <address>https://example.org</address>
+          <address>https://github.com/Washburn-CIS/CM111-Intro-to-Java</address>
         </website>
 
         <copyright>
-          <year>2020<ndash />2023</year>
-          <holder>You</holder>
+          <year>2023<ndash />2023</year>
+          <holder>Joseph Kendall-Morwick</holder>
           <shortlicense> 
             This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
           </shortlicense>
@@ -46,14 +46,196 @@
       </colophon>
     </frontmatter>
 
-    <chapter xml:id="chapter-title">
-      <title>Chapter title</title>
+    <chapter xml:id="programming-basics">
+      <title>Unit 1: Programming Basics</title>
 
-      <section xml:id="section-title">
-        <title>Section title</title>
+      <section xml:id="simple-programs">
+        <title>Basics of Programming in Java</title>
         <p>Hello</p>
       </section>
 
+      <section xml:id="basic-expressions">
+        <title>Basic Types and Expressions</title>
+        <p>Hello</p>
+      </section>
+
+      <section xml:id="complex-expressions">
+        <title>Operators and Complex Expressions</title>
+        <p>Hello</p>
+      </section>
+
+      <section xml:id="calling-methods">
+        <title>Method Call Expressions and Statements</title>
+        <p>Hello</p>
+      </section>
+
+      <section xml:id="variables">
+        <title>Variable Definitions and Assignment</title>
+        <p>Hello</p>
+      </section>	
+    
+      <section xml:id="import">
+        <title>Importing Code from Packages</title>
+        <p>Hello</p>
+      </section>	
+  
+      <section xml:id="object-basics">
+        <title>Creating Objects and Calling Methods</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="standard-input">
+        <title>Reading Input from the Keyboard</title>
+        <p>Hello</p>
+      </section>	
+  
+      <section xml:id="basic-errors">
+        <title>Programming Errors</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="booleans">
+        <title>The boolean Type and Comparison Operators</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="if-else">
+        <title>Basic Conditional Statements</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="logic">
+        <title>Logical Operators</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="advanced-conditionals">
+        <title>Advanced Conditional Statements</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="file-input">
+        <title>Reading Input from a File</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="conditional-expressions">
+        <title>Conditional Expressions</title>
+        <p>Hello</p>
+      </section>	
+   
+      <section xml:id="random-numbers">
+        <title>Random Numbers</title>
+        <p>Hello</p>
+      </section>
+   
+      <section xml:id="debugging">
+        <title>Debugging</title>
+        <p>Hello</p>
+      </section>
+    </chapter>
+
+
+    <chapter xml:id="modular-programming">
+      <title>Unit 2: Modular Programming</title>
+
+      <section xml:id="characters">
+        <title>Characters</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="strings">
+        <title>Strings</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="advanced-loops">
+        <title>Advanced Loops</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="method-definitions">
+        <title>Method Definitions</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="nested-loops">
+        <title>Advanced Loops</title>
+        <p>Hello</p>
+      </section>
+
+      <section xml:id="arrays">
+        <title>Arrays</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="for-each">
+        <title>For-Each Loops</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="void-method">
+        <title>Void Methods</title>
+        <p>Hello</p>
+      </section>	
+
+      <section xml:id="static-methods">
+        <title>Static and Instance Methods</title>
+        <p>Hello</p>
+      </section>
+
+      <section xml:id="method-patterns">
+        <title>Method Development Patterns</title>
+        <p>Hello</p>
+      </section>	
+    
+    </chapter>
+
+
+    <chapter xml:id="chapter-title">
+      <title>Unit 3: Basic Data Structures</title>
+
+      <section xml:id="class-definitions">
+        <title>Class Definitions</title>
+        <p>Hello</p>
+      </section>
+      
+      <section xml:id="scope">
+        <title>Scope</title>
+        <p>Hello</p>
+      </section>
+      
+      <section xml:id="references">
+        <title>References</title>
+        <p>Hello</p>
+      </section>
+      
+      <section xml:id="exceptions">
+        <title>Exception Handling</title>
+        <p>Hello</p>
+      </section>
+      
+      <section xml:id="file-output">
+        <title>File Output</title>
+        <p>Hello</p>
+      </section>
+      
+      <section xml:id="syntactic-sugar">
+        <title>Syntactic Sugar</title>
+        <p>Hello</p>
+      </section>
+      
+      <section xml:id="command-line-applications">
+        <title>Command-Line Applications</title>
+        <p>Hello</p>
+      </section>
+   
+      <section xml:id="recursion">
+        <title>Recursion</title>
+        <p>Hello</p>
+      </section>
+      
+      
     </chapter>
 
     <backmatter xml:id="backmatter">
