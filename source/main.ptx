@@ -54,10 +54,7 @@
         <p>Hello</p>
       </section>
 
-      <section xml:id="basic-expressions">
-        <title>Basic Types and Expressions</title>
-        <p>Hello</p>
-      </section>
+      <xi:include href="./basic-expressions.ptx"/>
 
       <section xml:id="complex-expressions">
         <title>Operators and Complex Expressions</title>
