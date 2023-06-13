@@ -1,2 +1,1 @@
-runestone>=2.7.4
-SQLAlchemy>=1.0.8
+pretext == 1.5.3
