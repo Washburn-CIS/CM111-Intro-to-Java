@@ -103,15 +103,7 @@
       <title>Unit 2: Modular Programming</title>
       <introduction>TODO: write me</introduction>
 
-      <section xml:id="characters">
-        <title>Characters</title>
-        <p>Hello</p>
-      </section>	
-
-      <section xml:id="strings">
-        <title>Strings</title>
-        <p>Hello</p>
-      </section>	
+      <xi:include href="./strings.ptx"/>
 
       <section xml:id="advanced-loops">
         <title>Advanced Loops</title>
