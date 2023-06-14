@@ -24,7 +24,7 @@
         </mediaobject>
     </figure>
 
-    <p>In the diagram above, a method named <varname>pow</varname> is being called. This method takes two arguments: the base and the power (both <type>double</type> values). The return value of this method is the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</p>
+    <p>In the diagram above, a method named <varname>pow</varname> is being called. This method takes two arguments: the base and the power (both <c>double</c> values). The return value of this method is the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</p>
 <!-- TODO: add examples
     <xi:include href="../../examples/call-sqrt.xml"/>
     <xi:include href="../../examples/call-round.xml"/>

@@ -29,7 +29,7 @@
 System.out.println(x);  // error, x is not defined in this scope
 </programlisting>
 
-      Both of the commented-out print statements would be errors since the variables they reference are defined in a different scope. Note that the first print statement is valid because <varname>x</varname> is defined in the same scope as that statement.
+      Both of the commented-out print statements would be errors since the variables they reference are defined in a different scope. Note that the first print statement is valid because <c>x</c> is defined in the same scope as that statement.
         </p>
         <p>
           Another important thing to note is that the statement in the inner-most scope can legally access the variable x. If a block of code is opened inside another block of code, it will inherit all the variable definitions of its enclosing scope.
@@ -51,7 +51,7 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     System.out.println(x);
 </programlisting>
 
-      At first glance, it appears this code will print out the numbers <literal>1</literal> through <literal>10</literal>, however, there is a semi-colon at the end of the first line. When omitting curly braces, the body of a for loop will consist of a statement immediately following the loop header. Since a semicolon follows the loop header, it counts as the single statement, meaning the print statement on the second line is not part of the for loop's body. Thus, the reference to the variable <varname>x</varname> is not in the correct scope and will be caught as a syntax error.
+      At first glance, it appears this code will print out the numbers <c>1</c> through <c>10</c>, however, there is a semi-colon at the end of the first line. When omitting curly braces, the body of a for loop will consist of a statement immediately following the loop header. Since a semicolon follows the loop header, it counts as the single statement, meaning the print statement on the second line is not part of the for loop's body. Thus, the reference to the variable <c>x</c> is not in the correct scope and will be caught as a syntax error.
         </p>
     </example>
 </section>
@@ -68,7 +68,7 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     </info>
 
     <p>
-      Boolean expressions evaluate to one of two values: <literal>true</literal> or <literal>false</literal>. What if the programmer wanted an expression like this to evaluate to one of two other values? For example, what if the program was answering a question about whether it was hot outside and the user expected <literal>"yes"</literal> or <literal>"no"</literal> to be printed? A <firstterm>conditional expression</firstterm> builds on a boolean expression to provide this flexibility.
+      Boolean expressions evaluate to one of two values: <c>true</c> or <c>false</c>. What if the programmer wanted an expression like this to evaluate to one of two other values? For example, what if the program was answering a question about whether it was hot outside and the user expected <c>"yes"</c> or <c>"no"</c> to be printed? A <firstterm>conditional expression</firstterm> builds on a boolean expression to provide this flexibility.
     </p>
 
     <figure xml:id="fig.conditional-expression">
@@ -122,34 +122,34 @@ for(int x = 1; x &lt;= 10; x = x + 1);
 (1 + 1) == 2
 </programlisting>
 
-            If you type this in to the REPL, it will evaluate to <literal>true</literal>. Note that the parentheses are not necessary, either. <c>+</c> will be evaluated before any comparison operators will be. There are several other comparison operators that will be useful to us, summarized below:
+            If you type this in to the REPL, it will evaluate to <c>true</c>. Note that the parentheses are not necessary, either. <c>+</c> will be evaluated before any comparison operators will be. There are several other comparison operators that will be useful to us, summarized below:
 
-            <itemizedlist>
-                <listitem>
+            <dl>
+                <li>
                     <p><c>!=</c> Not equal to</p>
-                </listitem>
-                <listitem>
+                </li>
+                <li>
                     <p><c>&gt;</c> greater than</p>
-                </listitem>
-                <listitem>
+                </li>
+                <li>
                     <p><c>&lt;</c> less than</p>
-                </listitem>
-                <listitem>
+                </li>
+                <li>
                     <p><c>&gt;=</c> greater than or equal to</p>
-                </listitem>
-                <listitem>
+                </li>
+                <li>
                     <p><c>&lt;=</c> less than or equal to</p>
-                </listitem>
-            </itemizedlist>
+                </li>
+            </dl>
         </p>
         <p> For example, the expression <programlisting>4 &lt; 3 + 3</programlisting> would
-            evaluate to <literal>true</literal>. </p>
+            evaluate to <c>true</c>. </p>
 
             <p>
-              Note that the <c>==</c> operator can not be used to compare the contents of two objects. The <c>==</c> operator will determine if two object references are equal (references are covered in more detail in another section). If you wish to compare the contents of two objects (such as to determine if two strings contain the same characters), use the <varname>equals</varname> instance method of one of the objects and pass the other in as an argument.
+              Note that the <c>==</c> operator can not be used to compare the contents of two objects. The <c>==</c> operator will determine if two object references are equal (references are covered in more detail in another section). If you wish to compare the contents of two objects (such as to determine if two strings contain the same characters), use the <c>equals</c> instance method of one of the objects and pass the other in as an argument.
             </p>
             <p>
-              For example, to check if an object stored in the variable <varname>message1</varname> has the same content as the object stored in the variable <varname>message2</varname>, the following expression would work: <programlisting>message1.equals(message2)</programlisting> Reversing the order would also work (assuming that neither variable holds the <c>null</c> value).
+              For example, to check if an object stored in the variable <c>message1</c> has the same content as the object stored in the variable <c>message2</c>, the following expression would work: <programlisting>message1.equals(message2)</programlisting> Reversing the order would also work (assuming that neither variable holds the <c>null</c> value).
           </p>
 </section>
 
@@ -163,25 +163,25 @@ for(int x = 1; x &lt;= 10; x = x + 1);
         <p>
             There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <firstterm>boolean operators</firstterm>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <firstterm>boolean algebra</firstterm>.
         </p><p> The first operator we'll consider is the and operator: <c>&amp;&amp;</c>. This is a
-            boolean operator that evaluates to <literal>true</literal> only when both the left and
-            right operands also evaluate to <literal>true</literal>. For example:
+            boolean operator that evaluates to <c>true</c> only when both the left and
+            right operands also evaluate to <c>true</c>. For example:
             <programlisting>
 true &amp;&amp; false
 </programlisting> evaluates to
-                <literal>false</literal>, since the right-hand operand is false. However:
+                <c>false</c>, since the right-hand operand is false. However:
             <programlisting>
 true &amp;&amp; true
 </programlisting> evaluates to
-                <literal>true</literal>, since both operands are true. </p><p>
-            The next operator we'll consider is the or operator: <c>||</c> It is similar to the and operator, but it evaluates to <literal>true</literal> when either of the operands are true. Put another way, this operator will only evaluate to <literal>false</literal> when both of its operands evaluate to <literal>false</literal>. For example, if you replaced <c>&amp;&amp;</c> with <c>||</c> in both of the last two expressions, they would both evaluate to <literal>true</literal>.
+                <c>true</c>, since both operands are true. </p><p>
+            The next operator we'll consider is the or operator: <c>||</c> It is similar to the and operator, but it evaluates to <c>true</c> when either of the operands are true. Put another way, this operator will only evaluate to <c>false</c> when both of its operands evaluate to <c>false</c>. For example, if you replaced <c>&amp;&amp;</c> with <c>||</c> in both of the last two expressions, they would both evaluate to <c>true</c>.
         </p><p> The last boolean operator we'll consider is unique in that it's a unary operator. Recall that
             this means it has only one operand. It is called the not operator: <c>!</c> This
             operator simply reverses the boolean value of its operand. For example:
             <programlisting>
 !false
-</programlisting> evaluates to <literal>true</literal>. Note
+</programlisting> evaluates to <c>true</c>. Note
             that all of these operators can be combined and nested in sub expressions. For example,
-            the following expression evaluates to <literal>true</literal>:
+            the following expression evaluates to <c>true</c>:
             <programlisting>
 !((false &amp;&amp; false) || false)
 </programlisting> These operators
@@ -189,14 +189,14 @@ true &amp;&amp; true
         </p>
 
         <p>
-          Another feature of boolean operators that you should be mindful of is called <firstterm>short circuiting</firstterm>. The operands of <c>&amp;&amp;</c> and <c>||</c> are evaluated in order from left to right. If the left operand evaluates to <literal>false</literal> for  <c>&amp;&amp;</c>  or if the left operand evaluates to <literal>true</literal> for  <c>||</c>, the right operand is never evaluated. This is because it doesn't matter what value this operand evaluates to --  a <c>&amp;&amp;</c> expression would evaluate to <literal>false</literal> and a <c>||</c> expression would evaluate to <literal>true</literal> in these scenarios regardless of what value the right operand evalutes to.
+          Another feature of boolean operators that you should be mindful of is called <firstterm>short circuiting</firstterm>. The operands of <c>&amp;&amp;</c> and <c>||</c> are evaluated in order from left to right. If the left operand evaluates to <c>false</c> for  <c>&amp;&amp;</c>  or if the left operand evaluates to <c>true</c> for  <c>||</c>, the right operand is never evaluated. This is because it doesn't matter what value this operand evaluates to --  a <c>&amp;&amp;</c> expression would evaluate to <c>false</c> and a <c>||</c> expression would evaluate to <c>true</c> in these scenarios regardless of what value the right operand evalutes to.
         </p>
         <p>
-          For the most part, this just means that your programs will run a bit more efficiently, since only have of the work needs to be done to evaluate these expressions at times. However, if an error or a side effect occurs while evaluating the right operand, it is important for the programmer to know that it will not occur when the left operand is not evaluated due to short circuiting. The programmer can also take advantage of this. For example, consider a scenario where the variable <varname>students</varname> is the number of students in a class and the variable <varname>cupcakes</varname> is the number of cupcakes the instructor brought with them. If we want to determine whether there are enough cupcakes for each student to have at least 2, we could use the following boolean expression:
+          For the most part, this just means that your programs will run a bit more efficiently, since only have of the work needs to be done to evaluate these expressions at times. However, if an error or a side effect occurs while evaluating the right operand, it is important for the programmer to know that it will not occur when the left operand is not evaluated due to short circuiting. The programmer can also take advantage of this. For example, consider a scenario where the variable <c>students</c> is the number of students in a class and the variable <c>cupcakes</c> is the number of cupcakes the instructor brought with them. If we want to determine whether there are enough cupcakes for each student to have at least 2, we could use the following boolean expression:
           <programlisting>cupcakes / students &gt;= 2</programlisting>
-          However, if by some mistake we used this expression for a class with no students in it, we would get a division by zero error instead of <literal>true</literal>. The latter would be preferred if we simply wanted to know whether the enough cupcakes were baked. Thus, we could instead use the following expression:
+          However, if by some mistake we used this expression for a class with no students in it, we would get a division by zero error instead of <c>true</c>. The latter would be preferred if we simply wanted to know whether the enough cupcakes were baked. Thus, we could instead use the following expression:
           <programlisting>students > 0 &amp;&amp; cupcakes / students &gt;= 2</programlisting>
-          In this case, if <varname>students</varname> is zero, the left operand to <c>&amp;&amp;</c> would evaluate to false, and the right operand would be ignored, avoiding the division by zero error.
+          In this case, if <c>students</c> is zero, the left operand to <c>&amp;&amp;</c> would evaluate to false, and the right operand would be ignored, avoiding the division by zero error.
         </p>
 </section>
 
@@ -255,17 +255,17 @@ Hello World!
     </p>
     <p>There are several places you'll see identifiers in Java. Identifiers can simply be thought of as the names of things in a Java program. There are some rules about which names are legal, since some names might be interpreted as instructions or other parts of the program if they're not written properly. Here are the Java identifier rules:</p>
 
-    <itemizedlist>
-        <listitem><p>Every Java identifier must begin with either a letter, a dollar sign, or an underscore.</p></listitem>
-        <listitem><p>Java identifiers cannot contain white space (spaces, new lines, tabs), but can contain any other characters.</p> </listitem>
-        <listitem><p>Java identifiers cannot be a reserved word (you can find a list of these online or in the textbook)</p>.</listitem>
-    </itemizedlist>
+    <ul>
+        <li><p>Every Java identifier must begin with either a letter, a dollar sign, or an underscore.</p></li>
+        <li><p>Java identifiers cannot contain white space (spaces, new lines, tabs), but can contain any other characters.</p> </li>
+        <li><p>Java identifiers cannot be a reserved word (you can find a list of these online or in the textbook)</p>.</li>
+    </ul>
 
-        <p>If you deviate from those rules, you end up with an error. For example, Identifiers can contain digits, but they cannot begin with one. Thus <varname>x5</varname> is a legal variable name, <varname>5x</varname> is not. </p>
+        <p>If you deviate from those rules, you end up with an error. For example, Identifiers can contain digits, but they cannot begin with one. Thus <c>x5</c> is a legal variable name, <c>5x</c> is not. </p>
 
-        <p>Note that the variable <varname>reallylongvariablename</varname> is legal, but is also somewhat difficult to read. The same identifier might appear dozens of times in a program and a long one such as this will become tedious for the programmer to read and type! For this reason, there are <firstterm>conventions</firstterm> in Java that dictate the proper way to name variables. <varname>reallylongvariablename</varname> is not an error, but it does break a variable naming convention in Java known as called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <varname>reallyLongVariableName</varname>. Notice that this is a bit easier to read?
+        <p>Note that the variable <c>reallylongvariablename</c> is legal, but is also somewhat difficult to read. The same identifier might appear dozens of times in a program and a long one such as this will become tedious for the programmer to read and type! For this reason, there are <firstterm>conventions</firstterm> in Java that dictate the proper way to name variables. <c>reallylongvariablename</c> is not an error, but it does break a variable naming convention in Java known as called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <c>reallyLongVariableName</c>. Notice that this is a bit easier to read?
 </p>
-     <p>All conscientious programmers also try to use identifiers that are meaningful and help explain the purpose of a definition. For example, if you want to average the values of three exam scores, you might call each of the variables holding the exam scores <varname>exam1</varname>, <varname>exam2</varname>, and <varname>exam3</varname> instead of <varname>x</varname>, <varname>y</varname>, and <varname>z</varname>, and you might call the variable holding the average <varname>averageExamScore</varname> or perhaps simply <varname>average</varname>.
+     <p>All conscientious programmers also try to use identifiers that are meaningful and help explain the purpose of a definition. For example, if you want to average the values of three exam scores, you might call each of the variables holding the exam scores <c>exam1</c>, <c>exam2</c>, and <c>exam3</c> instead of <c>x</c>, <c>y</c>, and <c>z</c>, and you might call the variable holding the average <c>averageExamScore</c> or perhaps simply <c>average</c>.
         </p>
 
     <p>
@@ -318,7 +318,7 @@ Hello World!
    
         There are two distinct parts to an assignment statement: on the left is an identifier for the variable you want to make an assignment to, and on the right is an expression which yields the value you want to assign to the variable. 
     </p>
-    <p>This syntax may be a little confusing since it uses the equals operator despite the fact that this is not an equation! This is one situation where the semantics (meaning) of Java syntax diverges from what you might be accustomed to from algebra. Rather than trying to determine what the <varname>x</varname>'s value should be, this statement makes <varname>x</varname> equal to <literal>5</literal>.
+    <p>This syntax may be a little confusing since it uses the equals operator despite the fact that this is not an equation! This is one situation where the semantics (meaning) of Java syntax diverges from what you might be accustomed to from algebra. Rather than trying to determine what the <c>x</c>'s value should be, this statement makes <c>x</c> equal to <c>5</c>.
     </p>
     
     
@@ -388,10 +388,10 @@ i += 1;
 </programlisting>
 
 <p>
-We could also add <literal>2</literal> to the value of <varname>i</varname> the same way, or any other value we want to increment it by. Similarly, we could subtract that value from <varname>i</varname>  with the <c>-=</c> operator. Each of the other arithmetic operators has a similar shortcut.
+We could also add <c>2</c> to the value of <c>i</c> the same way, or any other value we want to increment it by. Similarly, we could subtract that value from <c>i</c>  with the <c>-=</c> operator. Each of the other arithmetic operators has a similar shortcut.
 </p>
 <p>
-Beyond these shortcuts, it's also very common to simply add <literal>1</literal> to a variable, so there is a second shortcut that just adds <literal>1</literal>:
+Beyond these shortcuts, it's also very common to simply add <c>1</c> to a variable, so there is a second shortcut that just adds <c>1</c>:
 </p>
 
 <programlisting>
@@ -407,20 +407,20 @@ Note that this shortcut can be used to simplify the string iteration example con
 </programlisting>
 
 <p>
-If you've ever heard of the programming language C++ and wondered why it was named that way, now you know. Similarly, another shortcut exists for subtracting <literal>1</literal> from a variable.
+If you've ever heard of the programming language C++ and wondered why it was named that way, now you know. Similarly, another shortcut exists for subtracting <c>1</c> from a variable.
 </p>
 
 <programlisting>
 i--;
 </programlisting>
 
-<p> Shortcuts exist also for the other arithmetic operators. For example, the following statement will double the value held by the variable <varname>i</varname>:
+<p> Shortcuts exist also for the other arithmetic operators. For example, the following statement will double the value held by the variable <c>i</c>:
 <programlisting>
 i *= 2;
 </programlisting>
 </p>
 
-<p> This shortcut also for the concatenation operator. For example, the following statement will concatenate an exclamation mark on to the string held by the variable <varname>str</varname>:
+<p> This shortcut also for the concatenation operator. For example, the following statement will concatenate an exclamation mark on to the string held by the variable <c>str</c>:
 <programlisting>
 str += "!";
 </programlisting>
@@ -451,7 +451,7 @@ While loops are a lot like if statements. In fact, they have a nearly identical 
     
     <p>While loops start with the <c>while</c> keyword, and then a boolean expression in parentheses, and then a block of code (a series of statements surrounded by curly braces) or a single statement. The only difference is that when this block of code or single statement completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
 </p><p>
-    Now you may be concerned by the word <emphasis>indefinitely</emphasis>, and you should be -- it's a distinct possibility that a while loop can run <emphasis>forever</emphasis>. However, after each <firstterm>iteration</firstterm> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <literal>false</literal> when you don't want the loop executing anymore. 
+    Now you may be concerned by the word <emphasis>indefinitely</emphasis>, and you should be -- it's a distinct possibility that a while loop can run <emphasis>forever</emphasis>. However, after each <firstterm>iteration</firstterm> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <c>false</c> when you don't want the loop executing anymore. 
 </p>
     
     <example><title>Counting with a While Loop</title>
@@ -475,18 +475,18 @@ After the first iteration of the loop, count will increase by 1 and total will i
     </info>
 
 <p>When writing loops, three components are very commonly included:
-    <itemizedlist>
-        <listitem>
-            <p>Some local variable is declared and initialized, for instance a variable named <varname>counter</varname> could be initialized to <literal>1</literal>. </p>
-        </listitem>
-        <listitem>
-            <p>That variable is tested as part of the while condition, for instance looping while <varname>counter</varname> is less than <literal>10</literal>.
+    <ul>
+        <li>
+            <p>Some local variable is declared and initialized, for instance a variable named <c>counter</c> could be initialized to <c>1</c>. </p>
+        </li>
+        <li>
+            <p>That variable is tested as part of the while condition, for instance looping while <c>counter</c> is less than <c>10</c>.
             </p>
-        </listitem>
-        <listitem>
-            <p>At the end of each iteration of the loop, the variable is altered in some way, for instance <varname>counter</varname> could be incremented at the end of each iteration of the loop. </p>
-        </listitem>
-</itemizedlist>
+        </li>
+        <li>
+            <p>At the end of each iteration of the loop, the variable is altered in some way, for instance <c>counter</c> could be incremented at the end of each iteration of the loop. </p>
+        </li>
+    </ul>
 
 Since nearly every while loop that we write contains these three components, and also because they play an important role in determining how the loop executes, Java provides a special syntax called a <c>for</c> loop that simply re-organizes these components to all reside at the front of the loop.
 </p>
@@ -531,7 +531,7 @@ for(int count = 1; count &lt;= 10; count = count + 1) {
     <p>Because code written with while loops and for loops perform the exact same task, we call for loops <firstterm>syntactic sugar</firstterm>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding style.</p>
 
 <example><title>Iterate Through a String</title>
-    <p>The following code will print each character of the string <varname>message</varname>, one character per line:
+    <p>The following code will print each character of the string <c>message</c>, one character per line:
     </p>
 <programlisting>
 String message = "hello";
@@ -553,7 +553,7 @@ for(int i=0; i &lt; message.length(); i = i + 1) {
 </p>
 
     <p>
-A for-each loop eliminates the index variable <varname>i</varname> entirely. Instead, the programmer must define a new variable that will hold a single element of the array through each iteration of the loop. The same keyword <c>for</c> is used. Following the definition of this new variable, the programmer must include a colon (<c>:</c>) and then an expression yielding the array to be iterated over (usually just a variable reference).
+A for-each loop eliminates the index variable <c>i</c> entirely. Instead, the programmer must define a new variable that will hold a single element of the array through each iteration of the loop. The same keyword <c>for</c> is used. Following the definition of this new variable, the programmer must include a colon (<c>:</c>) and then an expression yielding the array to be iterated over (usually just a variable reference).
     </p>
 
 
@@ -612,7 +612,7 @@ for(String name : new String[] { "Jane", "Billy", "Susie" }) {
 
       <example><title>Validating User Input</title>
         <p>
-          Assume there is a method called <varname>getUserResponse</varname> that allows the user to enter in a numeric value. The following code will request a positive even integer from the user and validate the user's response. If the user provides such a value, it will be added to a running total of these numbers.
+          Assume there is a method called <c>getUserResponse</c> that allows the user to enter in a numeric value. The following code will request a positive even integer from the user and validate the user's response. If the user provides such a value, it will be added to a running total of these numbers.
         </p>
         <programlisting>
     int total = 0;
@@ -669,12 +669,12 @@ provide a positive, even number:
   <programlisting>
     break;
   </programlisting>
-    <p>You will use <c>break</c> statements within an <c>if</c> statement since you will only want to terminate the loop early because of some other condition that arises. You may want to use a break statement if an error occurs that must be processed. You can also intentionally begin an infinite loop (set the loop condition to <literal>true</literal>) and use break statements to end the loop. </p>
+    <p>You will use <c>break</c> statements within an <c>if</c> statement since you will only want to terminate the loop early because of some other condition that arises. You may want to use a break statement if an error occurs that must be processed. You can also intentionally begin an infinite loop (set the loop condition to <c>true</c>) and use break statements to end the loop. </p>
 
 
   <example><title>Searching for Values in an Array</title>
     <p>
-      The following code will search through an array <varname>arr</varname> for the number <literal>13</literal>:
+      The following code will search through an array <c>arr</c> for the number <c>13</c>:
     </p>
     <programlisting>
 int i=0;
@@ -684,7 +684,7 @@ for(; i&lt; arr.length; i++) {
   }
 }
     </programlisting>
-      <p>When this snippet of code completes executing, <varname>i</varname> will be the index for <varname>arr</varname> where the value <literal>13</literal> is located (or it will be <c>arr.length</c> if <literal>13</literal> doesn't appear in <varname>arr</varname>).
+      <p>When this snippet of code completes executing, <c>i</c> will be the index for <c>arr</c> where the value <c>13</c> is located (or it will be <c>arr.length</c> if <c>13</c> doesn't appear in <c>arr</c>).
       </p>
   </example>
 
@@ -766,13 +766,13 @@ int getMinimumGrade(char letterGrade) {
         <example>
             <title>Nested if Statements to Determine Best Temperature</title>
             <p>
-                The following method will return <literal>true</literal> <emphasis>if</emphasis> the <varname>tempaerature</varname> (an integer type variable) is between <literal>68</literal> and <literal>72</literal>:</p>
+                The following method will return <c>true</c> <emphasis>if</emphasis> the <c>tempaerature</c> (an integer type variable) is between <c>68</c> and <c>72</c>:</p>
 
 
             <programlisting>
 <xi:include href="../../../examples/code/justRight.jsh" parse="text"/>
 </programlisting>
-            <p>One thing to note about this example is that there are no <c>else</c> statements. There could be, but they aren't necessary since in all cases they would return <literal>false</literal>, which is also what the last statement of the method does.
+            <p>One thing to note about this example is that there are no <c>else</c> statements. There could be, but they aren't necessary since in all cases they would return <c>false</c>, which is also what the last statement of the method does.
             </p>
             <p>
                 Also notice that the nested if block is indented further than the block it is nested in. This is an important style convention that you should follow whenever opening nested blocks of code, not just with nested if statements.
@@ -815,7 +815,7 @@ int getMinimumGrade(char letterGrade) {
 </programlisting>
 
     <p>
-        The first if statement does nothing. y is not greater than x at this point, so the assignment statement that follows it (<c>x = 30;</c>) does not execute. The second if statement will set the variable <varname>y</varname> to the value 20. Since <varname>x</varname> is greater than <varname>y</varname>, the statement (<c>y = 20;</c>) will be executed.
+        The first if statement does nothing. y is not greater than x at this point, so the assignment statement that follows it (<c>x = 30;</c>) does not execute. The second if statement will set the variable <c>y</c> to the value 20. Since <c>x</c> is greater than <c>y</c>, the statement (<c>y = 20;</c>) will be executed.
     </p><p>
         More than one statement can be conditionally executed in an if statement. In fact, you can include as many as you like by opening up a <firstterm>block</firstterm> of code using curly braces surrounding each of the conditionally executed statements.
     </p>
@@ -906,7 +906,7 @@ if ( temperature > 80 ) {
         <info>
             <title>Else Statements</title>
         </info>
-        <p>Conditional expressions provided a value whether our boolean expression evaluated to <literal>true</literal> <emphasis>or</emphasis> <literal>false</literal>. We can similarly provide an alternative block of statements we want executed if the boolean expression used in our if statement evaluates to false by using an <c>else</c> statement.
+        <p>Conditional expressions provided a value whether our boolean expression evaluated to <c>true</c> <emphasis>or</emphasis> <c>false</c>. We can similarly provide an alternative block of statements we want executed if the boolean expression used in our if statement evaluates to false by using an <c>else</c> statement.
         </p>
 
         <figure xml:id="fig.if-else-statement">
@@ -928,12 +928,12 @@ if ( temperature > 80 ) {
 
         <example>
             <title>Implementing Absolute Value with if/else</title>
-            <p>Recall the <varname>abs</varname> method from the <varname>Math</varname> class that determined the absolute value of a number. In this example, we'll write our own absolute valued method that does the exact same thing using an <c>if</c> and an <c>else</c> statement. We'll name this method <varname>myAbs</varname> to make it distinct:
+            <p>Recall the <c>abs</c> method from the <c>Math</c> class that determined the absolute value of a number. In this example, we'll write our own absolute valued method that does the exact same thing using an <c>if</c> and an <c>else</c> statement. We'll name this method <c>myAbs</c> to make it distinct:
             </p>
             <programlisting>
 <xi:include href="../../../examples/code/myAbs.jsh" parse="text"/>
         </programlisting>
-            <p>If <varname>x</varname> is greater than <literal>0</literal>, the first if statement will execute, meaning that the value stored in <varname>x</varname> will be returned. If <varname>x</varname> is not greater than zero, the return statement inside the <c>else</c> block will execute instead, meaning that the negation of the value stored in <varname>x</varname> will be returned. Note that <literal>-0</literal> is returned when <varname>x</varname> is stores the value <literal>0</literal>, but since these two values are equivalent, it doesn't make a difference. Also note that the return statement is still always the last statement executed, no matter what the value of <varname>x</varname> is. </p>
+            <p>If <c>x</c> is greater than <c>0</c>, the first if statement will execute, meaning that the value stored in <c>x</c> will be returned. If <c>x</c> is not greater than zero, the return statement inside the <c>else</c> block will execute instead, meaning that the negation of the value stored in <c>x</c> will be returned. Note that <c>-0</c> is returned when <c>x</c> is stores the value <c>0</c>, but since these two values are equivalent, it doesn't make a difference. Also note that the return statement is still always the last statement executed, no matter what the value of <c>x</c> is. </p>
         </example>
     </subsection>
     
@@ -993,16 +993,16 @@ if ( temperature > 80 ) {
     <subsection>
         <title>Reading from Standard Input</title>
         <p>
-            A text-based application writes to <firstterm>standard output</firstterm> to communicate something to the user. You've already seen how to do this in the "Hello World!" example. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce <varname>Scanner</varname> objects which allow you to read messages from <firstterm>standard input</firstterm>.
+            A text-based application writes to <firstterm>standard output</firstterm> to communicate something to the user. You've already seen how to do this in the "Hello World!" example. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce <c>Scanner</c> objects which allow you to read messages from <firstterm>standard input</firstterm>.
         </p>
 
-        <p>To create a scanner, you need to provide it with an <varname>InputStream</varname> object to read data in from. Java prepares an input stream that will read data from the standard input (usually the keyboard, though it's a bit more complicated than that) and stores it in <varname>System.in</varname>, so simply provide that as the argument to the constructor for the <varname>Scanner</varname> class. The example below creates a scanner object stored in a variable named <varname>in</varname>:
+        <p>To create a scanner, you need to provide it with an <c>InputStream</c> object to read data in from. Java prepares an input stream that will read data from the standard input (usually the keyboard, though it's a bit more complicated than that) and stores it in <c>System.in</c>, so simply provide that as the argument to the constructor for the <c>Scanner</c> class. The example below creates a scanner object stored in a variable named <c>in</c>:
 
 <programlisting>
 var in = new Scanner(System.in);
 </programlisting>
 
-		Now we need to do something with the scanner! A line of input can be read in from the user by calling the <varname>nextLine</varname> instance method. Note that this is a method that <firstterm>blocks</firstterm>, meaning that execution of your program will halt at the point that this method is called and will not resume until the user hits the enter key. This method has a return value of type <varname>String</varname>. The string that it returns will be whatever the user typed in. For example, running the following program will ask the user to type something in, and then will simply repeat it back to them:
+		Now we need to do something with the scanner! A line of input can be read in from the user by calling the <c>nextLine</c> instance method. Note that this is a method that <firstterm>blocks</firstterm>, meaning that execution of your program will halt at the point that this method is called and will not resume until the user hits the enter key. This method has a return value of type <c>String</c>. The string that it returns will be whatever the user typed in. For example, running the following program will ask the user to type something in, and then will simply repeat it back to them:
 <programlisting>
 var in = new Scanner(System.in);
 print("Please enter a message: ");
@@ -1012,28 +1012,28 @@ in.close();
 </programlisting>
 </p>
         <p>
-        Note that <varname>print</varname> is called first instead of <varname>println</varname>. These methods work the same way with the exception that the latter will jump to the next line of output when it's finished. By calling <varname>print</varname> instead, the user will type something on the same line that they're being prompted on (similar to how JShell itself works).
+        Note that <c>print</c> is called first instead of <c>println</c>. These methods work the same way with the exception that the latter will jump to the next line of output when it's finished. By calling <c>print</c> instead, the user will type something on the same line that they're being prompted on (similar to how JShell itself works).
 
         </p>
-        <p> Also note that a call is made to the <varname>close</varname> instance method for the scanner on the last line of the program. This essentially lets the system know that you're done using the standard input stream. You won't always run in to trouble if you neglect to close your scanner, but there are many times where this sort of cleanup code is important, so it's good form to always close scanners when you're finished with them.</p>
+        <p> Also note that a call is made to the <c>close</c> instance method for the scanner on the last line of the program. This essentially lets the system know that you're done using the standard input stream. You won't always run in to trouble if you neglect to close your scanner, but there are many times where this sort of cleanup code is important, so it's good form to always close scanners when you're finished with them.</p>
     </subsection>
 
         <subsection>
         <title>Reading in Other Datatypes</title>
         <p>
-            If you ask a user for a number and read it in with <varname>nextLine</varname>, you will have a string, not an int or double! That means that if you try to add something to it, you'll be concatenating, not adding. </p>
+            If you ask a user for a number and read it in with <c>nextLine</c>, you will have a string, not an int or double! That means that if you try to add something to it, you'll be concatenating, not adding. </p>
 
-            <p> Scanners have many instance methods you can use to read in data other than strings. For example, you can call the <varname>nextInt</varname> or <varname>nextDouble</varname> methods to read in numeric data as an <type>int</type> or <type>double</type>, respectively. However, there is a problem with using these methods: They don't necessarily read an entire line of input, they only read the next value stored in an input buffer for the scanner. What this means is that if the user types in two different numbers separated by a space in one line, such as
+            <p> Scanners have many instance methods you can use to read in data other than strings. For example, you can call the <c>nextInt</c> or <c>nextDouble</c> methods to read in numeric data as an <c>int</c> or <c>double</c>, respectively. However, there is a problem with using these methods: They don't necessarily read an entire line of input, they only read the next value stored in an input buffer for the scanner. What this means is that if the user types in two different numbers separated by a space in one line, such as
 <code>
 23 54
-</code>, calling <varname>nextInt</varname> once will return the value <literal>23</literal> and calling it a second time will return the value <literal>54</literal> without blocking and waiting for the user to enter another line of input. Sometimes this is exactly the behaviour you want from your scanner, but more often when writing text-based applications, this will create a confusing and error-prone experience for your users.
+</code>, calling <c>nextInt</c> once will return the value <c>23</c> and calling it a second time will return the value <c>54</c> without blocking and waiting for the user to enter another line of input. Sometimes this is exactly the behaviour you want from your scanner, but more often when writing text-based applications, this will create a confusing and error-prone experience for your users.
         </p>
 
-        <p>In a text-based application, a better approach is to always use <varname>nextLine</varname> to read in an entire line of input. Once you've read this line in, if you want to perform arithmetic with it, you can convert it from a string in to an integer with the static method <varname>parseInt</varname>. It's available for use after entering the following import statement:
+        <p>In a text-based application, a better approach is to always use <c>nextLine</c> to read in an entire line of input. Once you've read this line in, if you want to perform arithmetic with it, you can convert it from a string in to an integer with the static method <c>parseInt</c>. It's available for use after entering the following import statement:
 <programlisting>
 import static java.lang.Integer.parseInt;
 </programlisting>
-        This method takes a <type>String</type> as input and returns an <type>int</type>. The following program uses the <varname>parseInt</varname> method to read two numbers in from the user and print out their sum:
+        This method takes a <c>String</c> as input and returns an <c>int</c>. The following program uses the <c>parseInt</c> method to read two numbers in from the user and print out their sum:
 <programlisting>
 import java.util.Scanner;
 import static java.lang.Integer.parseInt;
@@ -1047,15 +1047,15 @@ println("Their sum is: " + (firstNumber + secondNumber));
 </programlisting>
 		</p>
 
-		<p>Note that if the string contains data that is not properly formatted as an integer (such as "23.43" or "ham sandwich"), an error will occur. That means that the user can cause this program to misbehave by typing in bad data! This will also happen with the <varname>nextInt</varname> instance method. We'll see some ways to defend against foolishness on the user's part in future chapters.</p>
+		<p>Note that if the string contains data that is not properly formatted as an integer (such as "23.43" or "ham sandwich"), an error will occur. That means that the user can cause this program to misbehave by typing in bad data! This will also happen with the <c>nextInt</c> instance method. We'll see some ways to defend against foolishness on the user's part in future chapters.</p>
     </subsection>
 
             <subsection>
             <title>Writing to Standard Output</title>
-            <p>The print methods (print and println) that are made available by starting JShell in printing mode will print to standard output. However, these JShell shortcuts are not available outside of JShell. The typical way to print something to standard output is to use the <varname>print</varname> and <varname>println</varname> instance methods available from the <c>PrintWriter</c> object available from the <varname>out</varname> static field of the <c>System</c> class. Putting this all together, you get the rather infamous wordy java print statement:
+            <p>The print methods (print and println) that are made available by starting JShell in printing mode will print to standard output. However, these JShell shortcuts are not available outside of JShell. The typical way to print something to standard output is to use the <c>print</c> and <c>println</c> instance methods available from the <c>PrintWriter</c> object available from the <c>out</c> static field of the <c>System</c> class. Putting this all together, you get the rather infamous wordy java print statement:
             <programlisting>System.out.println("Hello World!");</programlisting></p>
 
-            <p>One trick to make this at least a little less wordy would be to use a static import to bring in the <varname>out</varname> field:
+            <p>One trick to make this at least a little less wordy would be to use a static import to bring in the <c>out</c> field:
 <programlisting>
 import static java.lang.System.out;
 out.println("Hello World!");
@@ -1077,9 +1077,9 @@ out.println("Hello World!");
 $1 ==> 5
 </console>
     
-    <p>The <varname>$1</varname> that you see indicates the name of an automatically generated variable. 
+    <p>The <c>$1</c> that you see indicates the name of an automatically generated variable. 
         <termdef xml:id="term.variable"> A <firstterm>variable</firstterm> is a named portion of computer memory that holds a single value. </termdef> 
-        In this case, the value <literal>5</literal> is stored in computer memory at a location accessible with the variable name <varname>$1</varname>. 
+        In this case, the value <c>5</c> is stored in computer memory at a location accessible with the variable name <c>$1</c>. 
         </p>
     
     <p>Variables in programming are similar to the idea of a variable you've seen in algebra. In algebra, the variable  represents an unknown quantity. Likewise, when you write a program, you may not know what value a variable you're using will eventually hold. However, at the time when your program is running (known as <firstterm>run time</firstterm>), the variable's value will be known to the computer, just as the        value of a variable in algebra is known when you solve an equation. </p>
@@ -1181,17 +1181,17 @@ $3 ==> 14
     	</p>
     	<p>
     		There is a bit of an art to writing comments well, just as there is an art to writing programs well. Too few comments and it may not be clear what a program is doing. This can also make errors in the program harder to detect. Too many comments can make a program laborious to read and also wastes the programmer's time since writing comments takes careful thought. There are many rules of thumb, but some important ones are:
-    	    <itemizedlist>
-    	        <listitem>
+    	    <ul>
+    	        <li>
     	            <p>Use descriptive variable names that do a lot of the job a comment might be intended for. If the variable's role is very simple, you may not need a comment describing its purpose. </p>
-    	        </listitem>
-    	        <listitem>
+    	        </li>
+    	        <li>
     	            <p>Do not use comments that merely repeat what a statement is doing, but rather explain the purpose behind one or more statements if that purpose is not immediately obvious. </p>
-    	        </listitem>
-    	        <listitem>
+    	        </li>
+    	        <li>
     	            <p>Otherwise, if it's not immediately clear what a statement is doing, it may deserve a comment, but put some thought in to whether your comment should cover just that one line of code, or perhaps several that are working closely together.</p>
-    	        </listitem>
-    		</itemizedlist>
+    	        </li>
+    	    </ul>
     	</p>
 
         <xi:include href="../../examples/commenting-averaging.xml" parse="xml"/>
@@ -1239,7 +1239,7 @@ $3 ==> 14
         <title>Command-Line Arguments</title>
     </info>
     <p>
-Though you should understand what the type <type>String[]</type> means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any <firstterm>command-line arguments</firstterm> that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to <emphasis>javac</emphasis> itself!
+Though you should understand what the type <c>String[]</c> means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any <firstterm>command-line arguments</firstterm> that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to <emphasis>javac</emphasis> itself!
     </p>
     <p>
 Consider the following example program:
@@ -1289,7 +1289,7 @@ arguments
         To run a java application, you must provide the Java runtime environment (JRE) with the name of a class representing a Java application. The JRE will then search for one particular static method called <c>main</c> and execute it. This is called the <firstterm>entry point</firstterm> to the application.
       </p>
       <p>
-        The JRE is very picky about how <c>main</c> should be defined. Firstly, the name must be exact -- <c>main</c> must not be capitalized or otherwise misspelled. Next, the method (like the class definition) must be declared to be public. It also must be a static method, so both of these keywords need to preceed the rest of the method definition (typically public comes first, but the order is more of a style issue). Next, the return type of the method must be void. Finally, the method must have one parameter. The parameter can be named anything you want, though by convention it is given the name <varname>args</varname>. What is important is that the type of this parameter is an array of strings:  <type>String[]</type>.
+        The JRE is very picky about how <c>main</c> should be defined. Firstly, the name must be exact -- <c>main</c> must not be capitalized or otherwise misspelled. Next, the method (like the class definition) must be declared to be public. It also must be a static method, so both of these keywords need to preceed the rest of the method definition (typically public comes first, but the order is more of a style issue). Next, the return type of the method must be void. Finally, the method must have one parameter. The parameter can be named anything you want, though by convention it is given the name <c>args</c>. What is important is that the type of this parameter is an array of strings:  <c>String[]</c>.
 
         Putting this all together, the following serves as an example of a complete Java application:
         </p>
@@ -1362,15 +1362,15 @@ arguments
     <subsection><title>Classes</title>
       <p>Inside of packages, you'll find a general description of the package and several additional organizational categories of code, including interfaces, classes, enumerations, exceptions, errors, and annotations. For now, we'll focus specifically on classes, in part because all of the other organizational categories are essentially more specialized forms of classes.</p>
 
-      <p>Classes serve two very important purposes in Java. They organize individual methods and other class members which can be called on to <emphasis>actually do something</emphasis>, but they also define object data types (such as the <type>String</type> type) which differ from the primitive data types we've mainly worked with. Other sections of this book will go in to more detail on object types and the purpose of classes as they relate to Java's support for Object-Oriented Programming (OOP), but for now we'll focus on their prior role and how we can directly get to some code we can use right away.</p>
+      <p>Classes serve two very important purposes in Java. They organize individual methods and other class members which can be called on to <emphasis>actually do something</emphasis>, but they also define object data types (such as the <c>String</c> type) which differ from the primitive data types we've mainly worked with. Other sections of this book will go in to more detail on object types and the purpose of classes as they relate to Java's support for Object-Oriented Programming (OOP), but for now we'll focus on their prior role and how we can directly get to some code we can use right away.</p>
 
       <p>When you click on an individual class in the documentation, you will find a description of its purpose and descriptions of its individual members. For example, let's look at the <c>Math</c> class. Note that at the top of the page, it is identified as the Class <c>Math</c> but also as <c>java.lang.Math</c> below that. Technically, this longer name is the full-name of the class and can be referenced at any point in your program as the name of this class. It has two important kinds of members we'll look at: static fields and static methods. </p>
 
       <p>A <firstterm>static</firstterm> field (or method) is one that can be referenced directly from the class. Other fields and methods (called instance fields and instance methods) that you'll see in other sections of this book need to be referenced in a more complicated way because they will be part of an object (again, objects are covered in much more detail in other sections of this book). Static fields and static methods sit outside of the Object-Oriented nature of Java, and more so resemble plain variables and functions that you might see in any other programming language. Until you reach the sections that focus more on objects and object-oriented programming, you'll only really need to look at the methods and fields of classes that have the <c>static</c>  keyword before their descriptions.</p>
 
-      <p>You can think of fields as a special kind of variable that is organized within a class.  Static fields are typically constants (that is, they cannot be changed). Note that there are two fields in the <c>Math</c> class: <varname>E</varname> and <varname>PI</varname>, which contain estimates of these two famous mathematical constants. Note that they are only estimates because both of these constants are infinite, non-repeating decimals. Variables in general are covered in more detail in another section of this book.</p>
+      <p>You can think of fields as a special kind of variable that is organized within a class.  Static fields are typically constants (that is, they cannot be changed). Note that there are two fields in the <c>Math</c> class: <c>E</c> and <c>PI</c>, which contain estimates of these two famous mathematical constants. Note that they are only estimates because both of these constants are infinite, non-repeating decimals. Variables in general are covered in more detail in another section of this book.</p>
 
-      <p>To access a static member of a class, you must give the full name of the class, followed by a period, followed by the name of the member you wish to access. For example, you could access the <varname>PI</varname> constant with the following expression in JShell:
+      <p>To access a static member of a class, you must give the full name of the class, followed by a period, followed by the name of the member you wish to access. For example, you could access the <c>PI</c> constant with the following expression in JShell:
 <programlisting>java.lang.Math.PI</programlisting>
     </p>
 
@@ -1378,22 +1378,22 @@ arguments
     </subsection>
 
     <subsection><title>Import Statements</title>
-    	<p>Referring to static members of a class using their full name can be tedious. Often you will want to simply refer to them with their short name, like <varname>PI</varname> in the <c>Math</c> class rather than <c>java.lang.Math.</c><varname>PI</varname>. One of the main purposes of packages is to prevent name conflicts, but we can selectively bring in names of individual classes or individual members of classes by importing them. If we only import the classes or members of classes we need, we shouldn't have to worry about name conflicts. </p>
+    	<p>Referring to static members of a class using their full name can be tedious. Often you will want to simply refer to them with their short name, like <c>PI</c> in the <c>Math</c> class rather than <c>java.lang.Math.</c><c>PI</c>. One of the main purposes of packages is to prevent name conflicts, but we can selectively bring in names of individual classes or individual members of classes by importing them. If we only import the classes or members of classes we need, we shouldn't have to worry about name conflicts. </p>
 
       <p>To import a class, you will need to use an <firstterm>import statement</firstterm>. Import statements begin with the <c>import</c> keyword, followed by the full name of a class (that is, the short name of the class preceded by the name of the package it belongs to), and ending with a semicolon. Importing a class allows us to refer to that class using only its short name. For example, if we imported the <c>Math</c> class with the following import statement:
 <programlisting>import java.lang.Math;</programlisting>
-      We could simply refer to the constant <varname>PI</varname> with the following expression:
+      We could simply refer to the constant <c>PI</c> with the following expression:
 <programlisting>Math.PI</programlisting>
     </p>
     <p>Note that, by default, all of the classes in the <c>java.lang</c> package are automatically imported. Thus, you didn't actually need the import statement in the previous example! However, this import statement will be needed for any other package when you're working with JShell. </p>
 
-      <p>We can also import individual static members of a class if we wish, making it even more simple to refer to the members we're interested in using. When we import <c>static</c> class members, we also need to follow the <c>import</c> keyword with the <emphasis>static</emphasis> keyword. What follows is the full name of a class and the name of the method or field we want to import, all separated by periods. For example, below is an import statement that allows us to use the <varname>PI</varname> constant without referring to the <c>Math</c> class:
+      <p>We can also import individual static members of a class if we wish, making it even more simple to refer to the members we're interested in using. When we import <c>static</c> class members, we also need to follow the <c>import</c> keyword with the <emphasis>static</emphasis> keyword. What follows is the full name of a class and the name of the method or field we want to import, all separated by periods. For example, below is an import statement that allows us to use the <c>PI</c> constant without referring to the <c>Math</c> class:
 <programlisting>import static java.lang.Math.PI;</programlisting>
-      In this case, the package name is <c>java.lang</c>, the class name is <c>Math</c>, and the name of the class member to be imported is <varname>PI</varname>. Now we could reference the <varname>PI</varname> constant in JShell simply by using its name:
+      In this case, the package name is <c>java.lang</c>, the class name is <c>Math</c>, and the name of the class member to be imported is <c>PI</c>. Now we could reference the <c>PI</c> constant in JShell simply by using its name:
 <programlisting>PI</programlisting>
       We could import all of the static members of the <c>Math</c> class at the same time if we wished by replacing the method name with a wildcard in the import statement:
 <programlisting>import static java.lang.Math.*;</programlisting>
-		This would allow us to use the complete collection of static methods and fields organized in to the <varname>Math</varname> class. Wildcards can also be used to import multiple classes at once from a package. 
+		This would allow us to use the complete collection of static methods and fields organized in to the <c>Math</c> class. Wildcards can also be used to import multiple classes at once from a package. 
     	</p>
     </subsection>
 
@@ -1503,7 +1503,7 @@ There is a way around this limitation. We could define a method that has an arra
 
 </example>
 <p>
-Since Java 5, variable number of arguments has been supported in Java, allowing us to perform the same task as the method above, but with a cleaner looking syntax. Using the varargs syntax, we'll declare that our method accepts an integer instead of an array. The difference will be that we'll include an ellipsis in between the type (<type>int</type>) and the variable name. The variable will still hold an array of integers in this case, not a single integer. This syntax can be used for any type (not just integers). You could write a varargs method that takes an arbitrary number of <type>String</type> parameters, for example. 
+Since Java 5, variable number of arguments has been supported in Java, allowing us to perform the same task as the method above, but with a cleaner looking syntax. Using the varargs syntax, we'll declare that our method accepts an integer instead of an array. The difference will be that we'll include an ellipsis in between the type (<c>int</c>) and the variable name. The variable will still hold an array of integers in this case, not a single integer. This syntax can be used for any type (not just integers). You could write a varargs method that takes an arbitrary number of <c>String</c> parameters, for example. 
 </p>
 
 <example>
@@ -1536,10 +1536,10 @@ Since Java 5, variable number of arguments has been supported in Java, allowing 
         <title>Overloading Method Parameters</title>
     </info>
 
-<p>What if the programmer wanted to develop a method that could take more than one type of argument? You may have noticed in the past that the <varname>abs</varname> method in the <varname>Math</varname> class works with either <type>int</type> values or <type>double</type> values. That is because there are two different implementations of this method, one for each of these parameter data types. This is called <firstterm>overloading</firstterm>.
+<p>What if the programmer wanted to develop a method that could take more than one type of argument? You may have noticed in the past that the <c>abs</c> method in the <c>Math</c> class works with either <c>int</c> values or <c>double</c> values. That is because there are two different implementations of this method, one for each of these parameter data types. This is called <firstterm>overloading</firstterm>.
 </p>
     <p>
-Methods in Java are not identified by their name alone. If you were to call <c>Math.abs(5)</c>, the Java compiler will search for a method named <varname>abs</varname> that has exactly one parameter of type <type>int</type> to bind this call to. There may be another method named <varname>abs</varname> that has a parameter of type <type>double</type>, or more than one parameter, or no parameters, etc..
+Methods in Java are not identified by their name alone. If you were to call <c>Math.abs(5)</c>, the Java compiler will search for a method named <c>abs</c> that has exactly one parameter of type <c>int</c> to bind this call to. There may be another method named <c>abs</c> that has a parameter of type <c>double</c>, or more than one parameter, or no parameters, etc..
     </p>
 
     <example>
@@ -1576,7 +1576,7 @@ abs(-5.0);
         <title>Method Definitions</title>
     </info>
     
-    <p>In prior sections we used method calls to do some of the computing for us. For example, a call to the <varname>max</varname> method in the <varname>Math</varname> class was a simple way to achieve what would have otherwise required more detailed code. In this section you will learn how to define your own custom methods. 
+    <p>In prior sections we used method calls to do some of the computing for us. For example, a call to the <c>max</c> method in the <c>Math</c> class was a simple way to achieve what would have otherwise required more detailed code. In this section you will learn how to define your own custom methods. 
     </p>
     
     <p>
@@ -1597,7 +1597,7 @@ abs(-5.0);
     </figure>
   
         <p>
-            A method definition consists of a header (or signature) defining the input and output data types, and a method body. Let's first take a look at the contents of the signature. First is a data type for the data returned by the method. For instance, the <varname>abs</varname> method in the <varname>Math</varname> class returns a double, so it's return type would be <type>double</type>. Next is the name of the method. 
+            A method definition consists of a header (or signature) defining the input and output data types, and a method body. Let's first take a look at the contents of the signature. First is a data type for the data returned by the method. For instance, the <c>abs</c> method in the <c>Math</c> class returns a double, so it's return type would be <c>double</c>. Next is the name of the method. 
         </p><p>
     So far, the definition looks a lot like a variable definition, but we're not quite finished. We also need to define parameters for the method. Parameters are variables that will hold the input values for the method (the input values are what we referred to as arguments in prior sections). Following the name of the method is a pair of parentheses with definitions of the parameters in between the parentheses. Each parameter definition consists of a data type followed by the name of the parameter (just like the variable definitions we saw previously but without the semicolon at the end). There may be zero or more parameter definitions, separated by commas. 
         </p><p>
@@ -1611,7 +1611,7 @@ int square(int x) {
   return x * x;
 }
 </programlisting>
-            <p>Note that it has only one parameter, <varname>x</varname>, and one statement in the method body, the return statement. Defining and then calling this method in jshell will look like this:</p>
+            <p>Note that it has only one parameter, <c>x</c>, and one statement in the method body, the return statement. Defining and then calling this method in jshell will look like this:</p>
             
 <console>
 <prompt>jshell> </prompt><input>int square(int x) {
@@ -1627,13 +1627,13 @@ $3 ==> 100
 
 </console>
             
-            <p>Notice that jshell doesn't include the name of the parameter <varname>x</varname>
+            <p>Notice that jshell doesn't include the name of the parameter <c>x</c>
             in the message reporting that you successfully defined the method. That's because the
             name of the parameter is ultimately not important. The parameter's name is meant to help
             make the code defining your method easier to read and understand, and also to describe
             the purpose of the parameter to the programmer writing code that calls it. What's most
             important from a functional perspective is that you've defined a method that can take an
-                <type>int</type> type argument and that it will return another <type>int</type> type
+                <c>int</c> type argument and that it will return another <c>int</c> type
             value to you. </p>
         </example>
         <example><title>Add Two Numbers</title>
@@ -1654,7 +1654,7 @@ $3 ==> 8
         </example>
         
         <example><title>Ultimate Answer</title>
-        <p>Some methods don't have any parameters at all. For example, below is the definition of a method that simply returns the value <literal>42</literal>:</p>
+        <p>Some methods don't have any parameters at all. For example, below is the definition of a method that simply returns the value <c>42</c>:</p>
 <programlisting>
 int ultimateAnswer() { 
   return 42;
@@ -1680,18 +1680,18 @@ $2 ==> 42
     <p>A single character by itself doesn't convey much. The kind of data we more often want to
         work with is a sequence of multiple characters, like a name or address field, or even
         something longer and more complex like a news article or a computer program. Java has a
-        data type that fits this role: the <type>String</type>. While a character literal only holds
-        a single value, such as <literal>'h'</literal>, a string can hold 0 or more character
+        data type that fits this role: the <c>String</c>. While a character literal only holds
+        a single value, such as <c>'h'</c>, a string can hold 0 or more character
         values. Thus, strings can represent more complex data like names, sentences, or even this
-        entire book! You can create a variable of type <type>String</type> as follows: </p>
+        entire book! You can create a variable of type <c>String</c> as follows: </p>
     <programlisting>String name;</programlisting>
 <p>
-    Note that the type in that variable declaration is capitalized. That's because, unlike <type>char</type>'s and <type>int</type>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <type>Point</type>s and other objects we've played with, strings are a special object type in Java in that they see very heavy usage and also have some special syntax associated with them (described in the following sections).
+    Note that the type in that variable declaration is capitalized. That's because, unlike <c>char</c>'s and <c>int</c>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <c>Point</c>s and other objects we've played with, strings are a special object type in Java in that they see very heavy usage and also have some special syntax associated with them (described in the following sections).
 </p>
 <section>
     <title>String Literals</title>
 
-    <p>String literals have a special syntax somewhat similar to character literals. Character literals are a single character surrounded by single quotes, such <literal>'a'</literal>. String literals are similar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For example, the following code initializes the name variable from the previous example with my name as a value: </p>
+    <p>String literals have a special syntax somewhat similar to character literals. Character literals are a single character surrounded by single quotes, such <c>'a'</c>. String literals are similar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For example, the following code initializes the name variable from the previous example with my name as a value: </p>
     <programlisting>name = "Joesph Kendall-Morwick";</programlisting>
 
     <p>Note that string literals can contain all sorts of characters, including spaces and dashes. Strings also distinguish between upper and lower case characters. Character literals work just the same way, but character literals hold exactly one character.
@@ -1701,7 +1701,7 @@ $2 ==> 42
 
     <programlisting>name = "";</programlisting>
 
-    <p>is also legal. Note that the empty string (above) is still a string value! It doesn't mean there isn't a string held by the variable <varname>name</varname>. If <varname>name</varname> held no value, we would say it holds the <c>null</c> value, just as any other object-type variable that doesn't hold a value. Recall that <c>null</c> is a keyword representing this value:
+    <p>is also legal. Note that the empty string (above) is still a string value! It doesn't mean there isn't a string held by the variable <c>name</c>. If <c>name</c> held no value, we would say it holds the <c>null</c> value, just as any other object-type variable that doesn't hold a value. Recall that <c>null</c> is a keyword representing this value:
     </p>
 
     <programlisting>name = null;</programlisting>
@@ -1728,7 +1728,7 @@ $2 ==> 42
 String fullName = "Joseph" + " " + "Kendall-Morwick";
 </programlisting>
     <p>
-        will store a single string value representing my full name in the variable <varname>fullName</varname>.</p>
+        will store a single string value representing my full name in the variable <c>fullName</c>.</p>
 </example>
 
 <p>In fact, concatenation is performed when even just one of the operands is a string value. The other value will be coerced (transformed) in to a string value.
@@ -1740,7 +1740,7 @@ String fullName = "Joseph" + " " + "Kendall-Morwick";
 <programlisting>
 String message = "my favorite number is " + 5;
 </programlisting>
-    <p>will store a single string value holding the message "my favorite number is 5" in the variable <varname>message</varname>.</p>
+    <p>will store a single string value holding the message "my favorite number is 5" in the variable <c>message</c>.</p>
 </example>
     </subsection>
 <subsection>
@@ -1750,7 +1750,7 @@ String message = "my favorite number is " + 5;
     </p>
 
     <subsubsection><title>length</title>
-        <p>The <varname>length</varname> instance method has no parameters but returns the length of the string (as an integer).
+        <p>The <c>length</c> instance method has no parameters but returns the length of the string (as an integer).
         </p>
 
     <example>
@@ -1768,47 +1768,47 @@ String message = "my favorite number is " + 5;
 
     <subsubsection><title>equals</title>
 
-        <p>The <varname>equals</varname> instance method takes another String as input and returns a boolean value (<literal>true</literal> or <literal>false</literal>) indicating whether the two strings (the argument and the string from which the method is being called) have the exact same contents or not. Boolean values are described in more detail in another section. </p>
+        <p>The <c>equals</c> instance method takes another String as input and returns a boolean value (<c>true</c> or <c>false</c>) indicating whether the two strings (the argument and the string from which the method is being called) have the exact same contents or not. Boolean values are described in more detail in another section. </p>
         <example>
             <title>Comparing two Strings</title>
             <programlisting>"hello".equals("hello") </programlisting>
-            <p>evaluates to the value <literal>true</literal> whereas</p>
+            <p>evaluates to the value <c>true</c> whereas</p>
             <programlisting>"hello".charAt("Hello") </programlisting>
-            <p>evaluates to the value <literal>false</literal></p>
+            <p>evaluates to the value <c>false</c></p>
         </example>
     </subsubsection>
 
     <subsubsection><title>charAt</title>
 
-        <p>The <varname>charAt</varname> instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). </p>
+        <p>The <c>charAt</c> instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). </p>
         <example>
             <title>Pulling a character out of a String</title>
             <programlisting>"hello".charAt(0) </programlisting>
-            <p>evaluates to the value <literal>'h'</literal> whereas</p>
+            <p>evaluates to the value <c>'h'</c> whereas</p>
             <programlisting>"hello".charAt(4) </programlisting>
-            <p>evaluates to the value <literal>'o'</literal></p>
+            <p>evaluates to the value <c>'o'</c></p>
         </example>
     </subsubsection>
 
     <subsubsection><title>char</title>
 
-        <p>The <varname>indexOf</varname> instance method takes a character you're searching for as input and returns the first index of where it's found in the string. If the character is not present in the string, <literal>-1</literal> is returned instead. </p>
+        <p>The <c>indexOf</c> instance method takes a character you're searching for as input and returns the first index of where it's found in the string. If the character is not present in the string, <c>-1</c> is returned instead. </p>
 
     </subsubsection>
 
     <subsubsection><title>substring</title>
 
-        <p>        The <varname>substring</varname> instance method takes two integer values (indexes) as input and returns a substring of the original string starting at the first index and ending just before the last index. Be mindful of the fact that the first index given indicates where the substring starts (and the character at this index is included in the resulting substring), but the second index is expected to be one greater than the index of the last character included (so the character at the second index is not included). The second index is also optional -- if it is omitted, all characters following the first index are included in the resulting substring. This can be a little confusing, so make sure that the examples below make sense and try some others out in JShell.
+        <p>        The <c>substring</c> instance method takes two integer values (indexes) as input and returns a substring of the original string starting at the first index and ending just before the last index. Be mindful of the fact that the first index given indicates where the substring starts (and the character at this index is included in the resulting substring), but the second index is expected to be one greater than the index of the last character included (so the character at the second index is not included). The second index is also optional -- if it is omitted, all characters following the first index are included in the resulting substring. This can be a little confusing, so make sure that the examples below make sense and try some others out in JShell.
   </p>
         <example>
             <title>Pulling a substring out of a String</title>
             <programlisting>"hello".substring(1, 3) </programlisting>
-            <p>evaluates to the value <literal>"el"</literal></p>
+            <p>evaluates to the value <c>"el"</c></p>
         </example>
         <example>
             <title>Pulling a prefix out of a String</title>
             <programlisting>"hello".substring(1) </programlisting>
-            <p>evaluates to the value <literal>"ello"</literal></p>
+            <p>evaluates to the value <c>"ello"</c></p>
         </example>
     </subsubsection>
 
@@ -1820,7 +1820,7 @@ var namesStartingAtJ = names.substring(names.indexOf('J'));
 var endOfName = namesStartingAtJ.indexOf('.');
 var nameStartingWithJ = namesStartingAtJ.substring(0, endOfName);
 </programlisting>
-        <p>In a String listing several capitalized names ending in periods, this code locates and isolates the first name that begins with a J. After each of the four statements are executed, the variable <varname>nameStartingWithJ</varname> will contain the value <literal>"Joey"</literal>.</p>
+        <p>In a String listing several capitalized names ending in periods, this code locates and isolates the first name that begins with a J. After each of the four statements are executed, the variable <c>nameStartingWithJ</c> will contain the value <c>"Joey"</c>.</p>
     </example>
 
 </subsection>
@@ -1875,33 +1875,33 @@ to advance
             <title>Classes, Packages, and Import Statements</title>
         </info>
         
-        <p>Objects are also called <firstterm>instances</firstterm> of a <firstterm>class</firstterm> in Java. A class is essentially a definition of an object type that determines what fields an object will have and what methods you can use to interact with the object. For example, there might be an <varname>Employee</varname> class, but you could potentially have many instances of that class (objects) that represent individual employees with their own names, hire dates, etc. The <varname>Employee</varname> class is merely a data type that ensures each of the objects that are instances of it have these features in common. </p>
+        <p>Objects are also called <firstterm>instances</firstterm> of a <firstterm>class</firstterm> in Java. A class is essentially a definition of an object type that determines what fields an object will have and what methods you can use to interact with the object. For example, there might be an <c>Employee</c> class, but you could potentially have many instances of that class (objects) that represent individual employees with their own names, hire dates, etc. The <c>Employee</c> class is merely a data type that ensures each of the objects that are instances of it have these features in common. </p>
         
         <p>Java provides literally thousands of classes with the JDK that you may use to create
             programs. Because there are so many classes, there was a need to keep them organized
             (it's possible two classes might even have the same name, such as a
-                <varname>Deal</varname> class that might refer to a business deal or the cards laid
+                <c>Deal</c> class that might refer to a business deal or the cards laid
             down in a poker game). Java organizes classes by placing them in named
                 <firstterm>packages</firstterm>. For example, Java has a class called
-                <varname>Point</varname> that is used to represent a point in a 2 dimensional
+                <c>Point</c> that is used to represent a point in a 2 dimensional
             Cartesian plane. However, to avoid possible name conflicts and to help keep things
-            organized, this class is placed in a package named <varname>java.awt</varname>, along
+            organized, this class is placed in a package named <c>java.awt</c>, along
             with several other classes that assist with computer graphics. Remember that each class
             represents a data type, and data types have names (such as int). In this case, the name
-            of this data type, including its package name, is <varname>java.awt.Point</varname>. </p>
+            of this data type, including its package name, is <c>java.awt.Point</c>. </p>
         
         <p>It can be cumbersome to have to type in all of that every time you want to refer to a
             data type, so java provides <firstterm>import statements</firstterm> to allow you to
-            shorten it to just the class name (in this case, <varname>Point</varname>). In order to
-            use <varname>Point</varname> as the name of the data type rather than
-                <varname>java.awt.Point</varname>, enter this import statement in the REPL:
+            shorten it to just the class name (in this case, <c>Point</c>). In order to
+            use <c>Point</c> as the name of the data type rather than
+                <c>java.awt.Point</c>, enter this import statement in the REPL:
             <programlisting>import java.awt.Point;</programlisting> You can also import all of the
-            classes in the <varname>java.awt</varname> package at the same time if you want to by
+            classes in the <c>java.awt</c> package at the same time if you want to by
             using a <firstterm>wildcard</firstterm> in your import statement in place of the class
             name: <programlisting>import java.awt.*;</programlisting> This would allow you to use
-            the short name for <varname>Point</varname>, but also <varname>Polygon</varname>
-            (instead of <varname>java.awt.Polygon</varname> and many other classes in the
-                <varname>java.awt</varname> package). Generally the use of wild cards is discouraged
+            the short name for <c>Point</c>, but also <c>Polygon</c>
+            (instead of <c>java.awt.Polygon</c> and many other classes in the
+                <c>java.awt</c> package). Generally the use of wild cards is discouraged
             since you often will only need a handful of classes from a single package, and having
             each of them listed explicitly in an import statement makes it clear what classes you're
             using in your code. It also helps avoid the possibility of name conflicts. </p>
@@ -1931,7 +1931,7 @@ to advance
         </figure>
         
         
-        <p>Assuming you've already imported the <varname>Point</varname> class, this is a method call expression that creates a new <varname>Point</varname> object with its <varname>x</varname> field set to <literal>5</literal> and its <varname>y</varname> set to <literal>2</literal>. Some constructors will require more or fewer arguments, and some will require none at all. In fact, if you provide no arguments to the constructor for the <varname>Point</varname> class, it will create a <varname>Point</varname> object with its <varname>x</varname> field set to 0 and its <varname>y</varname> field set to <literal>0</literal>:
+        <p>Assuming you've already imported the <c>Point</c> class, this is a method call expression that creates a new <c>Point</c> object with its <c>x</c> field set to <c>5</c> and its <c>y</c> set to <c>2</c>. Some constructors will require more or fewer arguments, and some will require none at all. In fact, if you provide no arguments to the constructor for the <c>Point</c> class, it will create a <c>Point</c> object with its <c>x</c> field set to 0 and its <c>y</c> field set to <c>0</c>:
 <programlisting>new Point()</programlisting>   </p>     
         
     </subsection>
@@ -1942,7 +1942,7 @@ to advance
             <title>Object Type Variables</title>
         </info>
         
-        <p>If we want to store and manipulate the object values we create with constructor calls, we need to be able to put them in to variables. Object type variables work exactly the same as primitive type variables. You can simply use the <c>var</c> keyword and the proper data type will be assigned to the variable you create and initialize with a constructor call. The following example stores a point at x coordinate 4 and y coordinate 1 in a variable called <varname>homeLocation</varname>:
+        <p>If we want to store and manipulate the object values we create with constructor calls, we need to be able to put them in to variables. Object type variables work exactly the same as primitive type variables. You can simply use the <c>var</c> keyword and the proper data type will be assigned to the variable you create and initialize with a constructor call. The following example stores a point at x coordinate 4 and y coordinate 1 in a variable called <c>homeLocation</c>:
         <programlisting>var homeLocation = new Point(4, 1);</programlisting>
         Also, if you want to explicitly name the type rather than using the <c>var</c> keyword, you can simply use the class name as the name of the data type. The following example does the exact same thing as the previous example:
         <programlisting>Point homeLocation = new Point(4, 1);</programlisting>
@@ -1956,7 +1956,7 @@ to advance
             <title>Instance Method Calls</title>
         </info>
         
-        <p>Once you create an object and store it in to a variable, you can interact with that object by calling its instance methods. Calling an instance method looks a lot like calling a normal method with the difference that you start with an expression of an object type, follow it with a dot, and then follow that with the method call. Typically, you will just use a variable reference as the object type expression. Below is a diagram of an instance method call on the <varname>Point</varname> object stored in the <varname>homeLocation</varname> variable we declared in the last section:
+        <p>Once you create an object and store it in to a variable, you can interact with that object by calling its instance methods. Calling an instance method looks a lot like calling a normal method with the difference that you start with an expression of an object type, follow it with a dot, and then follow that with the method call. Typically, you will just use a variable reference as the object type expression. Below is a diagram of an instance method call on the <c>Point</c> object stored in the <c>homeLocation</c> variable we declared in the last section:
         
         
             <figure xml:id="fig.instance-method-call">
@@ -1973,9 +1973,9 @@ to advance
             </figure>
             
         
-        This method call moves the <varname>Point</varname> object forward <literal>2</literal> in the <varname>x</varname> direction and backward <literal>1</literal> in the <varname>y</varname> direction, meaning that the <varname>Point</varname> object will now be at location 6, 0 on the coordinate plane. Note that <emphasis>translation</emphasis> is an operation frequently applied to points in computer graphics, so it was developed as an instance method for the <varname>Point</varname> class. This is an example of how objects provide useful abstractions in object-oriented programming, just as static methods do. </p>
+        This method call moves the <c>Point</c> object forward <c>2</c> in the <c>x</c> direction and backward <c>1</c> in the <c>y</c> direction, meaning that the <c>Point</c> object will now be at location 6, 0 on the coordinate plane. Note that <emphasis>translation</emphasis> is an operation frequently applied to points in computer graphics, so it was developed as an instance method for the <c>Point</c> class. This is an example of how objects provide useful abstractions in object-oriented programming, just as static methods do. </p>
         
-        <p>The <varname>Point</varname> class has several other useful instance methods that can
+        <p>The <c>Point</c> class has several other useful instance methods that can
             be called. Some of them have return values and some of them don't. You can find them all
             summarized here:ba
                 <uri>https://docs.oracle.com/javase/10/docs/api/java/awt/Point.html</uri>
@@ -1989,13 +1989,13 @@ to advance
             <title>Object Fields</title>
         </info>
         
-        <p>Some classes will allow you to access the object's fields directly and <varname>Point</varname> is one of them. You can access a field just as you would an instance method. For example, to directly access the <varname>x</varname> coordinate of the <varname>Point</varname> object stored in <varname>homeLocation</varname>, you could use the following expression:
+        <p>Some classes will allow you to access the object's fields directly and <c>Point</c> is one of them. You can access a field just as you would an instance method. For example, to directly access the <c>x</c> coordinate of the <c>Point</c> object stored in <c>homeLocation</c>, you could use the following expression:
         <programlisting>homeLocation.x</programlisting>
         </p>
         
         <p>Most classes will prevent you from accessing the object's fields in this way as it's
             generally considered bad style to write classes that expose their fields (though it's
-            debatable whether it was a bad choice for the <varname>Point</varname> class,
+            debatable whether it was a bad choice for the <c>Point</c> class,
             specifically). There are two primary reasons for this: is that it is expected that the
             designer of the class has already provided sufficiently powerful instance methods that
             serve as the proper means for manipulating the object, and more importantly also because
@@ -2024,7 +2024,7 @@ to advance
         <subsection>
             <title>Copying Object References</title>
             <p>
-                If you have a variable of type <type>int</type> and copy its value to another variable, you can expect that the value is truly copied. For example:
+                If you have a variable of type <c>int</c> and copy its value to another variable, you can expect that the value is truly copied. For example:
 
 <programlisting>
 int x = 5;
@@ -2086,7 +2086,7 @@ void clearArray(int[] arr) {
         <title>The Character Primitive Data Type</title>
     </info>
     <p>A character is essentially another type of numeric primitive, but with a special purpose. In order to work with textual data on a computer (such as the letters you're reading right now, which were printed off by a computer), each letter (and also other symbols such as punctuation, numbers, etc) are each given a special code number.</p>
-    <p>Characters are a primitive type in Java, and the name of the type is <type>char</type>. Thus, just like <type>int</type> and <type>double</type>, you can create a variable of type <type>char</type>:
+    <p>Characters are a primitive type in Java, and the name of the type is <c>char</c>. Thus, just like <c>int</c> and <c>double</c>, you can create a variable of type <c>char</c>:
     </p>
 
 <programlisting>
@@ -2103,7 +2103,7 @@ letterGrade = 'A';
     <uri>https://unicode.org/</uri></p>
 
 
-<p>The actual codes used for each character in Java can be looked up on the UTF-8 chart here: <uri>https://www.unicode.org/charts/</uri>  Note that you can convert between the character codes and character literals by casting them back and forth to other integer types. For example, the following expression: <programlisting>(int)'a'</programlisting> will evaluate to the integer value <literal>97</literal>, which was designated for this character in unicode. The rest of the lower-case characters in the basic latin alphabet are assigned to each of the following integers, so similarly evaluating the expression: <programlisting>(int)'b'</programlisting> will evaluate to <literal>98</literal></p>
+<p>The actual codes used for each character in Java can be looked up on the UTF-8 chart here: <uri>https://www.unicode.org/charts/</uri>  Note that you can convert between the character codes and character literals by casting them back and forth to other integer types. For example, the following expression: <programlisting>(int)'a'</programlisting> will evaluate to the integer value <c>97</c>, which was designated for this character in unicode. The rest of the lower-case characters in the basic latin alphabet are assigned to each of the following integers, so similarly evaluating the expression: <programlisting>(int)'b'</programlisting> will evaluate to <c>98</c></p>
 
 
     <subsection>
@@ -2116,28 +2116,28 @@ import static java.lang.Character.*;
 
             A couple important ones are summarized below:
 
-        <itemizedlist>
+        <dl>
             <!-- these will need to be covered after booleans are
-            <listitem>
+            <li>
                 <p><c>boolean isDigit(char)</c> - Takes a character as input and returns a boolean indicating whether or not it is a digit (0-9). </p>
-            </listitem>
-            <listitem>
+            </li>
+            <li>
                 <p><c>boolean isLetter(char)</c> - Takes a character as input and returns a boolean indicating whether or not it is a letter (a-z or A-Z). </p>
-            </listitem>
-            <listitem>
+            </li>
+            <li>
                 <p><c>boolean isUpperCase(char)</c> - Takes a character as input and returns a boolean indicating whether or not it is a upper-case letter (A-Z). </p>
-            </listitem>
-            <listitem>
+            </li>
+            <li>
                 <p><c>boolean isLowerCase(char)</c> - Takes a character as input and returns a boolean indicating whether or not it is a lower-case letter (a-z)</p>
-            </listitem>
+            </li>
             -->
-            <listitem>
+            <li>
                 <p><c>char toUpperCase(char)</c> - Takes a character as input and returns that character in upper-case (or leaves it alone if it was already upper-case)</p>
-            </listitem>
-            <listitem>
+            </li>
+            <li>
                 <p><c>char toLowerCase(char)</c> - Takes a character as input and returns that character in lower-case (or leaves it alone if it was already lower-case)</p>
-            </listitem>
-        </itemizedlist>
+            </li>
+        </dl>
     </p>
         <!-- this will need to be covered after booleans are
         -        <p>Executing the following code:</p>
@@ -2167,7 +2167,7 @@ import static java.lang.Character.*;
     </info>
 
     <p>
-        The boolean type is a primitive data type and actually the most simple type because it has only two possible values: <literal>true</literal> and <literal>false</literal>. Both <literal>true</literal> and <literal>false</literal> are also literal boolean values, and <varname>boolean</varname> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
+        The boolean type is a primitive data type and actually the most simple type because it has only two possible values: <c>true</c> and <c>false</c>. Both <c>true</c> and <c>false</c> are also literal boolean values, and <c>boolean</c> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
 
 <programlisting>
 boolean mybool = true;
@@ -2197,9 +2197,9 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         <title>The Array Type</title>
         <p> Arrays themselves are a type of data, but are parameterized by the type of data they hold (that is to say, there are many 'array types' and each is distinguished by the type of data held by an array of that type). Values in an array can have any type, but they must all have the <emphasis>same type</emphasis> as each other.
         </p>
-        <p> The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <type>int[]</type>
+        <p> The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <c>int[]</c>
         </p>
-        <p> A variable named <varname>arr</varname> that could hold an array of integers is defined as follows:
+        <p> A variable named <c>arr</c> that could hold an array of integers is defined as follows:
             <programlisting>int[] arr;</programlisting>
         </p>
     </subsection>
@@ -2209,11 +2209,11 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
 
           <programlisting>int[] arr = null;</programlisting>
 
-            We also create array objects with the <c>new</c> keyword, although the syntax is a little different than it is for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes <varname>arr</varname> to contain an array of 5 integers:
+            We also create array objects with the <c>new</c> keyword, although the syntax is a little different than it is for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes <c>arr</c> to contain an array of 5 integers:
 
           <programlisting>int[] arr = new int[5];</programlisting>
 
-            Each of the integers in the array <varname>arr</varname> are initialized to zero in the previous example. However, we can initialize them to hold arbitrary values by enumerating those values within curly braces instead of providing the length of the array. For example, the following code initializes <varname>arr</varname> to hold the values 1 through 10:
+            Each of the integers in the array <c>arr</c> are initialized to zero in the previous example. However, we can initialize them to hold arbitrary values by enumerating those values within curly braces instead of providing the length of the array. For example, the following code initializes <c>arr</c> to hold the values 1 through 10:
 
 
           <programlisting>int[] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};</programlisting>
@@ -2224,18 +2224,18 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         <subsubsection>
             <title>Length of an Array</title>
             <p>
-                The first operation to consider on arrays is how to determine the length of an array. This is similar to determining the length of a string, but instead of calling a method, the <varname>length</varname> field is accessed instead. For example, assuming the most recent definition of <varname>arr</varname>, the following expression will evaluate to <literal>10</literal>:
+                The first operation to consider on arrays is how to determine the length of an array. This is similar to determining the length of a string, but instead of calling a method, the <c>length</c> field is accessed instead. For example, assuming the most recent definition of <c>arr</c>, the following expression will evaluate to <c>10</c>:
 
           <programlisting>
                 arr.length
           </programlisting>
 
-                It is a very common mistake to include parentheses at the end of <varname>length</varname> for an array or to leave off parentheses at the end of <varname>length</varname> for a string because of this unfortunate inconsistency.
+                It is a very common mistake to include parentheses at the end of <c>length</c> for an array or to leave off parentheses at the end of <c>length</c> for a string because of this unfortunate inconsistency.
             </p>
         </subsubsection>
         <subsubsection>
             <title>Accessing an Array</title>
-            <p> The most important operation on arrays is retrieving a value from an array. This is very similar to the <varname>charAt</varname> instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent definition of <varname>arr</varname>, the following expression will evaluate to <literal>1</literal>:
+            <p> The most important operation on arrays is retrieving a value from an array. This is very similar to the <c>charAt</c> instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent definition of <c>arr</c>, the following expression will evaluate to <c>1</c>:
 
 <programlisting>arr[0]</programlisting>
 
@@ -2243,9 +2243,9 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         </subsubsection>
         <subsubsection>
             <title>Modifying an Array</title>
-            <p>Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value <literal>100</literal> to the first position in the array <varname>arr</varname>:
+            <p>Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value <c>100</c> to the first position in the array <c>arr</c>:
 <programlisting>arr[0] = 100;</programlisting>
-                Following this assignment statement, the following expression will evaluate to <literal>100</literal>:
+                Following this assignment statement, the following expression will evaluate to <c>100</c>:
 
           <programlisting>arr[0]</programlisting>
                       </p>
@@ -2253,7 +2253,7 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         <subsubsection>
             <title>Iterating through an Array</title>
             <p>
-                For loops are a very convenient way to process each element of an array. For example, the following code initializes <varname>arr</varname> to the values 1 through 10, but can be easily modified to have any upper limit:
+                For loops are a very convenient way to process each element of an array. For example, the following code initializes <c>arr</c> to the values 1 through 10, but can be easily modified to have any upper limit:
 
 <programlisting>
 int size = 10;
@@ -2286,7 +2286,7 @@ for(int i=0; i&lt;arr.length; i++) {
         </p>
 
         <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></programlisting>
-        <p>Inside of these curly braces is the class body in which its <firstterm>members</firstterm> are defined. Class members include method definitions, so we can include any of the method definitions we've been developing. If we make these methods static by including the <c>static</c> keyword before the method definition, we can use them like any other static method (such as <varname>max</varname> in the <varname>Math</varname> class). For instance, consider the following modification of the class definition above:
+        <p>Inside of these curly braces is the class body in which its <firstterm>members</firstterm> are defined. Class members include method definitions, so we can include any of the method definitions we've been developing. If we make these methods static by including the <c>static</c> keyword before the method definition, we can use them like any other static method (such as <c>max</c> in the <c>Math</c> class). For instance, consider the following modification of the class definition above:
         </p>
       <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text"/></programlisting>
         <p>Any other Java code we write, even in another file, could access this method as follows:
@@ -2300,7 +2300,7 @@ ExampleClassWithStaticMethod.sayHello();
 import static ExampleClassWithStaticMethod.sayHello;
 sayHello();
 </programlisting>
-<p>If we want to use import statements in a Java file, they must all come before the class definitions (unlike JShell, where we could use import statements at any time). For example, if we want to use the <varname>min</varname> from the <varname>Math</varname> class in a method inside a class we define, we could import it at the top of the file:
+<p>If we want to use import statements in a Java file, they must all come before the class definitions (unlike JShell, where we could use import statements at any time). For example, if we want to use the <c>min</c> from the <c>Math</c> class in a method inside a class we define, we could import it at the top of the file:
 </p>
 <programlisting>
 import static java.lang.Math.min;
@@ -2314,13 +2314,13 @@ public class ExampleClassWithImport {
     </subsection>
     <subsection>
         <title>Static Fields</title>
-        <p>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called <firstterm>fields</firstterm>. For example, we can create a variable called <varname>greeting</varname> to hold the message we use in the <varname>sayHello</varname> method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. <varname>greeting</varname> must also be declared static to be used as a general purpose method:
+        <p>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called <firstterm>fields</firstterm>. For example, we can create a variable called <c>greeting</c> to hold the message we use in the <c>sayHello</c> method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. <c>greeting</c> must also be declared static to be used as a general purpose method:
         </p>
         <programlisting><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text"/></programlisting>
     </subsection>
     <subsection>
         <title>Scope of Fields</title>
-        <p>Note that the variable <varname>greeting</varname> in the previous example is accessible in both of the static methods in the class. That is because the <firstterm>scope</firstterm> of the variable is the entire class definition body. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
+        <p>Note that the variable <c>greeting</c> in the previous example is accessible in both of the static methods in the class. That is because the <firstterm>scope</firstterm> of the variable is the entire class definition body. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
 
 <programlisting>
 ClassWithMultipleStaticMethods.sayHello();
@@ -2330,7 +2330,7 @@ ClassWithMultipleStaticMethods.sayHelloEmphatically();
 
         <subsubsection>
             <title>Constants</title>
-            <p>Because <varname>greeting</varname> is a member of the class, just like the <varname>sayHello</varname> method, it can be accessed from outside of the class as well. That means that the greeting could be modified from outside the class, such as in the following example:
+            <p>Because <c>greeting</c> is a member of the class, just like the <c>sayHello</c> method, it can be accessed from outside of the class as well. That means that the greeting could be modified from outside the class, such as in the following example:
             </p>
 
 <programlisting>
@@ -2420,7 +2420,7 @@ int addStuff(int x, int y)
     <p>A special type of block comment is a <firstterm>javadoc comment</firstterm>. These comments come before each method definition and describe in detail what the method does, including the roles of its parameters and a description of the method's return value (if any). Javadoc comments begin with a <c>/**</c> instead of a <c>/*</c>
     </p>
         <p>
-    Javadoc comments also have a special syntax for describing the parameters and return values. Within the Javadoc comment, a line beginning with <c>@return</c> will describe the return value and a line beginning with <c>@param</c> followed by the name of the parameter will describe one of the parameters. If you document your parameters in this way, you can also refer to your parameters in the rest of the comment with the following: <c>@code parameterName</c> where <varname>parameterName</varname> is the name of your parameter.
+    Javadoc comments also have a special syntax for describing the parameters and return values. Within the Javadoc comment, a line beginning with <c>@return</c> will describe the return value and a line beginning with <c>@param</c> followed by the name of the parameter will describe one of the parameters. If you document your parameters in this way, you can also refer to your parameters in the rest of the comment with the following: <c>@code parameterName</c> where <c>parameterName</c> is the name of your parameter.
         </p>
         <p>
     If you use the Javadoc comment format, HTML documentation for your code can be automatically generated. In fact, the API documentation pages we've used previously were all automatically generated from javadoc comments in the API source code!
