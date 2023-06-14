@@ -50,6 +50,8 @@
       <title>Unit 1: Programming Basics</title>
       <introduction>TODO: write me</introduction>
       
+      <xi:include href="./repls.ptx"/>
+      
       <section xml:id="simple-programs">
         <title>Basics of Programming in Java</title>
         <p>Hello</p>
