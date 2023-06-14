@@ -68,11 +68,8 @@
       <xi:include href="./code-organization.ptx"/>
 
       <xi:include href="./objects.ptx"/>
-   
-      <section xml:id="standard-input">
-        <title>Reading Input from the Keyboard</title>
-        <p>Hello</p>
-      </section>	
+
+      <xi:include href="./standard-io.ptx"/>
   
       <section xml:id="basic-errors">
         <title>Programming Errors</title>

@@ -1,0 +1,20 @@
+<section xml:id="booleans">
+        <title>Booleans</title>
+
+    <p>
+        The boolean type is a primitive data type and actually the most simple type because it has only two possible values: <c>true</c> and <c>false</c>. Both <c>true</c> and <c>false</c> are also literal boolean values, and <c>boolean</c> is the name of the type. For example, you can declare and initialize a boolean variable as follows:
+
+<program language="java"><input>
+boolean mybool = true;
+</input></program>
+
+        or simply
+
+<program language="java"><input>
+var mybool = true;
+</input></program>
+
+    </p>
+
+</section>
+
