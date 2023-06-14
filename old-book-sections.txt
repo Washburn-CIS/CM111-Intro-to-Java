@@ -302,6 +302,14 @@ str += "!";
 </p>
 
 </section>
+
+
+
+
+
+
+
+
 <section xml:id="section.while-loops">
     <info>
         <title>While Loops</title>
@@ -335,6 +343,18 @@ After the first iteration of the loop, count will increase by 1 and total will i
     </example>
     
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <section xml:id="section.for-loops">
@@ -405,6 +425,17 @@ for(int i=0; i &lt; message.length(); i = i + 1) {
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
 <section xml:id="section.for-each">
     <info>
         <title>For-Each Loops</title>
@@ -452,6 +483,14 @@ for(String name : new String[] { "Jane", "Billy", "Susie" }) {
 </input></program>
 </example>
 </section>
+
+
+
+
+
+
+
+
 
 
 <section xml:id="section.continue-statements">
@@ -516,6 +555,15 @@ provide a positive, even number:
 </section>
 
 
+
+
+
+
+
+
+
+
+
 <section xml:id="section.break-statements">
     <info>
         <title>Break Statements</title>
@@ -550,6 +598,17 @@ for(; i&lt; arr.length; i++) {
   </example>
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <section xml:id="section.switch-statements">
@@ -617,87 +676,6 @@ int getMinimumGrade(char letterGrade) {
 
 
 
-<section xml:id="section.nesting-if-statements">
-        <info>
-            <title>Nested If Statements</title>
-        </info>
-
-        <p>Any statement can be included in the body of an if statement, which means you can include an if statement inside an if statement! This is called a nested if statement.
-        </p>
-        <example>
-            <title>Nested if Statements to Determine Best Temperature</title>
-            <p>
-                The following method will return <c>true</c> <em>if</em> the <c>tempaerature</c> (an integer type variable) is between <c>68</c> and <c>72</c>:</p>
-
-
-            <program language="java"><input>
-<xi:include href="../../../examples/code/justRight.jsh" parse="text"/>
-</input></program>
-            <p>One thing to note about this example is that there are no <c>else</c> statements. There could be, but they aren't necessary since in all cases they would return <c>false</c>, which is also what the last statement of the method does.
-            </p>
-            <p>
-                Also notice that the nested if block is indented further than the block it is nested in. This is an important style convention that you should follow whenever opening nested blocks of code, not just with nested if statements.
-            </p>
-        </example>
-    </section>
-
-
-
-
-<section xml:id="section.if-else-chains">
-        <title>if/else Chains</title>
-
-    <p>When a situation calls for one of two kinds of action, we could use a if statement with an else statement following it. However, if there are more than two actions we might take, we can nest a new if statement inside of each else statement, forming a chain of if / else statements (ending in an else statement with no nested if statement). This way, rather than just two choices in the conditional statement, this if/else structure allows us to have 3 or more choices.</p>
-        <p>One issue with this level of nesting is that the code can become very complex if we're following the indentation conventions. For instance, if there were 10 different choices in an if/else chain (not unheard of), the last else statement would be indented at least 20 spaces!
-        </p>
-
-        <p>
-            To avoid this complexity in the code, there are coding conventions that dictate when you should use curly braces and how much you should indent to avoid very wide lines in your code, summarized in the figure above. Rather than opening a brace for each else statement, instead, when an else statement is followed by another if, no brace is opened and the if immediately follows the else on the same line. Then a brace is opened for the if statement and also the final trailing else statement.
-        </p>
- <example>
-     <title>Ice Cream Choices with if/else Chains</title>
-    <p>An application is being developed that can order an appropriate snack for you automatically. If the temperature outside is high, it will order an ice cream, and if the temperature is low, it will order a hot chocolate. Assume that there are two methods available that can order either of these foods. The code might look like this:
-    </p>
-<program language="java"><input>
-if ( temperature > 65 ) {
-  orderIceCream();
-} else {
-  orderHotChocolate();
-}
-</input></program>
-    <p>
-    Now consider that the application might also order popcorn if the temperature is more moderate. We would have to use a nested if statement to accomplish this:
-    </p>
-<program language="java"><input>
-if ( temperature > 80 ) {
-  orderIceCream();
-} else {
-  if (temperature > 50 ) {
-    orderPopcorn();
-  } else {
-    orderHotChocolate();
-  }
-}
-</input></program>
-    <p>
-    If we wanted to add, for example, 5 more snack options, this would become quite a mess, with many layers of nested if statements inside of else statements! Your code would be so far indented to the right, that it may begin to run over the length of the screen.
-    </p><p>
-    This is avoided by not opening a new curly brace for each if statement that immediately follows an else, and instead putting both on the same line. The body of the else then becomes the if statement that follows the else, and the following if statement is not indented further than the else that it follows. For example, we could re-write the code above this way:
-    </p>
-<program language="java"><input>
-if ( temperature > 80 ) {
-  orderIceCream();
-} else if (temperature > 50 ) {
-  orderPopcorn();
-} else {
-  orderHotChocolate();
-}
-</input></program>
- </example>
-    </section>
-    
-    
-    
     
     
     

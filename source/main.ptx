@@ -81,11 +81,8 @@
       <xi:include href="./if.ptx"/>	
 
       <xi:include href="./logic.ptx"/>	
-      
-      <section xml:id="advanced-conditionals">
-        <title>Advanced Conditional Statements</title>
-        <p>Hello</p>
-      </section>	
+
+      <xi:include href="./advanced-conditionals.ptx"/>	
    
       <section xml:id="file-input">
         <title>Reading Input from a File</title>
