@@ -2,7 +2,7 @@
         <title>Arithmetic Expressions</title>
     
     <p>
-        Expressions can be combined together to form a larger, more complex, compound expression. To combine two expressions, a <firstterm>binary operator</firstterm> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <firstterm>operands</firstterm>). For instance, + is a binary operator representing the addition operation. <c>5</c> is a numeric console> expression, and <c>5 + 5</c> is a more complex, compound expression using the addition operator that evaluates to the value <c>10</c>. 
+        Expressions can be combined together to form a larger, more complex, compound expression. To combine two expressions, a <term>binary operator</term> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <term>operands</term>). For instance, + is a binary operator representing the addition operation. <c>5</c> is a numeric console> expression, and <c>5 + 5</c> is a more complex, compound expression using the addition operator that evaluates to the value <c>10</c>. 
     </p>
     
     <p>

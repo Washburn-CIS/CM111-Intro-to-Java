@@ -6,7 +6,7 @@
         <title>Scope</title>
     </info>
     <p>
-      When writing larger programs, you will find that some variable definitions will only work as you expect them to in some parts of the program. This is because variable definitions are bound to a <firstterm>scope</firstterm> within the program. </p>
+      When writing larger programs, you will find that some variable definitions will only work as you expect them to in some parts of the program. This is because variable definitions are bound to a <term>scope</term> within the program. </p>
 
     <p>
       In Java, variable scopes are limited to the code blocks they're defined in. The extent of a code block is everything in between the block's opening and closing curly braces. Once a variable is defined inside the scope of a code block, it can be referenced on any succeeding line, including those in nested code blocks (additional code blocks defined inside of the code block in question).
@@ -68,7 +68,7 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     </info>
 
     <p>
-      Boolean expressions evaluate to one of two values: <c>true</c> or <c>false</c>. What if the programmer wanted an expression like this to evaluate to one of two other values? For example, what if the program was answering a question about whether it was hot outside and the user expected <c>"yes"</c> or <c>"no"</c> to be printed? A <firstterm>conditional expression</firstterm> builds on a boolean expression to provide this flexibility.
+      Boolean expressions evaluate to one of two values: <c>true</c> or <c>false</c>. What if the programmer wanted an expression like this to evaluate to one of two other values? For example, what if the program was answering a question about whether it was hot outside and the user expected <c>"yes"</c> or <c>"no"</c> to be printed? A <term>conditional expression</term> builds on a boolean expression to provide this flexibility.
     </p>
 
     <figure xml:id="fig.conditional-expression">
@@ -161,7 +161,7 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     </info>
 
         <p>
-            There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <firstterm>boolean operators</firstterm>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <firstterm>boolean algebra</firstterm>.
+            There are also operators that work strictly over boolean values, just as the arithmetic operators we used last week worked strictly over numeric values. These are called <term>boolean operators</term>. They operate over one or two boolean values and evaluate to another boolean value.  These operations are quite simple but form the basis for what is known as <term>boolean algebra</term>.
         </p><p> The first operator we'll consider is the and operator: <c>&amp;&amp;</c>. This is a
             boolean operator that evaluates to <c>true</c> only when both the left and
             right operands also evaluate to <c>true</c>. For example:
@@ -189,7 +189,7 @@ true &amp;&amp; true
         </p>
 
         <p>
-          Another feature of boolean operators that you should be mindful of is called <firstterm>short circuiting</firstterm>. The operands of <c>&amp;&amp;</c> and <c>||</c> are evaluated in order from left to right. If the left operand evaluates to <c>false</c> for  <c>&amp;&amp;</c>  or if the left operand evaluates to <c>true</c> for  <c>||</c>, the right operand is never evaluated. This is because it doesn't matter what value this operand evaluates to --  a <c>&amp;&amp;</c> expression would evaluate to <c>false</c> and a <c>||</c> expression would evaluate to <c>true</c> in these scenarios regardless of what value the right operand evalutes to.
+          Another feature of boolean operators that you should be mindful of is called <term>short circuiting</term>. The operands of <c>&amp;&amp;</c> and <c>||</c> are evaluated in order from left to right. If the left operand evaluates to <c>false</c> for  <c>&amp;&amp;</c>  or if the left operand evaluates to <c>true</c> for  <c>||</c>, the right operand is never evaluated. This is because it doesn't matter what value this operand evaluates to --  a <c>&amp;&amp;</c> expression would evaluate to <c>false</c> and a <c>||</c> expression would evaluate to <c>true</c> in these scenarios regardless of what value the right operand evalutes to.
         </p>
         <p>
           For the most part, this just means that your programs will run a bit more efficiently, since only have of the work needs to be done to evaluate these expressions at times. However, if an error or a side effect occurs while evaluating the right operand, it is important for the programmer to know that it will not occur when the left operand is not evaluated due to short circuiting. The programmer can also take advantage of this. For example, consider a scenario where the variable <c>students</c> is the number of students in a class and the variable <c>cupcakes</c> is the number of cupcakes the instructor brought with them. If we want to determine whether there are enough cupcakes for each student to have at least 2, we could use the following boolean expression:
@@ -207,9 +207,9 @@ true &amp;&amp; true
     </info>
     <p>
         <termdef xml:id="term.statement">
-            A <firstterm>statement</firstterm> is essentially a single instruction.
+            A <term>statement</term> is essentially a single instruction.
         </termdef>
-        This is a fairly abstract definition, but statements serve many purposes in imperative programming languages like Java and can embody simple or complex instructions. The main difference between a statement and what we've seen with expressions is that statements don't evaluate to some value. Instead, they <em>do something</em> to the state of the computing environment. For instance, they may alter the value of a variable or print something to the screen. These actions are referred to as <firstterm>side effects</firstterm> and are the heart of imperative programming.
+        This is a fairly abstract definition, but statements serve many purposes in imperative programming languages like Java and can embody simple or complex instructions. The main difference between a statement and what we've seen with expressions is that statements don't evaluate to some value. Instead, they <em>do something</em> to the state of the computing environment. For instance, they may alter the value of a variable or print something to the screen. These actions are referred to as <term>side effects</term> and are the heart of imperative programming.
     </p>
     <p>
         Syntactically, statements will vary, but for the most part end with a semicolon (similar to the period at the end of a sentence in English).  A very simple statement consists of an expression followed by semicolon. For example, the hello world example we started with mostly fits this pattern:
@@ -225,7 +225,7 @@ true &amp;&amp; true
     </info>
 
 
-    <p>Not every method will need to return a value. Some methods simply perform some side effects (that is, they alter the global state of the program in some way), and exit, yielding no return value. These methods are called <firstterm>void methods</firstterm> in that their return value is void (that is, there is no value at all). </p>
+    <p>Not every method will need to return a value. Some methods simply perform some side effects (that is, they alter the global state of the program in some way), and exit, yielding no return value. These methods are called <term>void methods</term> in that their return value is void (that is, there is no value at all). </p>
 
     <p>Method call statements are very similar to method call expressions. The only difference is that they are the entire statement and end in a semicolon. For more information about how to make a method call, refer to the method call expression section</p>
 
@@ -251,7 +251,7 @@ Hello World!
         <title>Declaration Statements</title>
     </info>
     
-    <p>Declaration statements are used to define new variables. In contrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <firstterm>Java identifiers</firstterm>. 
+    <p>Declaration statements are used to define new variables. In contrast to the automatically generated variables we saw when evaluating expressions with the REPL, declaration statements allow us to create variables with any legal name we wish. Variable names must be legal <term>Java identifiers</term>. 
     </p>
     <p>There are several places you'll see identifiers in Java. Identifiers can simply be thought of as the names of things in a Java program. There are some rules about which names are legal, since some names might be interpreted as instructions or other parts of the program if they're not written properly. Here are the Java identifier rules:</p>
 
@@ -263,13 +263,13 @@ Hello World!
 
         <p>If you deviate from those rules, you end up with an error. For example, Identifiers can contain digits, but they cannot begin with one. Thus <c>x5</c> is a legal variable name, <c>5x</c> is not. </p>
 
-        <p>Note that the variable <c>reallylongvariablename</c> is legal, but is also somewhat difficult to read. The same identifier might appear dozens of times in a program and a long one such as this will become tedious for the programmer to read and type! For this reason, there are <firstterm>conventions</firstterm> in Java that dictate the proper way to name variables. <c>reallylongvariablename</c> is not an error, but it does break a variable naming convention in Java known as called <firstterm>camel case</firstterm>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <c>reallyLongVariableName</c>. Notice that this is a bit easier to read?
+        <p>Note that the variable <c>reallylongvariablename</c> is legal, but is also somewhat difficult to read. The same identifier might appear dozens of times in a program and a long one such as this will become tedious for the programmer to read and type! For this reason, there are <term>conventions</term> in Java that dictate the proper way to name variables. <c>reallylongvariablename</c> is not an error, but it does break a variable naming convention in Java known as called <term>camel case</term>. In camel case, you don't include spaces between words, but you capitalize each successive word. We must do this for identifiers consisting of multiple words since spaces are not allowed in identifiers. Furthermore, for variable names in Java, by convention the first word is not capitalized. Considering these conventions, a proper identifier we could use as a variable name would be <c>reallyLongVariableName</c>. Notice that this is a bit easier to read?
 </p>
      <p>All conscientious programmers also try to use identifiers that are meaningful and help explain the purpose of a definition. For example, if you want to average the values of three exam scores, you might call each of the variables holding the exam scores <c>exam1</c>, <c>exam2</c>, and <c>exam3</c> instead of <c>x</c>, <c>y</c>, and <c>z</c>, and you might call the variable holding the average <c>averageExamScore</c> or perhaps simply <c>average</c>.
         </p>
 
     <p>
-      In order to use a variable in Java, you must declare that it exists using a <firstterm>declaration statement</firstterm>. 
+      In order to use a variable in Java, you must declare that it exists using a <term>declaration statement</term>. 
         
         <figure xml:id="fig.declaration-statement">
             <title>Anatomy of a Declaration Statement</title>
@@ -327,7 +327,7 @@ Hello World!
     
     <p> 
         <termdef xml:id="term.initialization">
-            When a variable is assigned its first (initial) value, we say that the variable has been <firstterm>initialized</firstterm>.
+            When a variable is assigned its first (initial) value, we say that the variable has been <term>initialized</term>.
         </termdef>
         Variables must be initialized before they can be used in another part of a program, and variables must be declared before they can be initialized. In the previous example, two statements were used for these two tasks, respectively. However variables can be declared and initialized in a single statement, which saves the programmer some typing. These combination statements take the following form:
         
@@ -358,7 +358,7 @@ Hello World!
                 </mediaobject>
             </figure>
         
-        Note that the only difference between this diagram and the previous one is the <c>var</c> keyword in place of the variable type. This is one of several ways that the Java maintainers have recently integrated <firstterm>type inference</firstterm>. When the term type inference is used, it means that the programmer won't need to explicitly name a type of a variable when the proper type is obvious from context. Note that the type is still static (that is, you can't later change the type of the variable). Though either form of these initialization statements are acceptable, type inference has made Java a little less wordy and a little easier on programmers, so as long as you're using a more recent version of Java (in this case, Java 10 or later), the latter syntax is preferred in most cases. 
+        Note that the only difference between this diagram and the previous one is the <c>var</c> keyword in place of the variable type. This is one of several ways that the Java maintainers have recently integrated <term>type inference</term>. When the term type inference is used, it means that the programmer won't need to explicitly name a type of a variable when the proper type is obvious from context. Note that the type is still static (that is, you can't later change the type of the variable). Though either form of these initialization statements are acceptable, type inference has made Java a little less wordy and a little easier on programmers, so as long as you're using a more recent version of Java (in this case, Java 10 or later), the latter syntax is preferred in most cases. 
     </p>
     
     <xi:include href="../../examples/assignment-and-declaration-statement.xml"/>
@@ -451,7 +451,7 @@ While loops are a lot like if statements. In fact, they have a nearly identical 
     
     <p>While loops start with the <c>while</c> keyword, and then a boolean expression in parentheses, and then a block of code (a series of statements surrounded by curly braces) or a single statement. The only difference is that when this block of code or single statement completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
 </p><p>
-    Now you may be concerned by the word <em>indefinitely</em>, and you should be -- it's a distinct possibility that a while loop can run <em>forever</em>. However, after each <firstterm>iteration</firstterm> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <c>false</c> when you don't want the loop executing anymore. 
+    Now you may be concerned by the word <em>indefinitely</em>, and you should be -- it's a distinct possibility that a while loop can run <em>forever</em>. However, after each <term>iteration</term> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <c>false</c> when you don't want the loop executing anymore. 
 </p>
     
     <example><title>Counting with a While Loop</title>
@@ -504,7 +504,7 @@ Since nearly every while loop that we write contains these three components, and
         </mediaobject>
     </figure>
 
-<p><firstterm>for loops</firstterm> start with the <c>for</c> keyword and a pair of parentheses, just like a while loop, but inside the parentheses is first an expression (ending in a semicolon) that is executed before the loop starts, secondly a boolean expression (the same as the looping condition for the while loop), also ending in a semicolon, and finally a statement that is executed at the end of each loop (typically incrementing a variable). The last statement doesn't have a semicolon following it, but all three should be within the parentheses. The rest is identical to a while loop. </p>
+<p><term>for loops</term> start with the <c>for</c> keyword and a pair of parentheses, just like a while loop, but inside the parentheses is first an expression (ending in a semicolon) that is executed before the loop starts, secondly a boolean expression (the same as the looping condition for the while loop), also ending in a semicolon, and finally a statement that is executed at the end of each loop (typically incrementing a variable). The last statement doesn't have a semicolon following it, but all three should be within the parentheses. The rest is identical to a while loop. </p>
 
 <example><title>Totaling Numbers with a For Loop</title>
 <p>Consider the following while loop which adds the numbers between 1 and 10:
@@ -528,7 +528,7 @@ for(int count = 1; count &lt;= 10; count = count + 1) {
 }
 </programlisting></example>
 
-    <p>Because code written with while loops and for loops perform the exact same task, we call for loops <firstterm>syntactic sugar</firstterm>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding style.</p>
+    <p>Because code written with while loops and for loops perform the exact same task, we call for loops <term>syntactic sugar</term>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding style.</p>
 
 <example><title>Iterate Through a String</title>
     <p>The following code will print each character of the string <c>message</c>, one character per line:
@@ -549,7 +549,7 @@ for(int i=0; i &lt; message.length(); i = i + 1) {
         <title>For-Each Loops</title>
     </info>
 
-<p>While loops used to iterate over an array often looked very similar, so for loops were introduced as a more concise way to handle the task. <firstterm>For-Each Loops</firstterm> were introduced in Java 5 as an even more concise way to deal with these tasks, and are preferred whenever the programmer intends to iterate over each element of an array <em>sequentially</em> (that is, starting with the first, then the second, and so on until the last element).
+<p>While loops used to iterate over an array often looked very similar, so for loops were introduced as a more concise way to handle the task. <term>For-Each Loops</term> were introduced in Java 5 as an even more concise way to deal with these tasks, and are preferred whenever the programmer intends to iterate over each element of an array <em>sequentially</em> (that is, starting with the first, then the second, and so on until the last element).
 </p>
 
     <p>
@@ -599,7 +599,7 @@ for(String name : new String[] { "Jane", "Billy", "Susie" }) {
     </info>
 
         <p>
-          <firstterm>continue statements</firstterm> can be used within a loop when the remainder of the loop should not be executed, but the loop should not be terminated as it would be with a <c>break</c> statement. When a <c>continue</c> statement is executed, the enclosing loop will cease executing its current iteration and then resume execution with the next iteration of the loop. Note that, if a <c>continue</c> statement is encountered in a <c>for</c> loop, the update statement will still execute before the next iteration of the loop begins.
+          <term>continue statements</term> can be used within a loop when the remainder of the loop should not be executed, but the loop should not be terminated as it would be with a <c>break</c> statement. When a <c>continue</c> statement is executed, the enclosing loop will cease executing its current iteration and then resume execution with the next iteration of the loop. Note that, if a <c>continue</c> statement is encountered in a <c>for</c> loop, the update statement will still execute before the next iteration of the loop begins.
         </p>
 
         <p><c>continue</c> statements are very simple in their syntax. They consist of just a single keyword (<c>continue</c>) followed by a semicolon:
@@ -660,7 +660,7 @@ provide a positive, even number:
         <title>Break Statements</title>
     </info>
 
-    <p>Loops don't need to be terminated only when the loop condition becomes false. A loop can be terminated early by using a <firstterm>break statement</firstterm> inside of the loop. When a <c>break</c> statement is encountered, the enclosing loop will immediately terminate and execution will resume just after the closing brace of the
+    <p>Loops don't need to be terminated only when the loop condition becomes false. A loop can be terminated early by using a <term>break statement</term> inside of the loop. When a <c>break</c> statement is encountered, the enclosing loop will immediately terminate and execution will resume just after the closing brace of the
       loop.
     </p>
 
@@ -696,17 +696,17 @@ for(; i&lt; arr.length; i++) {
             <title>Switch Statements</title>
         </info>
 
-        <p>If each of the <c>if</c> statements in an if/else chain are simply comparing some expression to one of several literal values, there is a special syntax in Java called a <firstterm>switch</firstterm> statement that can be used instead. In some of these cases, this will be a little easier to read and more efficient.
+        <p>If each of the <c>if</c> statements in an if/else chain are simply comparing some expression to one of several literal values, there is a special syntax in Java called a <term>switch</term> statement that can be used instead. In some of these cases, this will be a little easier to read and more efficient.
         </p>
 
 
         <p>
             The syntax for switch statements is a little trickier than the other conditional statements we've seen. Following the <c>switch</c> keyword is an expression in parentheses, but it won't be a boolean expression. Instead, it can be any other type of primitive or String value. This value will be compared against a number of literal values inside of the switch statement body, which follows.</p><p>
-            The body is contained within a pair of curly braces and consists of a series of <firstterm>case statements</firstterm>. Each case statement begins with the <c>case</c> keyword, followed by the literal value that the resulting value from the original expression at the head of the switch statement will be compared to, and then a colon. Following that will be a series of statements. Curly braces are not necessary.
+            The body is contained within a pair of curly braces and consists of a series of <term>case statements</term>. Each case statement begins with the <c>case</c> keyword, followed by the literal value that the resulting value from the original expression at the head of the switch statement will be compared to, and then a colon. Following that will be a series of statements. Curly braces are not necessary.
         </p><p>
-            Note that after a case statement is complete, the next case statement will be executed! Unless this is intentional, you must explicitly end the switch statement using a <firstterm>break statement</firstterm>. This is simply the keyword <c>break</c> followed by a semicolon. Break statements are not needed if a return statement is used, since execution of the enclosing method will end at that point anyway.
+            Note that after a case statement is complete, the next case statement will be executed! Unless this is intentional, you must explicitly end the switch statement using a <term>break statement</term>. This is simply the keyword <c>break</c> followed by a semicolon. Break statements are not needed if a return statement is used, since execution of the enclosing method will end at that point anyway.
         </p><p>
-            One last important feature of the switch statement syntax is the <firstterm>default case</firstterm> which can handle the case where the value we get back from the initial expression doesn't match any of the literal values in the cases. A switch statement without a default case will simply do nothing. </p>
+            One last important feature of the switch statement syntax is the <term>default case</term> which can handle the case where the value we get back from the initial expression doesn't match any of the literal values in the cases. A switch statement without a default case will simply do nothing. </p>
         <p>There is a special syntax for defining the default case. Default cases look like the other case statements, but they use the keyword <c>default</c> instead of <c>case</c> and are immediately followed by a colon instead of some literal value to compare with.
         </p>
 
@@ -817,7 +817,7 @@ int getMinimumGrade(char letterGrade) {
     <p>
         The first if statement does nothing. y is not greater than x at this point, so the assignment statement that follows it (<c>x = 30;</c>) does not execute. The second if statement will set the variable <c>y</c> to the value 20. Since <c>x</c> is greater than <c>y</c>, the statement (<c>y = 20;</c>) will be executed.
     </p><p>
-        More than one statement can be conditionally executed in an if statement. In fact, you can include as many as you like by opening up a <firstterm>block</firstterm> of code using curly braces surrounding each of the conditionally executed statements.
+        More than one statement can be conditionally executed in an if statement. In fact, you can include as many as you like by opening up a <term>block</term> of code using curly braces surrounding each of the conditionally executed statements.
     </p>
 
     <figure xml:id="fig.if-statement">
@@ -844,7 +844,7 @@ if (x > y) {
         There are a couple important points to keep in mind about code blocks. First, notice that there is no semicolon at the end of the block of code following the closing curly brace. Even though we say there is an if <em>statement</em> here, the if portion doesn't actually have a semicolon on the end. Including a semicolon following the if portion of this code snippet is actually a common error that can be difficult to debug (the body of the if would always execute in this case and no error message would be given).
     </p>
     <p>
-        Another important consideration is style. Note that all of the statements inside of the block are indented. This is an important convention in Java that makes the code much easier to read. Soon you will be including blocks of code inside of blocks of code, and each should be further indented, helping the programmer to see how deeply <firstterm>nested</firstterm> the blocks of code are. Typically each nested statement is indented two spaces. Sometimes a tab or four spaces is used instead, but this can become a problem with larger programs. Whatever choice you make, the most important consideration is that you use consistent indentation throughout your program.
+        Another important consideration is style. Note that all of the statements inside of the block are indented. This is an important convention in Java that makes the code much easier to read. Soon you will be including blocks of code inside of blocks of code, and each should be further indented, helping the programmer to see how deeply <term>nested</term> the blocks of code are. Typically each nested statement is indented two spaces. Sometimes a tab or four spaces is used instead, but this can become a problem with larger programs. Whatever choice you make, the most important consideration is that you use consistent indentation throughout your program.
     </p>
 </section>
 
@@ -985,7 +985,7 @@ if ( temperature > 80 ) {
         <title>Standard Input / Output</title>
     </info>
 
-<p>The programs you write will need to be able to interact with a user and thus require some sort of <firstterm>user interface</firstterm>. A text-based user interface (or command-line interface) is a very simple and straight forward way to start interacting with the users of your programs by printing information to the screen for the user in text format and taking in data when the user types something at the keyboard. JShell is an excellent example of a program that uses a text-based user interface. This was a very popular style of application on older computer systems in the 90's and earlier but has remained relevant and has perhaps even gained popularity more recently.
+<p>The programs you write will need to be able to interact with a user and thus require some sort of <term>user interface</term>. A text-based user interface (or command-line interface) is a very simple and straight forward way to start interacting with the users of your programs by printing information to the screen for the user in text format and taking in data when the user types something at the keyboard. JShell is an excellent example of a program that uses a text-based user interface. This was a very popular style of application on older computer systems in the 90's and earlier but has remained relevant and has perhaps even gained popularity more recently.
 </p>
     <p>Now that you've had experience with characters and strings, you can use these data types to send messages back and forth with the user.
     </p>
@@ -993,7 +993,7 @@ if ( temperature > 80 ) {
     <subsection>
         <title>Reading from Standard Input</title>
         <p>
-            A text-based application writes to <firstterm>standard output</firstterm> to communicate something to the user. You've already seen how to do this in the "Hello World!" example. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce <c>Scanner</c> objects which allow you to read messages from <firstterm>standard input</firstterm>.
+            A text-based application writes to <term>standard output</term> to communicate something to the user. You've already seen how to do this in the "Hello World!" example. What you haven't seen yet is how to receive a response from the user while your program is running. This chapter will introduce <c>Scanner</c> objects which allow you to read messages from <term>standard input</term>.
         </p>
 
         <p>To create a scanner, you need to provide it with an <c>InputStream</c> object to read data in from. Java prepares an input stream that will read data from the standard input (usually the keyboard, though it's a bit more complicated than that) and stores it in <c>System.in</c>, so simply provide that as the argument to the constructor for the <c>Scanner</c> class. The example below creates a scanner object stored in a variable named <c>in</c>:
@@ -1002,7 +1002,7 @@ if ( temperature > 80 ) {
 var in = new Scanner(System.in);
 </programlisting>
 
-		Now we need to do something with the scanner! A line of input can be read in from the user by calling the <c>nextLine</c> instance method. Note that this is a method that <firstterm>blocks</firstterm>, meaning that execution of your program will halt at the point that this method is called and will not resume until the user hits the enter key. This method has a return value of type <c>String</c>. The string that it returns will be whatever the user typed in. For example, running the following program will ask the user to type something in, and then will simply repeat it back to them:
+		Now we need to do something with the scanner! A line of input can be read in from the user by calling the <c>nextLine</c> instance method. Note that this is a method that <term>blocks</term>, meaning that execution of your program will halt at the point that this method is called and will not resume until the user hits the enter key. This method has a return value of type <c>String</c>. The string that it returns will be whatever the user typed in. For example, running the following program will ask the user to type something in, and then will simply repeat it back to them:
 <programlisting>
 var in = new Scanner(System.in);
 print("Please enter a message: ");
@@ -1078,11 +1078,11 @@ $1 ==> 5
 </console>
     
     <p>The <c>$1</c> that you see indicates the name of an automatically generated variable. 
-        <termdef xml:id="term.variable"> A <firstterm>variable</firstterm> is a named portion of computer memory that holds a single value. </termdef> 
+        <termdef xml:id="term.variable"> A <term>variable</term> is a named portion of computer memory that holds a single value. </termdef> 
         In this case, the value <c>5</c> is stored in computer memory at a location accessible with the variable name <c>$1</c>. 
         </p>
     
-    <p>Variables in programming are similar to the idea of a variable you've seen in algebra. In algebra, the variable  represents an unknown quantity. Likewise, when you write a program, you may not know what value a variable you're using will eventually hold. However, at the time when your program is running (known as <firstterm>run time</firstterm>), the variable's value will be known to the computer, just as the        value of a variable in algebra is known when you solve an equation. </p>
+    <p>Variables in programming are similar to the idea of a variable you've seen in algebra. In algebra, the variable  represents an unknown quantity. Likewise, when you write a program, you may not know what value a variable you're using will eventually hold. However, at the time when your program is running (known as <term>run time</term>), the variable's value will be known to the computer, just as the        value of a variable in algebra is known when you solve an equation. </p>
     
     <p>When you type an expression in to the REPL, another variable will be automatically generated to hold the value. For instance:</p>
 <console>
@@ -1094,7 +1094,7 @@ $2 ==> 9
 </console>
 
 <p>
-    Variables aren't just used for storing values but can also be used to retrieve values. A <firstterm>variable expression</firstterm> is simply the name of a variable and evaluates to the value held by the variable. For example:
+    Variables aren't just used for storing values but can also be used to retrieve values. A <term>variable expression</term> is simply the name of a variable and evaluates to the value held by the variable. For example:
 <console>
 <prompt>jshell> </prompt><input>5</input>
 $1 ==> 5
@@ -1138,7 +1138,7 @@ $3 ==> 14
     </info>
 
     <p>
-    	Together, a collection of statements comprises an imperative computer <firstterm>program</firstterm>. Even one statement by itself can be a program (such as the hello world example). However, typing each of these statements in to the REPL is tedious. Any useful programming language has a means to easily store and run programs.
+    	Together, a collection of statements comprises an imperative computer <term>program</term>. Even one statement by itself can be a program (such as the hello world example). However, typing each of these statements in to the REPL is tedious. Any useful programming language has a means to easily store and run programs.
     </p>
 
     <subsection>
@@ -1147,7 +1147,7 @@ $3 ==> 14
 <programlisting>
 /save myscript.jsh
 </programlisting>
-    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <firstterm>script</firstterm>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load and execute a script you've previously saved in JShell by typing in the following command:
+    	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <term>script</term>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load and execute a script you've previously saved in JShell by typing in the following command:
 <programlisting>
 /open myscript.jsh
 </programlisting>
@@ -1206,7 +1206,7 @@ $3 ==> 14
     </info>
     
     <p>
-        There are many ways to categorize programming languages. For instance, some programming languages are called <em>object-oriented</em>, <em>functional</em>, or <em>statically typed</em>, to name a few, and many of these categories overlap. An important category, as it relates to teaching Java to a beginning programmer, is that of <firstterm>scripting languages</firstterm>. This is important because Java has never in the past been considered one <footnote><p>Do not confuse Java with Javascript, which is an entirely different language and is indeed a scripting language.</p></footnote>, and this has led to problems when introducing it to someone who has never programmed before.
+        There are many ways to categorize programming languages. For instance, some programming languages are called <em>object-oriented</em>, <em>functional</em>, or <em>statically typed</em>, to name a few, and many of these categories overlap. An important category, as it relates to teaching Java to a beginning programmer, is that of <term>scripting languages</term>. This is important because Java has never in the past been considered one <footnote><p>Do not confuse Java with Javascript, which is an entirely different language and is indeed a scripting language.</p></footnote>, and this has led to problems when introducing it to someone who has never programmed before.
     </p>
     <p> A scripting language is one that is intended for quickly writing short, ad-hoc programs that perform a simple task, possibly only once. An important tool for working with a scripting language is a <acronym>REPL</acronym> (Read Evaluate Print Loop). A REPL allows you to run small snippets of a program, one at a time, and observe what the computer does in real time. This way the programmer can quickly react, correct errors, and experiment. This functionality is of obvious importance to a new programmer learning how to use the language. </p>
     <p> Java has long been infamous for its <em>wordiness</em>. That is, it took a lot of typing to say anything meaningful. For example, the first program most introductory programming books show the reader is <em>Hello World!</em> -- a program that simply prints these words to the screen. In Java, this required the programmer to write 5 lines of code. This degree of wordiness is essentially the opposite of the goal of a scripting language.
@@ -1224,7 +1224,7 @@ $3 ==> 14
             <textobject><phrase>The Hello World! example with the JShell REPL</phrase></textobject>
         </mediaobject>
     </figure>
-        JShell is an example of a command-line program run from the system terminal. You can see in the figure that the first thing JShell did after I started it up was to welcome me and indicate what version is running. After that you see the <firstterm>command prompt</firstterm>. <prompt>jshell&gt;</prompt>  At that prompt I typed <c>println("Hello World!");</c> which is a snippet of Java that instructs the computer to print the same message back to me. JShell read this snippet in from me (the R for read in REPL), then did as it was instructed (the E for evaluate and P for Print steps). You can see the JShell REPL complying with that command below and then returning me to the command prompt for another command (L for loop -- after each command, it waits for another, looping indefinitely).
+        JShell is an example of a command-line program run from the system terminal. You can see in the figure that the first thing JShell did after I started it up was to welcome me and indicate what version is running. After that you see the <term>command prompt</term>. <prompt>jshell&gt;</prompt>  At that prompt I typed <c>println("Hello World!");</c> which is a snippet of Java that instructs the computer to print the same message back to me. JShell read this snippet in from me (the R for read in REPL), then did as it was instructed (the E for evaluate and P for Print steps). You can see the JShell REPL complying with that command below and then returning me to the command prompt for another command (L for loop -- after each command, it waits for another, looping indefinitely).
     </p>
     
     <p>
@@ -1239,7 +1239,7 @@ $3 ==> 14
         <title>Command-Line Arguments</title>
     </info>
     <p>
-Though you should understand what the type <c>String[]</c> means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any <firstterm>command-line arguments</firstterm> that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to <em>javac</em> itself!
+Though you should understand what the type <c>String[]</c> means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any <term>command-line arguments</term> that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to <em>javac</em> itself!
     </p>
     <p>
 Consider the following example program:
@@ -1286,7 +1286,7 @@ arguments
     <subsection>
         <title>Main Methods</title>
         <p>
-        To run a java application, you must provide the Java runtime environment (JRE) with the name of a class representing a Java application. The JRE will then search for one particular static method called <c>main</c> and execute it. This is called the <firstterm>entry point</firstterm> to the application.
+        To run a java application, you must provide the Java runtime environment (JRE) with the name of a class representing a Java application. The JRE will then search for one particular static method called <c>main</c> and execute it. This is called the <term>entry point</term> to the application.
       </p>
       <p>
         The JRE is very picky about how <c>main</c> should be defined. Firstly, the name must be exact -- <c>main</c> must not be capitalized or otherwise misspelled. Next, the method (like the class definition) must be declared to be public. It also must be a static method, so both of these keywords need to preceed the rest of the method definition (typically public comes first, but the order is more of a style issue). Next, the return type of the method must be void. Finally, the method must have one parameter. The parameter can be named anything you want, though by convention it is given the name <c>args</c>. What is important is that the type of this parameter is an array of strings:  <c>String[]</c>.
@@ -1330,7 +1330,7 @@ arguments
         <title>Code Organization</title>
     </info>
 
-        <p>Programmers rarely write their programs from scratch. Nearly all programs are written to take advantage of some pre-existing code that handles common tasks. This way programmers don't need to repeat themselves whenever they need to sort a list of numbers or print something to the screen. In this section, we'll explore how this code is organized in to an <firstterm>Application Programming Interface</firstterm> (or API), and how Java specifically organizes their API. </p>
+        <p>Programmers rarely write their programs from scratch. Nearly all programs are written to take advantage of some pre-existing code that handles common tasks. This way programmers don't need to repeat themselves whenever they need to sort a list of numbers or print something to the screen. In this section, we'll explore how this code is organized in to an <term>Application Programming Interface</term> (or API), and how Java specifically organizes their API. </p>
 
 
     <subsection><title>The Java API</title>
@@ -1366,7 +1366,7 @@ arguments
 
       <p>When you click on an individual class in the documentation, you will find a description of its purpose and descriptions of its individual members. For example, let's look at the <c>Math</c> class. Note that at the top of the page, it is identified as the Class <c>Math</c> but also as <c>java.lang.Math</c> below that. Technically, this longer name is the full-name of the class and can be referenced at any point in your program as the name of this class. It has two important kinds of members we'll look at: static fields and static methods. </p>
 
-      <p>A <firstterm>static</firstterm> field (or method) is one that can be referenced directly from the class. Other fields and methods (called instance fields and instance methods) that you'll see in other sections of this book need to be referenced in a more complicated way because they will be part of an object (again, objects are covered in much more detail in other sections of this book). Static fields and static methods sit outside of the Object-Oriented nature of Java, and more so resemble plain variables and functions that you might see in any other programming language. Until you reach the sections that focus more on objects and object-oriented programming, you'll only really need to look at the methods and fields of classes that have the <c>static</c>  keyword before their descriptions.</p>
+      <p>A <term>static</term> field (or method) is one that can be referenced directly from the class. Other fields and methods (called instance fields and instance methods) that you'll see in other sections of this book need to be referenced in a more complicated way because they will be part of an object (again, objects are covered in much more detail in other sections of this book). Static fields and static methods sit outside of the Object-Oriented nature of Java, and more so resemble plain variables and functions that you might see in any other programming language. Until you reach the sections that focus more on objects and object-oriented programming, you'll only really need to look at the methods and fields of classes that have the <c>static</c>  keyword before their descriptions.</p>
 
       <p>You can think of fields as a special kind of variable that is organized within a class.  Static fields are typically constants (that is, they cannot be changed). Note that there are two fields in the <c>Math</c> class: <c>E</c> and <c>PI</c>, which contain estimates of these two famous mathematical constants. Note that they are only estimates because both of these constants are infinite, non-repeating decimals. Variables in general are covered in more detail in another section of this book.</p>
 
@@ -1380,7 +1380,7 @@ arguments
     <subsection><title>Import Statements</title>
     	<p>Referring to static members of a class using their full name can be tedious. Often you will want to simply refer to them with their short name, like <c>PI</c> in the <c>Math</c> class rather than <c>java.lang.Math.</c><c>PI</c>. One of the main purposes of packages is to prevent name conflicts, but we can selectively bring in names of individual classes or individual members of classes by importing them. If we only import the classes or members of classes we need, we shouldn't have to worry about name conflicts. </p>
 
-      <p>To import a class, you will need to use an <firstterm>import statement</firstterm>. Import statements begin with the <c>import</c> keyword, followed by the full name of a class (that is, the short name of the class preceded by the name of the package it belongs to), and ending with a semicolon. Importing a class allows us to refer to that class using only its short name. For example, if we imported the <c>Math</c> class with the following import statement:
+      <p>To import a class, you will need to use an <term>import statement</term>. Import statements begin with the <c>import</c> keyword, followed by the full name of a class (that is, the short name of the class preceded by the name of the package it belongs to), and ending with a semicolon. Importing a class allows us to refer to that class using only its short name. For example, if we imported the <c>Math</c> class with the following import statement:
 <programlisting>import java.lang.Math;</programlisting>
       We could simply refer to the constant <c>PI</c> with the following expression:
 <programlisting>Math.PI</programlisting>
@@ -1536,7 +1536,7 @@ Since Java 5, variable number of arguments has been supported in Java, allowing 
         <title>Overloading Method Parameters</title>
     </info>
 
-<p>What if the programmer wanted to develop a method that could take more than one type of argument? You may have noticed in the past that the <c>abs</c> method in the <c>Math</c> class works with either <c>int</c> values or <c>double</c> values. That is because there are two different implementations of this method, one for each of these parameter data types. This is called <firstterm>overloading</firstterm>.
+<p>What if the programmer wanted to develop a method that could take more than one type of argument? You may have noticed in the past that the <c>abs</c> method in the <c>Math</c> class works with either <c>int</c> values or <c>double</c> values. That is because there are two different implementations of this method, one for each of these parameter data types. This is called <term>overloading</term>.
 </p>
     <p>
 Methods in Java are not identified by their name alone. If you were to call <c>Math.abs(5)</c>, the Java compiler will search for a method named <c>abs</c> that has exactly one parameter of type <c>int</c> to bind this call to. There may be another method named <c>abs</c> that has a parameter of type <c>double</c>, or more than one parameter, or no parameters, etc..
@@ -1580,7 +1580,7 @@ abs(-5.0);
     </p>
     
     <p>
-        Method definitions are a bit more involved than our previous topics. Methods take data (arguments) as input (through <firstterm>parameters</firstterm>) and return data as output (called the <firstterm>return value</firstterm>). The data types for both a method's input and output must be specified (similar to how you could specify the data type when you create a variable, though in this case it's required). Below is a diagram of the syntax of a method definition.
+        Method definitions are a bit more involved than our previous topics. Methods take data (arguments) as input (through <term>parameters</term>) and return data as output (called the <term>return value</term>). The data types for both a method's input and output must be specified (similar to how you could specify the data type when you create a variable, though in this case it's required). Below is a diagram of the syntax of a method definition.
     </p>
   
     <figure xml:id="fig.method-definition">
@@ -1720,7 +1720,7 @@ $2 ==> 42
             operators since they take distinct actions on their operands. You will end up with
             addition or concatenation depending on the data types of the operands. Allowing an
             operator to take on multiple meanings depending on the types of the operands is more
-            generally referred to as <firstterm>operator overloading</firstterm>. </p>
+            generally referred to as <term>operator overloading</term>. </p>
 
 <example><title>Basic Concatenation</title>
     <p>The following code:</p>
@@ -1857,14 +1857,14 @@ to advance
         <p>Thus far we've worked with very simple data in Java (integers, floating point numbers, etc). These data types represent single values with no structure to them and can represent such real-world data as test scores, temperatures, etc. However, how do we represent more complex real-world data? How would we be able to send data about a book, or a completed exam, or an immunization record? 
         </p>
         
-        <p>Some data doesn't consist of one simple value. More complex data may have multiple named <firstterm>fields</firstterm>. For example, an employee record may have a name, a hire date, a department, etc. Furthermore, operations on this data are also going to be more complicated. We can add and subtract integers, but we hire or fire employees, or put them to work on tasks. We also need new operations for more complex data.
+        <p>Some data doesn't consist of one simple value. More complex data may have multiple named <term>fields</term>. For example, an employee record may have a name, a hire date, a department, etc. Furthermore, operations on this data are also going to be more complicated. We can add and subtract integers, but we hire or fire employees, or put them to work on tasks. We also need new operations for more complex data.
         </p>
         
-        <p>Both of these problems are solved by a whole new category of data types: objects. Object types are fundamentally different from primitive types. Object data types can have multiple fields associated with them and also have <firstterm>instance methods</firstterm> that allow you to perform operations over the objects. 
+        <p>Both of these problems are solved by a whole new category of data types: objects. Object types are fundamentally different from primitive types. Object data types can have multiple fields associated with them and also have <term>instance methods</term> that allow you to perform operations over the objects. 
         </p>
         
         <p>Objects are a very important part of the Java programming language (and are the reason
-        Java is referred to as an <firstterm>Object Oriented</firstterm> programming language). In
+        Java is referred to as an <term>Object Oriented</term> programming language). In
         Java, you are also able to create new object types if some of the standard ones that ship
         with the JDK are not what you need or what you want -- however creating new object types is
         a more advanced topic that will be covered in a future course. This section will show you
@@ -1875,14 +1875,14 @@ to advance
             <title>Classes, Packages, and Import Statements</title>
         </info>
         
-        <p>Objects are also called <firstterm>instances</firstterm> of a <firstterm>class</firstterm> in Java. A class is essentially a definition of an object type that determines what fields an object will have and what methods you can use to interact with the object. For example, there might be an <c>Employee</c> class, but you could potentially have many instances of that class (objects) that represent individual employees with their own names, hire dates, etc. The <c>Employee</c> class is merely a data type that ensures each of the objects that are instances of it have these features in common. </p>
+        <p>Objects are also called <term>instances</term> of a <term>class</term> in Java. A class is essentially a definition of an object type that determines what fields an object will have and what methods you can use to interact with the object. For example, there might be an <c>Employee</c> class, but you could potentially have many instances of that class (objects) that represent individual employees with their own names, hire dates, etc. The <c>Employee</c> class is merely a data type that ensures each of the objects that are instances of it have these features in common. </p>
         
         <p>Java provides literally thousands of classes with the JDK that you may use to create
             programs. Because there are so many classes, there was a need to keep them organized
             (it's possible two classes might even have the same name, such as a
                 <c>Deal</c> class that might refer to a business deal or the cards laid
             down in a poker game). Java organizes classes by placing them in named
-                <firstterm>packages</firstterm>. For example, Java has a class called
+                <term>packages</term>. For example, Java has a class called
                 <c>Point</c> that is used to represent a point in a 2 dimensional
             Cartesian plane. However, to avoid possible name conflicts and to help keep things
             organized, this class is placed in a package named <c>java.awt</c>, along
@@ -1891,13 +1891,13 @@ to advance
             of this data type, including its package name, is <c>java.awt.Point</c>. </p>
         
         <p>It can be cumbersome to have to type in all of that every time you want to refer to a
-            data type, so java provides <firstterm>import statements</firstterm> to allow you to
+            data type, so java provides <term>import statements</term> to allow you to
             shorten it to just the class name (in this case, <c>Point</c>). In order to
             use <c>Point</c> as the name of the data type rather than
                 <c>java.awt.Point</c>, enter this import statement in the REPL:
             <programlisting>import java.awt.Point;</programlisting> You can also import all of the
             classes in the <c>java.awt</c> package at the same time if you want to by
-            using a <firstterm>wildcard</firstterm> in your import statement in place of the class
+            using a <term>wildcard</term> in your import statement in place of the class
             name: <programlisting>import java.awt.*;</programlisting> This would allow you to use
             the short name for <c>Point</c>, but also <c>Polygon</c>
             (instead of <c>java.awt.Polygon</c> and many other classes in the
@@ -1914,7 +1914,7 @@ to advance
             <title>Constructor Calls</title>
         </info>
         
-        <p>Before you can use an object, you need to be able to create one. To create an object, you must call a special method called a <firstterm>constructor</firstterm>. There is a special syntax for calling constructors outlined in the diagram below:</p>
+        <p>Before you can use an object, you need to be able to create one. To create an object, you must call a special method called a <term>constructor</term>. There is a special syntax for calling constructors outlined in the diagram below:</p>
         
         
         <figure xml:id="fig.constructor-call">
@@ -2016,10 +2016,10 @@ to advance
 <section xml:id="section.references">
         <title>Object References</title>
         <p>
-            An important and subtle distinction in dealing with object type variables is that the values they hold are not the objects themselves, but rather <firstterm>references</firstterm> to the objects. In this sense, the <c>null</c> value indicates that a variable is not referencing any object value.
+            An important and subtle distinction in dealing with object type variables is that the values they hold are not the objects themselves, but rather <term>references</term> to the objects. In this sense, the <c>null</c> value indicates that a variable is not referencing any object value.
         </p>
         <p>
-            This doesn't have particularly important implications when dealing with <firstterm>immutable</firstterm> objects like strings (immutable meaning that the values within the object cannot be changed). However, when we use a <firstterm>mutable</firstterm> object like an array, we need to be careful.
+            This doesn't have particularly important implications when dealing with <term>immutable</term> objects like strings (immutable meaning that the values within the object cannot be changed). However, when we use a <term>mutable</term> object like an array, we need to be careful.
         </p>
         <subsection>
             <title>Copying Object References</title>
@@ -2059,7 +2059,7 @@ System.out.println(x);
 System.out.println(y);
 </programlisting>
 
-                This code will print the values 10, 5, and 10 on three separate lines. In particular, we can rest assured that Math.max has no impact on the values that x and y hold. This is because Math.max has no <firstterm>side effects</firstterm>; that is, it does not have any impact on any part of a program calling it (other than its own local variables).
+                This code will print the values 10, 5, and 10 on three separate lines. In particular, we can rest assured that Math.max has no impact on the values that x and y hold. This is because Math.max has no <term>side effects</term>; that is, it does not have any impact on any part of a program calling it (other than its own local variables).
               </p>
               <p>
                 This is not true of every method. For example, calling <c>System.out.println()</c> modifies the global state of the program, since it writes to standard output.
@@ -2286,7 +2286,7 @@ for(int i=0; i&lt;arr.length; i++) {
         </p>
 
         <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></programlisting>
-        <p>Inside of these curly braces is the class body in which its <firstterm>members</firstterm> are defined. Class members include method definitions, so we can include any of the method definitions we've been developing. If we make these methods static by including the <c>static</c> keyword before the method definition, we can use them like any other static method (such as <c>max</c> in the <c>Math</c> class). For instance, consider the following modification of the class definition above:
+        <p>Inside of these curly braces is the class body in which its <term>members</term> are defined. Class members include method definitions, so we can include any of the method definitions we've been developing. If we make these methods static by including the <c>static</c> keyword before the method definition, we can use them like any other static method (such as <c>max</c> in the <c>Math</c> class). For instance, consider the following modification of the class definition above:
         </p>
       <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text"/></programlisting>
         <p>Any other Java code we write, even in another file, could access this method as follows:
@@ -2314,13 +2314,13 @@ public class ExampleClassWithImport {
     </subsection>
     <subsection>
         <title>Static Fields</title>
-        <p>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called <firstterm>fields</firstterm>. For example, we can create a variable called <c>greeting</c> to hold the message we use in the <c>sayHello</c> method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. <c>greeting</c> must also be declared static to be used as a general purpose method:
+        <p>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called <term>fields</term>. For example, we can create a variable called <c>greeting</c> to hold the message we use in the <c>sayHello</c> method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. <c>greeting</c> must also be declared static to be used as a general purpose method:
         </p>
         <programlisting><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text"/></programlisting>
     </subsection>
     <subsection>
         <title>Scope of Fields</title>
-        <p>Note that the variable <c>greeting</c> in the previous example is accessible in both of the static methods in the class. That is because the <firstterm>scope</firstterm> of the variable is the entire class definition body. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
+        <p>Note that the variable <c>greeting</c> in the previous example is accessible in both of the static methods in the class. That is because the <term>scope</term> of the variable is the entire class definition body. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
 
 <programlisting>
 ClassWithMultipleStaticMethods.sayHello();
@@ -2337,7 +2337,7 @@ ClassWithMultipleStaticMethods.sayHelloEmphatically();
 ClassWithMultipleStaticMethods.greeting = "Hey Jerk";
 </programlisting>
 
-            <p>If a field is never meant to be altered, it should be made in to a <firstterm>constant</firstterm> by using the <c>final</c> keyword in its definition. Here is the updated definition of the running example that prevents any changes to the greeting field:
+            <p>If a field is never meant to be altered, it should be made in to a <term>constant</term> by using the <c>final</c> keyword in its definition. Here is the updated definition of the running example that prevents any changes to the greeting field:
             </p>
 
           <programlisting><xi:include href="../../examples/code/ClassWithConstant.java" parse="text"/></programlisting>
@@ -2354,7 +2354,7 @@ ClassWithMultipleStaticMethods.greeting = "Hey Jerk";
     
     <p> 
         <termdef xml:id="term.algorithm">
-            An <firstterm>Algorithm</firstterm> is a list of abstract instructions for solving a problem.
+            An <term>Algorithm</term> is a list of abstract instructions for solving a problem.
         </termdef>
         These instructions need not be computer codes -- an algorithm, as a concept, transcends any one particular programming language.</p>
     
@@ -2412,12 +2412,12 @@ int addStuff(int x, int y)
 
 <p>    Block comments are often used for these larger, more descriptive comments. To begin a block comment, type /* and all of the code, including newlines, will be considered a comment up to the closing */.</p>
 
-<p>Another use of block comments is to temporarily <firstterm>comment out</firstterm> a portion of your code if you don't want it to run while you test your code but you also don't want to permenantly delete it. This can be helpful when debugging your more complicated programs. </p>
+<p>Another use of block comments is to temporarily <term>comment out</term> a portion of your code if you don't want it to run while you test your code but you also don't want to permenantly delete it. This can be helpful when debugging your more complicated programs. </p>
     </section>
 
     <section>
         <title>Javadoc Comments</title>
-    <p>A special type of block comment is a <firstterm>javadoc comment</firstterm>. These comments come before each method definition and describe in detail what the method does, including the roles of its parameters and a description of the method's return value (if any). Javadoc comments begin with a <c>/**</c> instead of a <c>/*</c>
+    <p>A special type of block comment is a <term>javadoc comment</term>. These comments come before each method definition and describe in detail what the method does, including the roles of its parameters and a description of the method's return value (if any). Javadoc comments begin with a <c>/**</c> instead of a <c>/*</c>
     </p>
         <p>
     Javadoc comments also have a special syntax for describing the parameters and return values. Within the Javadoc comment, a line beginning with <c>@return</c> will describe the return value and a line beginning with <c>@param</c> followed by the name of the parameter will describe one of the parameters. If you document your parameters in this way, you can also refer to your parameters in the rest of the comment with the following: <c>@code parameterName</c> where <c>parameterName</c> is the name of your parameter.
