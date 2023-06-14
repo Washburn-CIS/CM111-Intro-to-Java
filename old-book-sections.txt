@@ -113,8 +113,8 @@ for(int x = 1; x &lt;= 10; x = x + 1);
         <title>Comparison Operators</title>
     </info>
 
-        <p> The boolean type is useful for answering <emphasis>yes</emphasis> or
-                <emphasis>no</emphasis> questions, such as <emphasis>is 2 equal to 1 + 1?</emphasis>
+        <p> The boolean type is useful for answering <em>yes</em> or
+                <em>no</em> questions, such as <em>is 2 equal to 1 + 1?</em>
             We can ask these types of questions with comparison operators. </p><p>
             The comparison operators are binary operators, just like the arithmetic operators from prior sections. However, they operate over values of any type (instead of numeric values), and the evaluate to a boolean value (instead of a numeric value). For example, <c>==</c> is the comparison operator. It determines whether two values are the same or not. So, to answer the question we posed in the last paragraph, we could use an expression like this:
 
@@ -209,13 +209,13 @@ true &amp;&amp; true
         <termdef xml:id="term.statement">
             A <firstterm>statement</firstterm> is essentially a single instruction.
         </termdef>
-        This is a fairly abstract definition, but statements serve many purposes in imperative programming languages like Java and can embody simple or complex instructions. The main difference between a statement and what we've seen with expressions is that statements don't evaluate to some value. Instead, they <emphasis>do something</emphasis> to the state of the computing environment. For instance, they may alter the value of a variable or print something to the screen. These actions are referred to as <firstterm>side effects</firstterm> and are the heart of imperative programming.
+        This is a fairly abstract definition, but statements serve many purposes in imperative programming languages like Java and can embody simple or complex instructions. The main difference between a statement and what we've seen with expressions is that statements don't evaluate to some value. Instead, they <em>do something</em> to the state of the computing environment. For instance, they may alter the value of a variable or print something to the screen. These actions are referred to as <firstterm>side effects</firstterm> and are the heart of imperative programming.
     </p>
     <p>
         Syntactically, statements will vary, but for the most part end with a semicolon (similar to the period at the end of a sentence in English).  A very simple statement consists of an expression followed by semicolon. For example, the hello world example we started with mostly fits this pattern:
         <programlisting>System.out.println("Hello World!");</programlisting>
         This is essentially a method call expression (though it involves a few other concepts we'll explore soon) with a semicolon at the end. Note that the argument is not a character literal -- the double quotes indicate that it is a String, which is a sequence of several characters (strings are covered in much more depth in another section). </p>
-      <p>When we call this method, we're not concerned with what value it returns, but rather what it <emphasis>does</emphasis>. In this case, the statement prints the welcome message to the screen (an example of a side effect).</p>
+      <p>When we call this method, we're not concerned with what value it returns, but rather what it <em>does</em>. In this case, the statement prints the welcome message to the screen (an example of a side effect).</p>
 </section>
 
 
@@ -231,7 +231,7 @@ true &amp;&amp; true
 
     <example>
       <title>Printing a Message to the Screen</title>
-      <p>Thus far, we've received messages back from the REPL each time we evaluate an expression, but perhaps we would like a message to be delivered somewhere during the execution of our program. Many <emphasis>text-based applications</emphasis> interact with their users solely through messages printed to a console (such as the REPL itself). In the case of jshell, standard output is simply the jshell screen, so any messages you print while using jshell will show up there.</p>
+      <p>Thus far, we've received messages back from the REPL each time we evaluate an expression, but perhaps we would like a message to be delivered somewhere during the execution of our program. Many <em>text-based applications</em> interact with their users solely through messages printed to a console (such as the REPL itself). In the case of jshell, standard output is simply the jshell screen, so any messages you print while using jshell will show up there.</p>
 
       <p>The method we will use to print to standard output is unfortunately (and infamously) somewhat complicated looking, but JShell does allow to access it in a more simple way. If you start up JShell with the <c>-startup PRINTING</c> argument, the print method will be available to you to call to print a message to the screen. Below is an example of how you could start JShell from a system command prompt with this option and use the print method to send a greeting:</p>
 <console>
@@ -451,7 +451,7 @@ While loops are a lot like if statements. In fact, they have a nearly identical 
     
     <p>While loops start with the <c>while</c> keyword, and then a boolean expression in parentheses, and then a block of code (a series of statements surrounded by curly braces) or a single statement. The only difference is that when this block of code or single statement completes, program control returns to the beginning of the while loop. Think of it as an if statement that repeats itself indefinitely.
 </p><p>
-    Now you may be concerned by the word <emphasis>indefinitely</emphasis>, and you should be -- it's a distinct possibility that a while loop can run <emphasis>forever</emphasis>. However, after each <firstterm>iteration</firstterm> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <c>false</c> when you don't want the loop executing anymore. 
+    Now you may be concerned by the word <em>indefinitely</em>, and you should be -- it's a distinct possibility that a while loop can run <em>forever</em>. However, after each <firstterm>iteration</firstterm> of the loop (an iteration is complete after execution reaches the end of the code block), the boolean expression at the front of the while loop is evaluated again. If you wrote the loop correctly, that boolean expression should evaluate to <c>false</c> when you don't want the loop executing anymore. 
 </p>
     
     <example><title>Counting with a While Loop</title>
@@ -549,7 +549,7 @@ for(int i=0; i &lt; message.length(); i = i + 1) {
         <title>For-Each Loops</title>
     </info>
 
-<p>While loops used to iterate over an array often looked very similar, so for loops were introduced as a more concise way to handle the task. <firstterm>For-Each Loops</firstterm> were introduced in Java 5 as an even more concise way to deal with these tasks, and are preferred whenever the programmer intends to iterate over each element of an array <emphasis>sequentially</emphasis> (that is, starting with the first, then the second, and so on until the last element).
+<p>While loops used to iterate over an array often looked very similar, so for loops were introduced as a more concise way to handle the task. <firstterm>For-Each Loops</firstterm> were introduced in Java 5 as an even more concise way to deal with these tasks, and are preferred whenever the programmer intends to iterate over each element of an array <em>sequentially</em> (that is, starting with the first, then the second, and so on until the last element).
 </p>
 
     <p>
@@ -766,7 +766,7 @@ int getMinimumGrade(char letterGrade) {
         <example>
             <title>Nested if Statements to Determine Best Temperature</title>
             <p>
-                The following method will return <c>true</c> <emphasis>if</emphasis> the <c>tempaerature</c> (an integer type variable) is between <c>68</c> and <c>72</c>:</p>
+                The following method will return <c>true</c> <em>if</em> the <c>tempaerature</c> (an integer type variable) is between <c>68</c> and <c>72</c>:</p>
 
 
             <programlisting>
@@ -841,7 +841,7 @@ if (x > y) {
 }
 </programlisting>
     <p>
-        There are a couple important points to keep in mind about code blocks. First, notice that there is no semicolon at the end of the block of code following the closing curly brace. Even though we say there is an if <emphasis>statement</emphasis> here, the if portion doesn't actually have a semicolon on the end. Including a semicolon following the if portion of this code snippet is actually a common error that can be difficult to debug (the body of the if would always execute in this case and no error message would be given).
+        There are a couple important points to keep in mind about code blocks. First, notice that there is no semicolon at the end of the block of code following the closing curly brace. Even though we say there is an if <em>statement</em> here, the if portion doesn't actually have a semicolon on the end. Including a semicolon following the if portion of this code snippet is actually a common error that can be difficult to debug (the body of the if would always execute in this case and no error message would be given).
     </p>
     <p>
         Another important consideration is style. Note that all of the statements inside of the block are indented. This is an important convention in Java that makes the code much easier to read. Soon you will be including blocks of code inside of blocks of code, and each should be further indented, helping the programmer to see how deeply <firstterm>nested</firstterm> the blocks of code are. Typically each nested statement is indented two spaces. Sometimes a tab or four spaces is used instead, but this can become a problem with larger programs. Whatever choice you make, the most important consideration is that you use consistent indentation throughout your program.
@@ -906,7 +906,7 @@ if ( temperature > 80 ) {
         <info>
             <title>Else Statements</title>
         </info>
-        <p>Conditional expressions provided a value whether our boolean expression evaluated to <c>true</c> <emphasis>or</emphasis> <c>false</c>. We can similarly provide an alternative block of statements we want executed if the boolean expression used in our if statement evaluates to false by using an <c>else</c> statement.
+        <p>Conditional expressions provided a value whether our boolean expression evaluated to <c>true</c> <em>or</em> <c>false</c>. We can similarly provide an alternative block of statements we want executed if the boolean expression used in our if statement evaluates to false by using an <c>else</c> statement.
         </p>
 
         <figure xml:id="fig.if-else-statement">
@@ -966,7 +966,7 @@ if ( temperature > 80 ) {
     <subsection><title>Experiential Learning</title>
         <p>As a colleague of mine likes to say, "Programming is not a spectator sport." As important as it is for a student to understand the difference between a conditional expression and a conditional statement, a student must also be able to understand programming in a more innate way and develop the faculties to solve programming problems involving all of these abstract concepts. Since this book assumes no prior experience programming, it is intended to be used in a highly active learning environment that involves programming experiences. For this reason, instructional sections are intentionally succinct and rely more on examples to help students understand the concepts being taught. It is also expected that instructors will take advantage of most or all exercises available through this book in a course utilizing it. This book is not intended to teach these concepts independent of a hands-on environment for instruction.</p>
         
-        <p>The advent of JShell makes it much easier to employ a more experiential approach to teaching programming, but textbooks need to adapt. For many, the main concern is when to introduce object oriented concepts when teaching Java. Because of JShell, it is now possible to write Java programs without having to write a class definition, which allows us to focus immediately on more fundamental imperative programming concepts first such as expressions and statements. This book does not avoid the topic of objects as a data type entirely, but does delay teaching the <emphasis>definition</emphasis> of new object types to focus on the core concepts of algorithms and imperative programming.</p>
+        <p>The advent of JShell makes it much easier to employ a more experiential approach to teaching programming, but textbooks need to adapt. For many, the main concern is when to introduce object oriented concepts when teaching Java. Because of JShell, it is now possible to write Java programs without having to write a class definition, which allows us to focus immediately on more fundamental imperative programming concepts first such as expressions and statements. This book does not avoid the topic of objects as a data type entirely, but does delay teaching the <em>definition</em> of new object types to focus on the core concepts of algorithms and imperative programming.</p>
     
     </subsection>
     
@@ -1177,7 +1177,7 @@ $3 ==> 14
     	</p>
 
     	<p>
-    		More often inline comments are used to explain what a significant or particularly complex snippet of code is intended to do (in plain English). It is often helpful to write these comments <emphasis>first</emphasis> and then write the code the comments are describing, but they can also be added to code later after a programmer realizes their code might not be so easy to follow.
+    		More often inline comments are used to explain what a significant or particularly complex snippet of code is intended to do (in plain English). It is often helpful to write these comments <em>first</em> and then write the code the comments are describing, but they can also be added to code later after a programmer realizes their code might not be so easy to follow.
     	</p>
     	<p>
     		There is a bit of an art to writing comments well, just as there is an art to writing programs well. Too few comments and it may not be clear what a program is doing. This can also make errors in the program harder to detect. Too many comments can make a program laborious to read and also wastes the programmer's time since writing comments takes careful thought. There are many rules of thumb, but some important ones are:
@@ -1206,12 +1206,12 @@ $3 ==> 14
     </info>
     
     <p>
-        There are many ways to categorize programming languages. For instance, some programming languages are called <emphasis>object-oriented</emphasis>, <emphasis>functional</emphasis>, or <emphasis>statically typed</emphasis>, to name a few, and many of these categories overlap. An important category, as it relates to teaching Java to a beginning programmer, is that of <firstterm>scripting languages</firstterm>. This is important because Java has never in the past been considered one <footnote><p>Do not confuse Java with Javascript, which is an entirely different language and is indeed a scripting language.</p></footnote>, and this has led to problems when introducing it to someone who has never programmed before.
+        There are many ways to categorize programming languages. For instance, some programming languages are called <em>object-oriented</em>, <em>functional</em>, or <em>statically typed</em>, to name a few, and many of these categories overlap. An important category, as it relates to teaching Java to a beginning programmer, is that of <firstterm>scripting languages</firstterm>. This is important because Java has never in the past been considered one <footnote><p>Do not confuse Java with Javascript, which is an entirely different language and is indeed a scripting language.</p></footnote>, and this has led to problems when introducing it to someone who has never programmed before.
     </p>
     <p> A scripting language is one that is intended for quickly writing short, ad-hoc programs that perform a simple task, possibly only once. An important tool for working with a scripting language is a <acronym>REPL</acronym> (Read Evaluate Print Loop). A REPL allows you to run small snippets of a program, one at a time, and observe what the computer does in real time. This way the programmer can quickly react, correct errors, and experiment. This functionality is of obvious importance to a new programmer learning how to use the language. </p>
-    <p> Java has long been infamous for its <emphasis>wordiness</emphasis>. That is, it took a lot of typing to say anything meaningful. For example, the first program most introductory programming books show the reader is <emphasis>Hello World!</emphasis> -- a program that simply prints these words to the screen. In Java, this required the programmer to write 5 lines of code. This degree of wordiness is essentially the opposite of the goal of a scripting language.
+    <p> Java has long been infamous for its <em>wordiness</em>. That is, it took a lot of typing to say anything meaningful. For example, the first program most introductory programming books show the reader is <em>Hello World!</em> -- a program that simply prints these words to the screen. In Java, this required the programmer to write 5 lines of code. This degree of wordiness is essentially the opposite of the goal of a scripting language.
     </p>
-    <p>This changed somewhat in September 2017 when an official REPL was added to Java, called JShell. In JShell, <emphasis>Hello World!</emphasis> is just one line:
+    <p>This changed somewhat in September 2017 when an official REPL was added to Java, called JShell. In JShell, <em>Hello World!</em> is just one line:
     <figure xml:id="fig.repls.jshell">
         <title>Using the JShell REPL</title>
         <mediaobject>
@@ -1239,7 +1239,7 @@ $3 ==> 14
         <title>Command-Line Arguments</title>
     </info>
     <p>
-Though you should understand what the type <c>String[]</c> means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any <firstterm>command-line arguments</firstterm> that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to <emphasis>javac</emphasis> itself!
+Though you should understand what the type <c>String[]</c> means at this point (an array of string values), it may not be clear why a parameter with this type must be provided to the main method. The purpose of this parameter is to hold any <firstterm>command-line arguments</firstterm> that may be provided to your application when it is started at the command prompt. This would allow you to write an application similar to <em>javac</em> itself!
     </p>
     <p>
 Consider the following example program:
@@ -1249,7 +1249,7 @@ Consider the following example program:
 </programlisting>
 
     <p>
-    This application prints out each of the command line arguments given to it when it is executed. These arguments are specified at the end of the <emphasis>java</emphasis> command that starts the JRE.
+    This application prints out each of the command line arguments given to it when it is executed. These arguments are specified at the end of the <em>java</em> command that starts the JRE.
     </p>
 
     <p>
@@ -1297,7 +1297,7 @@ arguments
 <xi:include href="../../examples/code/Hello.java" parse="text"/>
             </programlisting>
         <p>
-        This is the classic <emphasis>hello world</emphasis> program that is often given on the first day of a programming class. In many languages, <emphasis>Hello World</emphasis> is simply a one-line program, making this a convienent place to start in an introductory programming class. However, Java was designed with more complex software development in mind, and a more complex <emphasis>Hello World</emphasis> example is one of the unintended side effects of that choice. By starting with a tool like JShell, you were able to learn each of the concepts present in this code before using them in an application (with the exception of the <c>public</c> keyword, to some extent).
+        This is the classic <em>hello world</em> program that is often given on the first day of a programming class. In many languages, <em>Hello World</em> is simply a one-line program, making this a convienent place to start in an introductory programming class. However, Java was designed with more complex software development in mind, and a more complex <em>Hello World</em> example is one of the unintended side effects of that choice. By starting with a tool like JShell, you were able to learn each of the concepts present in this code before using them in an application (with the exception of the <c>public</c> keyword, to some extent).
 
         Note that this program would have to be defined in a file called <c>Hello.java</c>.
         </p>
@@ -1306,7 +1306,7 @@ arguments
         <title>Compiling and Running Java Programs</title>
 
         <p>
-          If you develop a java file such as <c>Hello.java</c>, you must first compile it before you run it. Recall that typing <emphasis>jshell</emphasis> at the command prompt started up the jshell REPL. Similarly, you can compile this Java program at the command prompt by typing:
+          If you develop a java file such as <c>Hello.java</c>, you must first compile it before you run it. Recall that typing <em>jshell</em> at the command prompt started up the jshell REPL. Similarly, you can compile this Java program at the command prompt by typing:
        </p>
        <console><input>javac Hello.java</input></console>
        <p>
@@ -1362,7 +1362,7 @@ arguments
     <subsection><title>Classes</title>
       <p>Inside of packages, you'll find a general description of the package and several additional organizational categories of code, including interfaces, classes, enumerations, exceptions, errors, and annotations. For now, we'll focus specifically on classes, in part because all of the other organizational categories are essentially more specialized forms of classes.</p>
 
-      <p>Classes serve two very important purposes in Java. They organize individual methods and other class members which can be called on to <emphasis>actually do something</emphasis>, but they also define object data types (such as the <c>String</c> type) which differ from the primitive data types we've mainly worked with. Other sections of this book will go in to more detail on object types and the purpose of classes as they relate to Java's support for Object-Oriented Programming (OOP), but for now we'll focus on their prior role and how we can directly get to some code we can use right away.</p>
+      <p>Classes serve two very important purposes in Java. They organize individual methods and other class members which can be called on to <em>actually do something</em>, but they also define object data types (such as the <c>String</c> type) which differ from the primitive data types we've mainly worked with. Other sections of this book will go in to more detail on object types and the purpose of classes as they relate to Java's support for Object-Oriented Programming (OOP), but for now we'll focus on their prior role and how we can directly get to some code we can use right away.</p>
 
       <p>When you click on an individual class in the documentation, you will find a description of its purpose and descriptions of its individual members. For example, let's look at the <c>Math</c> class. Note that at the top of the page, it is identified as the Class <c>Math</c> but also as <c>java.lang.Math</c> below that. Technically, this longer name is the full-name of the class and can be referenced at any point in your program as the name of this class. It has two important kinds of members we'll look at: static fields and static methods. </p>
 
@@ -1387,7 +1387,7 @@ arguments
     </p>
     <p>Note that, by default, all of the classes in the <c>java.lang</c> package are automatically imported. Thus, you didn't actually need the import statement in the previous example! However, this import statement will be needed for any other package when you're working with JShell. </p>
 
-      <p>We can also import individual static members of a class if we wish, making it even more simple to refer to the members we're interested in using. When we import <c>static</c> class members, we also need to follow the <c>import</c> keyword with the <emphasis>static</emphasis> keyword. What follows is the full name of a class and the name of the method or field we want to import, all separated by periods. For example, below is an import statement that allows us to use the <c>PI</c> constant without referring to the <c>Math</c> class:
+      <p>We can also import individual static members of a class if we wish, making it even more simple to refer to the members we're interested in using. When we import <c>static</c> class members, we also need to follow the <c>import</c> keyword with the <em>static</em> keyword. What follows is the full name of a class and the name of the method or field we want to import, all separated by periods. For example, below is an import statement that allows us to use the <c>PI</c> constant without referring to the <c>Math</c> class:
 <programlisting>import static java.lang.Math.PI;</programlisting>
       In this case, the package name is <c>java.lang</c>, the class name is <c>Math</c>, and the name of the class member to be imported is <c>PI</c>. Now we could reference the <c>PI</c> constant in JShell simply by using its name:
 <programlisting>PI</programlisting>
@@ -1973,7 +1973,7 @@ to advance
             </figure>
             
         
-        This method call moves the <c>Point</c> object forward <c>2</c> in the <c>x</c> direction and backward <c>1</c> in the <c>y</c> direction, meaning that the <c>Point</c> object will now be at location 6, 0 on the coordinate plane. Note that <emphasis>translation</emphasis> is an operation frequently applied to points in computer graphics, so it was developed as an instance method for the <c>Point</c> class. This is an example of how objects provide useful abstractions in object-oriented programming, just as static methods do. </p>
+        This method call moves the <c>Point</c> object forward <c>2</c> in the <c>x</c> direction and backward <c>1</c> in the <c>y</c> direction, meaning that the <c>Point</c> object will now be at location 6, 0 on the coordinate plane. Note that <em>translation</em> is an operation frequently applied to points in computer graphics, so it was developed as an instance method for the <c>Point</c> class. This is an example of how objects provide useful abstractions in object-oriented programming, just as static methods do. </p>
         
         <p>The <c>Point</c> class has several other useful instance methods that can
             be called. Some of them have return values and some of them don't. You can find them all
@@ -2108,7 +2108,7 @@ letterGrade = 'A';
 
     <subsection>
         <title>Methods for Characters</title>
-        <p>Just as with mathematical functions, there are also some <emphasis>built in</emphasis> methods for working with characters. You can make them available in the REPL by typing in the following statement:
+        <p>Just as with mathematical functions, there are also some <em>built in</em> methods for working with characters. You can make them available in the REPL by typing in the following statement:
 
 <programlisting>
 import static java.lang.Character.*;
@@ -2195,9 +2195,9 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
 
     <subsection>
         <title>The Array Type</title>
-        <p> Arrays themselves are a type of data, but are parameterized by the type of data they hold (that is to say, there are many 'array types' and each is distinguished by the type of data held by an array of that type). Values in an array can have any type, but they must all have the <emphasis>same type</emphasis> as each other.
+        <p> Arrays themselves are a type of data, but are parameterized by the type of data they hold (that is to say, there are many 'array types' and each is distinguished by the type of data held by an array of that type). Values in an array can have any type, but they must all have the <em>same type</em> as each other.
         </p>
-        <p> The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <emphasis>array of integers</emphasis> would be written: <c>int[]</c>
+        <p> The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <em>array of integers</em> would be written: <c>int[]</c>
         </p>
         <p> A variable named <c>arr</c> that could hold an array of integers is defined as follows:
             <programlisting>int[] arr;</programlisting>
@@ -2282,7 +2282,7 @@ for(int i=0; i&lt;arr.length; i++) {
 <programlisting>
 <xi:include href="../../examples/code/simple-class.jsh" parse="text"/>
 </programlisting>
-        <p>A Java file must contain one class designated as public using the <c>public</c> keyword before the class definition. It's also important to note that the filename must match the name of the public class, with <emphasis>.java</emphasis> at the end (similar to how an HTML file has <emphasis>.html</emphasis> at the end). For example, if we were to produce a Java file called <emphasis>ExampleClass.java</emphasis>, it could have the following as its contents:
+        <p>A Java file must contain one class designated as public using the <c>public</c> keyword before the class definition. It's also important to note that the filename must match the name of the public class, with <em>.java</em> at the end (similar to how an HTML file has <em>.html</em> at the end). For example, if we were to produce a Java file called <em>ExampleClass.java</em>, it could have the following as its contents:
         </p>
 
         <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></programlisting>
@@ -2380,7 +2380,7 @@ ClassWithMultipleStaticMethods.greeting = "Hey Jerk";
     <subsection>
         <title>Block Indentation</title>
 
-        <p>You've now seen two examples of a <emphasis>block</emphasis> in Java. <c>if</c> statements and method definitions both involved curly braces being opened around a series of statements. Every time you open a new block (that is, you open a curly brace), you should indent all statements within that block. Typically only 2 spaces are used rather than a full tab, since that block may contain another <emphasis>nested</emphasis> block, and so on, and using tabs can quickly lead to long lines and horizontal scrolling. Indenting helps you visually recognize what blocks each statement belong to. Thus, while reading a Java program, you can quickly skip over a block of code if you're not particularly interested in it.
+        <p>You've now seen two examples of a <em>block</em> in Java. <c>if</c> statements and method definitions both involved curly braces being opened around a series of statements. Every time you open a new block (that is, you open a curly brace), you should indent all statements within that block. Typically only 2 spaces are used rather than a full tab, since that block may contain another <em>nested</em> block, and so on, and using tabs can quickly lead to long lines and horizontal scrolling. Indenting helps you visually recognize what blocks each statement belong to. Thus, while reading a Java program, you can quickly skip over a block of code if you're not particularly interested in it.
         </p>
         <p>
             It's a fairly standard rule that you have no more than one statement on a line and always use a full line for a closing curly brace of a block, but there is some debate over whether you should open a curly brace for a block on the same line as an if statement or a method header, or whether you should open it on its own line. For instance:
