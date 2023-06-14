@@ -17,7 +17,7 @@
         >
         <title>Basic Scope Example</title>
         <p>Considering the following code:
-<programlisting>
+<program language="java"><input>
 {
   var x = 5;
   {
@@ -27,7 +27,7 @@
   System.out.println(y);  // error, y is not defined in this scope
 }
 System.out.println(x);  // error, x is not defined in this scope
-</programlisting>
+</input></program>
 
       Both of the commented-out print statements would be errors since the variables they reference are defined in a different scope. Note that the first print statement is valid because <c>x</c> is defined in the same scope as that statement.
         </p>
@@ -46,10 +46,10 @@ System.out.println(x);  // error, x is not defined in this scope
         >
         <title>Common Scope Error with For Loops</title>
         <p>Considering the following code:
-<programlisting>
+<program language="java"><input>
 for(int x = 1; x &lt;= 10; x = x + 1);
     System.out.println(x);
-</programlisting>
+</input></program>
 
       At first glance, it appears this code will print out the numbers <c>1</c> through <c>10</c>, however, there is a semi-colon at the end of the first line. When omitting curly braces, the body of a for loop will consist of a statement immediately following the loop header. Since a semicolon follows the loop header, it counts as the single statement, meaning the print statement on the second line is not part of the for loop's body. Thus, the reference to the variable <c>x</c> is not in the correct scope and will be caught as a syntax error.
         </p>
@@ -80,9 +80,9 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     <p> Conditional expressions use two operators in conjunction: a question mark (?) and a colon (:). These operators sit between three other expressions. These five parts of a conditional expression come in this order: a boolean expression, followed by a question mark, followed by an expression that will be evaluated if the initial boolean expression is true, followed by a colon, followed by an expression that will be evaluated if the initial boolean expression is false.
     For example, consider the following conditional expression:
     </p>
-<programlisting>
+<program language="java"><input>
     5 > 10 ? 30 : 40
-</programlisting>
+</input></program>
 <p>
     This expression evaluates to the value 40. Since the initial boolean expression evaluates
     to false, the expression following the colon is evaluated. The middle expression is ignored
@@ -93,9 +93,9 @@ for(int x = 1; x &lt;= 10; x = x + 1);
     Here's another example that would evaluate to the maximum of two integer variables x and y:
 </p>
 
-<programlisting>
+<program language="java"><input>
     x > y ? x : y
-</programlisting>
+</input></program>
 
 </section>
 
@@ -111,9 +111,9 @@ for(int x = 1; x &lt;= 10; x = x + 1);
             We can ask these types of questions with comparison operators. </p><p>
             The comparison operators are binary operators, just like the arithmetic operators from prior sections. However, they operate over values of any type (instead of numeric values), and the evaluate to a boolean value (instead of a numeric value). For example, <c>==</c> is the comparison operator. It determines whether two values are the same or not. So, to answer the question we posed in the last paragraph, we could use an expression like this:
 
-<programlisting>
+<program language="java"><input>
 (1 + 1) == 2
-</programlisting>
+</input></program>
 
             If you type this in to the REPL, it will evaluate to <c>true</c>. Note that the parentheses are not necessary, either. <c>+</c> will be evaluated before any comparison operators will be. There are several other comparison operators that will be useful to us, summarized below:
 
@@ -135,14 +135,14 @@ for(int x = 1; x &lt;= 10; x = x + 1);
                 </li>
             </dl>
         </p>
-        <p> For example, the expression <programlisting>4 &lt; 3 + 3</programlisting> would
+        <p> For example, the expression <program language="java"><input>4 &lt; 3 + 3</input></program> would
             evaluate to <c>true</c>. </p>
 
             <p>
               Note that the <c>==</c> operator can not be used to compare the contents of two objects. The <c>==</c> operator will determine if two object references are equal (references are covered in more detail in another section). If you wish to compare the contents of two objects (such as to determine if two strings contain the same characters), use the <c>equals</c> instance method of one of the objects and pass the other in as an argument.
             </p>
             <p>
-              For example, to check if an object stored in the variable <c>message1</c> has the same content as the object stored in the variable <c>message2</c>, the following expression would work: <programlisting>message1.equals(message2)</programlisting> Reversing the order would also work (assuming that neither variable holds the <c>null</c> value).
+              For example, to check if an object stored in the variable <c>message1</c> has the same content as the object stored in the variable <c>message2</c>, the following expression would work: <program language="java"><input>message1.equals(message2)</input></program> Reversing the order would also work (assuming that neither variable holds the <c>null</c> value).
           </p>
 </section>
 
@@ -158,26 +158,26 @@ for(int x = 1; x &lt;= 10; x = x + 1);
         </p><p> The first operator we'll consider is the and operator: <c>&amp;&amp;</c>. This is a
             boolean operator that evaluates to <c>true</c> only when both the left and
             right operands also evaluate to <c>true</c>. For example:
-            <programlisting>
+            <program language="java"><input>
 true &amp;&amp; false
-</programlisting> evaluates to
+</input></program> evaluates to
                 <c>false</c>, since the right-hand operand is false. However:
-            <programlisting>
+            <program language="java"><input>
 true &amp;&amp; true
-</programlisting> evaluates to
+</input></program> evaluates to
                 <c>true</c>, since both operands are true. </p><p>
             The next operator we'll consider is the or operator: <c>||</c> It is similar to the and operator, but it evaluates to <c>true</c> when either of the operands are true. Put another way, this operator will only evaluate to <c>false</c> when both of its operands evaluate to <c>false</c>. For example, if you replaced <c>&amp;&amp;</c> with <c>||</c> in both of the last two expressions, they would both evaluate to <c>true</c>.
         </p><p> The last boolean operator we'll consider is unique in that it's a unary operator. Recall that
             this means it has only one operand. It is called the not operator: <c>!</c> This
             operator simply reverses the boolean value of its operand. For example:
-            <programlisting>
+            <program language="java"><input>
 !false
-</programlisting> evaluates to <c>true</c>. Note
+</input></program> evaluates to <c>true</c>. Note
             that all of these operators can be combined and nested in sub expressions. For example,
             the following expression evaluates to <c>true</c>:
-            <programlisting>
+            <program language="java"><input>
 !((false &amp;&amp; false) || false)
-</programlisting> These operators
+</input></program> These operators
             also have an order of precedence: <c>!</c>, <c>&amp;&amp;</c>, <c>||</c>
         </p>
 
@@ -186,9 +186,9 @@ true &amp;&amp; true
         </p>
         <p>
           For the most part, this just means that your programs will run a bit more efficiently, since only have of the work needs to be done to evaluate these expressions at times. However, if an error or a side effect occurs while evaluating the right operand, it is important for the programmer to know that it will not occur when the left operand is not evaluated due to short circuiting. The programmer can also take advantage of this. For example, consider a scenario where the variable <c>students</c> is the number of students in a class and the variable <c>cupcakes</c> is the number of cupcakes the instructor brought with them. If we want to determine whether there are enough cupcakes for each student to have at least 2, we could use the following boolean expression:
-          <programlisting>cupcakes / students &gt;= 2</programlisting>
+          <program language="java"><input>cupcakes / students &gt;= 2</input></program>
           However, if by some mistake we used this expression for a class with no students in it, we would get a division by zero error instead of <c>true</c>. The latter would be preferred if we simply wanted to know whether the enough cupcakes were baked. Thus, we could instead use the following expression:
-          <programlisting>students > 0 &amp;&amp; cupcakes / students &gt;= 2</programlisting>
+          <program language="java"><input>students > 0 &amp;&amp; cupcakes / students &gt;= 2</input></program>
           In this case, if <c>students</c> is zero, the left operand to <c>&amp;&amp;</c> would evaluate to false, and the right operand would be ignored, avoiding the division by zero error.
         </p>
 </section>
@@ -206,7 +206,7 @@ true &amp;&amp; true
     </p>
     <p>
         Syntactically, statements will vary, but for the most part end with a semicolon (similar to the period at the end of a sentence in English).  A very simple statement consists of an expression followed by semicolon. For example, the hello world example we started with mostly fits this pattern:
-        <programlisting>System.out.println("Hello World!");</programlisting>
+        <program language="java"><input>System.out.println("Hello World!");</input></program>
         This is essentially a method call expression (though it involves a few other concepts we'll explore soon) with a semicolon at the end. Note that the argument is not a character literal -- the double quotes indicate that it is a String, which is a sequence of several characters (strings are covered in much more depth in another section). </p>
       <p>When we call this method, we're not concerned with what value it returns, but rather what it <em>does</em>. In this case, the statement prints the welcome message to the screen (an example of a side effect).</p>
 </section>
@@ -341,17 +341,17 @@ Hello World!
 You've now no doubt wrote a statement such as the following many times:
 </p>
 
-<programlisting>
+<program language="java"><input>
 i = i + 1;
-</programlisting>
+</input></program>
 
 <p>
 This happens so frequently in Java that there are several built-in shortcuts for such statements. For instance, if we simply want to add a value to a variable (rather than replace a value in a variable), we could do so using the <c>+=</c> operator. Thus, an equivalent version of the code above is the following:
 </p>
 
-<programlisting>
+<program language="java"><input>
 i += 1;
-</programlisting>
+</input></program>
 
 <p>
 We could also add <c>2</c> to the value of <c>i</c> the same way, or any other value we want to increment it by. Similarly, we could subtract that value from <c>i</c>  with the <c>-=</c> operator. Each of the other arithmetic operators has a similar shortcut.
@@ -360,36 +360,36 @@ We could also add <c>2</c> to the value of <c>i</c> the same way, or any other v
 Beyond these shortcuts, it's also very common to simply add <c>1</c> to a variable, so there is a second shortcut that just adds <c>1</c>:
 </p>
 
-<programlisting>
+<program language="java"><input>
 i++;
-</programlisting>
+</input></program>
 
 <p>
 Note that this shortcut can be used to simplify the string iteration example considerably, since it uses a somewhat long variable name:
 </p>
 
-<programlisting>
+<program language="java"><input>
 <xi:include href="../../examples/code/count-l-in-hello.jsh" parse="text"/>
-</programlisting>
+</input></program>
 
 <p>
 If you've ever heard of the programming language C++ and wondered why it was named that way, now you know. Similarly, another shortcut exists for subtracting <c>1</c> from a variable.
 </p>
 
-<programlisting>
+<program language="java"><input>
 i--;
-</programlisting>
+</input></program>
 
 <p> Shortcuts exist also for the other arithmetic operators. For example, the following statement will double the value held by the variable <c>i</c>:
-<programlisting>
+<program language="java"><input>
 i *= 2;
-</programlisting>
+</input></program>
 </p>
 
 <p> This shortcut also for the concatenation operator. For example, the following statement will concatenate an exclamation mark on to the string held by the variable <c>str</c>:
-<programlisting>
+<program language="java"><input>
 str += "!";
-</programlisting>
+</input></program>
 </p>
 
 </section>
@@ -417,9 +417,9 @@ While loops are a lot like if statements. In fact, they have a nearly identical 
     <p>
 The following code will add up the numbers 1 through 10:
 </p>
-<programlisting>
+<program language="java"><input>
 <xi:include href="../../../examples/code/count-to-ten.jsh" parse="text"/>
-</programlisting>
+</input></program>
 <p>
 After the first iteration of the loop, count will increase by 1 and total will increase by 1. Thus, when the boolean expression is evaluated the second time, count will be 1 (and not 0). However, 1 is still less than 10, so the loop will run a second time. After the second iteration, count will increase to 2 and total will increase to 3. Now you might see where this is going. The loop will run 8 more times until count is equal to 11. At that point, count will be greater than 10, so the boolean expression will be false, and the statements inside the block will be skipped. 
 </p>    
@@ -462,35 +462,35 @@ Since nearly every while loop that we write contains these three components, and
 <p>Consider the following while loop which adds the numbers between 1 and 10:
 </p>
 
-<programlisting>
+<program language="java"><input>
 int total = 0;
 int count = 1;
 while(count &lt;= 10) {
   total = total + count;
   count = count + 1;
 }
-</programlisting>
+</input></program>
 
     <p>Here is identical code written as a for loop:</p>
 
-<programlisting>
+<program language="java"><input>
 int total = 0;
 for(int count = 1; count &lt;= 10; count = count + 1) {
   total = total + count;
 }
-</programlisting></example>
+</input></program></example>
 
     <p>Because code written with while loops and for loops perform the exact same task, we call for loops <term>syntactic sugar</term>, in that it is meant only to help with the look of your code, not the function of your code. Essentially, it is used to improve your coding style.</p>
 
 <example><title>Iterate Through a String</title>
     <p>The following code will print each character of the string <c>message</c>, one character per line:
     </p>
-<programlisting>
+<program language="java"><input>
 String message = "hello";
 for(int i=0; i &lt; message.length(); i = i + 1) {
   System.out.println(message.charAt(i));
 }
-</programlisting>
+</input></program>
 </example>
 
 </section>
@@ -512,35 +512,35 @@ A for-each loop eliminates the index variable <c>i</c> entirely. Instead, the pr
 <example>
     <p>Consider the following array of Strings:</p>
 
-<programlisting>
+<program language="java"><input>
 String[] names = new String[] { "Jane", "Billy", "Susie" };
-</programlisting>
+</input></program>
 
 <p>A for loop could be used to print each name out:</p>
 
-<programlisting>
+<program language="java"><input>
 for(int i=0; i &lt; names.length; i++) {
     System.out.println(names[i]);
 }
-</programlisting>
+</input></program>
 
 <p>The following for-each loop will perform the exact same task with a little less code, and is a little easier to read and understand:
 </p>
 
-<programlisting>
+<program language="java"><input>
 for(String name : names) {
     System.out.println(name);
 }
-</programlisting>
+</input></program>
 
 <p>This makes it easier to use arbitrary expressions that yield arrays. For example, the following code snippet also does the same thing as the previous two, but doesn't require the initial variable definition:
 </p>
 
-<programlisting>
+<program language="java"><input>
 for(String name : new String[] { "Jane", "Billy", "Susie" }) {
     System.out.println(name);
 }
-</programlisting>
+</input></program>
 </example>
 </section>
 
@@ -556,9 +556,9 @@ for(String name : new String[] { "Jane", "Billy", "Susie" }) {
 
         <p><c>continue</c> statements are very simple in their syntax. They consist of just a single keyword (<c>continue</c>) followed by a semicolon:
       </p>
-      <programlisting>
+      <program language="java"><input>
         continue;
-      </programlisting>
+      </input></program>
         <p>You will use <c>continue</c> statements within an <c>if</c> statement since you will only want to skip the remainder of an iteration of a loop because some other condition that arises. Perhaps the task of the current iteration of the loop is completed early or perhaps an error was encountered that should end the current iteration of the loop but not the entire task the loop is handling. </p>
 
 
@@ -566,7 +566,7 @@ for(String name : new String[] { "Jane", "Billy", "Susie" }) {
         <p>
           Assume there is a method called <c>getUserResponse</c> that allows the user to enter in a numeric value. The following code will request a positive even integer from the user and validate the user's response. If the user provides such a value, it will be added to a running total of these numbers.
         </p>
-        <programlisting>
+        <program language="java"><input>
     int total = 0;
     while(true) {
       // get a number from the user
@@ -587,7 +587,7 @@ for(String name : new String[] { "Jane", "Billy", "Susie" }) {
       total = total + x;
       System.out.println("Total is currently " + total);
     }
-        </programlisting>
+        </input></program>
           <p>
             There are two <c>continue</c> statements used in this snippet of code. The first is used when it is detected that the user provided a number that is not positive. The <c>continue</c> statement forces the loop to restart and the user is once again prompted for a valid response. The second <c>continue</c> statement is executed if an odd number is provided by the user. In both cases, the statement that adds the number to the total is skipped if the user breaks either of the rules for proper input. Sample interaction with this snippet of code may look like the example below:
           </p>
@@ -618,9 +618,9 @@ provide a positive, even number:
 
     <p><c>break</c> statements are very simple. They consist of just a single keyword (<c>break</c>) followed by a semicolon:
   </p>
-  <programlisting>
+  <program language="java"><input>
     break;
-  </programlisting>
+  </input></program>
     <p>You will use <c>break</c> statements within an <c>if</c> statement since you will only want to terminate the loop early because of some other condition that arises. You may want to use a break statement if an error occurs that must be processed. You can also intentionally begin an infinite loop (set the loop condition to <c>true</c>) and use break statements to end the loop. </p>
 
 
@@ -628,14 +628,14 @@ provide a positive, even number:
     <p>
       The following code will search through an array <c>arr</c> for the number <c>13</c>:
     </p>
-    <programlisting>
+    <program language="java"><input>
 int i=0;
 for(; i&lt; arr.length; i++) {
   if(arr[i] == 13) {
     break;
   }
 }
-    </programlisting>
+    </input></program>
       <p>When this snippet of code completes executing, <c>i</c> will be the index for <c>arr</c> where the value <c>13</c> is located (or it will be <c>arr.length</c> if <c>13</c> doesn't appear in <c>arr</c>).
       </p>
   </example>
@@ -667,7 +667,7 @@ for(; i&lt; arr.length; i++) {
             <p>A grade book application needs to determine the minimum grade needed for each letter grade. Letter grades will be represented with capital letter characters. This functionality could be developed using an if/else chain:
                 </p>
 
-<programlisting>
+<program language="java"><input>
 int getMinimumGrade(char letterGrade) {
   if ( letterGrade == 'A' ) {
     return 90;
@@ -681,12 +681,12 @@ int getMinimumGrade(char letterGrade) {
     return 0;
   }
 }
-</programlisting>
+</input></program>
 
             <p> However, this is a good opportunity to use a switch statement. The switch statement below takes equivalent action, but will run a little more efficiently and may be a little easier to read and modify:
             </p>
 
-<programlisting>
+<program language="java"><input>
 int getMinimumGrade(char letterGrade) {
   switch(letterGrade) {
     case 'A':
@@ -701,7 +701,7 @@ int getMinimumGrade(char letterGrade) {
       return 0;
   }
 }
-</programlisting>
+</input></program>
 <p>Note that no break statements are needed in this example since return statements are used in each case.</p>
 </example>
     </section>
@@ -721,9 +721,9 @@ int getMinimumGrade(char letterGrade) {
                 The following method will return <c>true</c> <em>if</em> the <c>tempaerature</c> (an integer type variable) is between <c>68</c> and <c>72</c>:</p>
 
 
-            <programlisting>
+            <program language="java"><input>
 <xi:include href="../../../examples/code/justRight.jsh" parse="text"/>
-</programlisting>
+</input></program>
             <p>One thing to note about this example is that there are no <c>else</c> statements. There could be, but they aren't necessary since in all cases they would return <c>false</c>, which is also what the last statement of the method does.
             </p>
             <p>
@@ -750,14 +750,14 @@ int getMinimumGrade(char letterGrade) {
     <p> If statements start with the keyword <c>if</c>, then a boolean expression (surrounded in parentheses -- the parentheses are necessary), then the statement we want to conditionally execute. For instance, consider the following statements:
     </p>
 
-<programlisting>
+<program language="java"><input>
     int x = 10;
     int y = 0;
 
     if (y > x) x = 30;
 
     if (x > y) y = 20;
-</programlisting>
+</input></program>
 
     <p>
         The first if statement does nothing. y is not greater than x at this point, so the assignment statement that follows it (<c>x = 30;</c>) does not execute. The second if statement will set the variable <c>y</c> to the value 20. Since <c>x</c> is greater than <c>y</c>, the statement (<c>y = 20;</c>) will be executed.
@@ -771,13 +771,13 @@ int getMinimumGrade(char letterGrade) {
         <image source="figures/if-statement.png"/>
     </figure>
 
-<programlisting>
+<program language="java"><input>
 if (x > y) {
     x = 30;
     y = 40;
     z = 50;
 }
-</programlisting>
+</input></program>
     <p>
         There are a couple important points to keep in mind about code blocks. First, notice that there is no semicolon at the end of the block of code following the closing curly brace. Even though we say there is an if <em>statement</em> here, the if portion doesn't actually have a semicolon on the end. Including a semicolon following the if portion of this code snippet is actually a common error that can be difficult to debug (the body of the if would always execute in this case and no error message would be given).
     </p>
@@ -801,17 +801,17 @@ if (x > y) {
      <title>Ice Cream Choices with if/else Chains</title>
     <p>An application is being developed that can order an appropriate snack for you automatically. If the temperature outside is high, it will order an ice cream, and if the temperature is low, it will order a hot chocolate. Assume that there are two methods available that can order either of these foods. The code might look like this:
     </p>
-<programlisting>
+<program language="java"><input>
 if ( temperature > 65 ) {
   orderIceCream();
 } else {
   orderHotChocolate();
 }
-</programlisting>
+</input></program>
     <p>
     Now consider that the application might also order popcorn if the temperature is more moderate. We would have to use a nested if statement to accomplish this:
     </p>
-<programlisting>
+<program language="java"><input>
 if ( temperature > 80 ) {
   orderIceCream();
 } else {
@@ -821,13 +821,13 @@ if ( temperature > 80 ) {
     orderHotChocolate();
   }
 }
-</programlisting>
+</input></program>
     <p>
     If we wanted to add, for example, 5 more snack options, this would become quite a mess, with many layers of nested if statements inside of else statements! Your code would be so far indented to the right, that it may begin to run over the length of the screen.
     </p><p>
     This is avoided by not opening a new curly brace for each if statement that immediately follows an else, and instead putting both on the same line. The body of the else then becomes the if statement that follows the else, and the following if statement is not indented further than the else that it follows. For example, we could re-write the code above this way:
     </p>
-<programlisting>
+<program language="java"><input>
 if ( temperature > 80 ) {
   orderIceCream();
 } else if (temperature > 50 ) {
@@ -835,7 +835,7 @@ if ( temperature > 80 ) {
 } else {
   orderHotChocolate();
 }
-</programlisting>
+</input></program>
  </example>
     </section>
     
@@ -861,9 +861,9 @@ if ( temperature > 80 ) {
             <title>Implementing Absolute Value with if/else</title>
             <p>Recall the <c>abs</c> method from the <c>Math</c> class that determined the absolute value of a number. In this example, we'll write our own absolute valued method that does the exact same thing using an <c>if</c> and an <c>else</c> statement. We'll name this method <c>myAbs</c> to make it distinct:
             </p>
-            <programlisting>
+            <program language="java"><input>
 <xi:include href="../../../examples/code/myAbs.jsh" parse="text"/>
-        </programlisting>
+        </input></program>
             <p>If <c>x</c> is greater than <c>0</c>, the first if statement will execute, meaning that the value stored in <c>x</c> will be returned. If <c>x</c> is not greater than zero, the return statement inside the <c>else</c> block will execute instead, meaning that the negation of the value stored in <c>x</c> will be returned. Note that <c>-0</c> is returned when <c>x</c> is stores the value <c>0</c>, but since these two values are equivalent, it doesn't make a difference. Also note that the return statement is still always the last statement executed, no matter what the value of <c>x</c> is. </p>
         </example>
     </subsection>
@@ -991,13 +991,13 @@ $3 ==> 14
     <subsection>
     	<title>JShell Scripts</title>
     	<p>JShell also introduces a facility for this purpose that wasn't previously available to Java programmers. All of the statements you type in to a JShell session can be saved to a file by typing the following command in to JShell:
-<programlisting>
+<program language="java"><input>
 /save myscript.jsh
-</programlisting>
+</input></program>
     	where <filename>myscript.jsh</filename> can be any file name of your choosing. A series of statements saved to a file in any programming language referred to as a <term>script</term>. The <filename>.jsh</filename> extension distinguishes in the filename distinguishes this file as a JShell script that can be loaded and executed. In fact, you can load and execute a script you've previously saved in JShell by typing in the following command:
-<programlisting>
+<program language="java"><input>
 /open myscript.jsh
-</programlisting>
+</input></program>
     	</p>
 
         <xi:include href="../../examples/average-script.xml" parse="xml"/>
@@ -1060,9 +1060,9 @@ Though you should understand what the type <c>String[]</c> means at this point (
     <p>
 Consider the following example program:
     </p>
-<programlisting>
+<program language="java"><input>
 <xi:include href="../../examples/code/CommandLineDemo.java" parse="text"/>
-</programlisting>
+</input></program>
 
     <p>
     This application prints out each of the command line arguments given to it when it is executed. These arguments are specified at the end of the <em>java</em> command that starts the JRE.
@@ -1109,9 +1109,9 @@ arguments
 
         Putting this all together, the following serves as an example of a complete Java application:
         </p>
-        <programlisting>
+        <program language="java"><input>
 <xi:include href="../../examples/code/Hello.java" parse="text"/>
-            </programlisting>
+            </input></program>
         <p>
         This is the classic <em>hello world</em> program that is often given on the first day of a programming class. In many languages, <em>Hello World</em> is simply a one-line program, making this a convienent place to start in an introductory programming class. However, Java was designed with more complex software development in mind, and a more complex <em>Hello World</em> example is one of the unintended side effects of that choice. By starting with a tool like JShell, you were able to learn each of the concepts present in this code before using them in an application (with the exception of the <c>public</c> keyword, to some extent).
 
@@ -1158,11 +1158,11 @@ Not every method will need to return a value. This section will look at at one p
             Though not every method has a return value, method definitions require \textit{something} in the place of the return type in the method definition header. If no value is returned by the method, the \textbf{void} keyword is used to indicate such. If you use the void keyword in your method definition, you are not required to have a return statement in your method definition. Thus, the following is legal:
         </p>
         
-<programlisting>
+<program language="java"><input>
 void methodWithNoReturnStatement() {
 // this method literally does nothing
 }
-</programlisting>
+</input></program>
 
     </subsection>
     <subsection>
@@ -1177,31 +1177,31 @@ void methodWithNoReturnStatement() {
         <p>This method will take one argument -- whatever we want printed to standard output. So, if we want to print the number 5 to our jshell screen, we can use the following method call:
         </p>
         
-        <programlisting>
+        <program language="java"><input>
 System.out.println(5);
-        </programlisting>
+        </input></program>
         
         <p>Note that this method doesn't return anything. It will take any type of expression we give it, however. So the following code:
         </p>
         
-        <programlisting>
+        <program language="java"><input>
 System.out.println("Joseph Kendall-Morwick");            
-        </programlisting>
+        </input></program>
         
         <p>prints my name to standard output, and the following code:</p>
         
-        <programlisting>System.out.println(1 + 1 == 2);</programlisting>
+        <program language="java"><input>System.out.println(1 + 1 == 2);</input></program>
         
         <p>
             prints the value \textit{true} to standard output.  Note that if you don't want a newline printed, you can use System.out.print instead. This allows you to make multiple calls without continuing to the next line. For instance:
         </p>
         
         
-<programlisting>
+<program language="java"><input>
 System.out.print("hi");
 System.out.print(" ");
 System.out.print("there");
-</programlisting>
+</input></program>
         <p>would print:</p>
         
 <console><output>hi there</output></console>
@@ -1227,7 +1227,7 @@ There is a way around this limitation. We could define a method that has an arra
     <title>Sum an Array of Integers</title>
 <p>If we wanted to write a method that would add several numbers together, we could package all those numbers in an array before we pass them to the method:
 </p>
-<programlisting>
+<program language="java"><input>
   int sum(int[] numbers) {
     int total = 0;
     for(int number : numbers) {
@@ -1235,14 +1235,14 @@ There is a way around this limitation. We could define a method that has an arra
     }
     return total;
   }
-</programlisting>
+</input></program>
 
 <p>If we had three integer variables we wanted to add together, we could then pass them in within a literal array:
 </p>
 
-<programlisting>
+<program language="java"><input>
   sum(new int[] {a, b, c})
-</programlisting>
+</input></program>
 
 </example>
 <p>
@@ -1253,7 +1253,7 @@ Since Java 5, variable number of arguments has been supported in Java, allowing 
     <title>Sum a Variable Number of Integer Arguments</title>
 <p>We could rewrite the example above using variable arguments as follows:
 </p>
-<programlisting>
+<program language="java"><input>
   int sum(int ... numbers) {
     int total = 0;
     for(int number : numbers) {
@@ -1261,14 +1261,14 @@ Since Java 5, variable number of arguments has been supported in Java, allowing 
     }
     return total;
   }
-</programlisting>
+</input></program>
 
 <p>There is very little difference in the method definition, but now we don't need to create a literal array when we pass in a variable number of arguments. This version of sum can be called as follows:
 </p>
 
-<programlisting>
+<program language="java"><input>
   sum(a, b, c)
-</programlisting>
+</input></program>
 </example>
 </section>
 
@@ -1289,7 +1289,7 @@ Methods in Java are not identified by their name alone. If you were to call <c>M
 
         <p>Consider the following method definitions:</p>
 
-<programlisting>
+<program language="java"><input>
 int abs(int a) {
   System.out.println("abs was called with an int");
   return a > 0 ? a : -a;
@@ -1299,14 +1299,14 @@ double abs(double a) {
   System.out.println("abs was called with an double");
   return a > 0 ? a : -a;
 }
-</programlisting>
+</input></program>
 
 <p>The implementations of these methods look nearly identical, but if you enter them in to jshell and then evaluate the following statements:
 </p>
-<programlisting>
+<program language="java"><input>
 abs(-5);
 abs(-5.0);
-</programlisting>
+</input></program>
 
 <p>You will see that one returns an integer value and the other returns a double value, as well as each printing out a different message.
 </p>
@@ -1342,11 +1342,11 @@ abs(-5.0);
         
         <example><title>Square a Number</title>
         <p>Below is the definition of a method that will simply square the number passed in to it.</p>
-<programlisting>
+<program language="java"><input>
 int square(int x) {
   return x * x;
 }
-</programlisting>
+</input></program>
             <p>Note that it has only one parameter, <c>x</c>, and one statement in the method body, the return statement. Defining and then calling this method in jshell will look like this:</p>
             
 <console>
@@ -1374,11 +1374,11 @@ $3 ==> 100
         </example>
         <example><title>Add Two Numbers</title>
             <p>Below is an example of a method definition with more than one parameter. It might not be particularly useful, but it demonstrates how to work with more than one argument in your methods:</p>
-<programlisting>
+<program language="java"><input>
 int add(int x, int y) {
   return x + y;
 }
-</programlisting>     
+</input></program>     
             <p>Calling this method in jshell would look like this:</p>
 <console>
 <prompt>jshell> </prompt><input>add(4, 5)</input>
@@ -1391,11 +1391,11 @@ $3 ==> 8
         
         <example><title>Ultimate Answer</title>
         <p>Some methods don't have any parameters at all. For example, below is the definition of a method that simply returns the value <c>42</c>:</p>
-<programlisting>
+<program language="java"><input>
 int ultimateAnswer() { 
   return 42;
 }
-</programlisting>  
+</input></program>  
             <p>Calling this method in jshell would look like this:</p>
             
 <console>
@@ -1420,7 +1420,7 @@ $2 ==> 42
         a single value, such as <c>'h'</c>, a string can hold 0 or more character
         values. Thus, strings can represent more complex data like names, sentences, or even this
         entire book! You can create a variable of type <c>String</c> as follows: </p>
-    <programlisting>String name;</programlisting>
+    <program language="java"><input>String name;</input></program>
 <p>
     Note that the type in that variable declaration is capitalized. That's because, unlike <c>char</c>'s and <c>int</c>'s, the string type is an object type (not a primitive type). Thus, when we use the string type in Java code (such as the example above), it must be capitalized. However, unlike <c>Point</c>s and other objects we've played with, strings are a special object type in Java in that they see very heavy usage and also have some special syntax associated with them (described in the following sections).
 </p>
@@ -1428,19 +1428,19 @@ $2 ==> 42
     <title>String Literals</title>
 
     <p>String literals have a special syntax somewhat similar to character literals. Character literals are a single character surrounded by single quotes, such <c>'a'</c>. String literals are similar, but as noted, there may be more than one character in the string, and we use double quotes to surround them. For example, the following code initializes the name variable from the previous example with my name as a value: </p>
-    <programlisting>name = "Joesph Kendall-Morwick";</programlisting>
+    <program language="java"><input>name = "Joesph Kendall-Morwick";</input></program>
 
     <p>Note that string literals can contain all sorts of characters, including spaces and dashes. Strings also distinguish between upper and lower case characters. Character literals work just the same way, but character literals hold exactly one character.
     </p>
 
     <p>String literals may also hold zero characters. For instance:</p>
 
-    <programlisting>name = "";</programlisting>
+    <program language="java"><input>name = "";</input></program>
 
     <p>is also legal. Note that the empty string (above) is still a string value! It doesn't mean there isn't a string held by the variable <c>name</c>. If <c>name</c> held no value, we would say it holds the <c>null</c> value, just as any other object-type variable that doesn't hold a value. Recall that <c>null</c> is a keyword representing this value:
     </p>
 
-    <programlisting>name = null;</programlisting>
+    <program language="java"><input>name = null;</input></program>
 
     <p>Note that there are no quotes around <c>null</c>, since it is a keyword. </p>
 
@@ -1460,9 +1460,9 @@ $2 ==> 42
 
 <example><title>Basic Concatenation</title>
     <p>The following code:</p>
-<programlisting>
+<program language="java"><input>
 String fullName = "Joseph" + " " + "Kendall-Morwick";
-</programlisting>
+</input></program>
     <p>
         will store a single string value representing my full name in the variable <c>fullName</c>.</p>
 </example>
@@ -1473,9 +1473,9 @@ String fullName = "Joseph" + " " + "Kendall-Morwick";
 
 <example><title>Concatenating non-Strings</title>
     <p>The following code:</p>
-<programlisting>
+<program language="java"><input>
 String message = "my favorite number is " + 5;
-</programlisting>
+</input></program>
     <p>will store a single string value holding the message "my favorite number is 5" in the variable <c>message</c>.</p>
 </example>
     </subsection>
@@ -1492,11 +1492,11 @@ String message = "my favorite number is " + 5;
     <example>
         <title>Finding the Length of a String</title>
 
-        <programlisting>"hello".length() </programlisting>
+        <program language="java"><input>"hello".length() </input></program>
 
         <p>evaluates to the value 5 whereas</p>
 
-        <programlisting>"".length()</programlisting>
+        <program language="java"><input>"".length()</input></program>
 
         <p>evaluates to the value 0</p>
     </example>
@@ -1507,9 +1507,9 @@ String message = "my favorite number is " + 5;
         <p>The <c>equals</c> instance method takes another String as input and returns a boolean value (<c>true</c> or <c>false</c>) indicating whether the two strings (the argument and the string from which the method is being called) have the exact same contents or not. Boolean values are described in more detail in another section. </p>
         <example>
             <title>Comparing two Strings</title>
-            <programlisting>"hello".equals("hello") </programlisting>
+            <program language="java"><input>"hello".equals("hello") </input></program>
             <p>evaluates to the value <c>true</c> whereas</p>
-            <programlisting>"hello".charAt("Hello") </programlisting>
+            <program language="java"><input>"hello".charAt("Hello") </input></program>
             <p>evaluates to the value <c>false</c></p>
         </example>
     </subsubsection>
@@ -1519,9 +1519,9 @@ String message = "my favorite number is " + 5;
         <p>The <c>charAt</c> instance method takes the location (called the index or offset) of a character in the string and returns just that character (as a character-type value). The tricky part of working with string indexes is that the first index is zero (not one). </p>
         <example>
             <title>Pulling a character out of a String</title>
-            <programlisting>"hello".charAt(0) </programlisting>
+            <program language="java"><input>"hello".charAt(0) </input></program>
             <p>evaluates to the value <c>'h'</c> whereas</p>
-            <programlisting>"hello".charAt(4) </programlisting>
+            <program language="java"><input>"hello".charAt(4) </input></program>
             <p>evaluates to the value <c>'o'</c></p>
         </example>
     </subsubsection>
@@ -1538,12 +1538,12 @@ String message = "my favorite number is " + 5;
   </p>
         <example>
             <title>Pulling a substring out of a String</title>
-            <programlisting>"hello".substring(1, 3) </programlisting>
+            <program language="java"><input>"hello".substring(1, 3) </input></program>
             <p>evaluates to the value <c>"el"</c></p>
         </example>
         <example>
             <title>Pulling a prefix out of a String</title>
-            <programlisting>"hello".substring(1) </programlisting>
+            <program language="java"><input>"hello".substring(1) </input></program>
             <p>evaluates to the value <c>"ello"</c></p>
         </example>
     </subsubsection>
@@ -1551,11 +1551,11 @@ String message = "my favorite number is " + 5;
     <p>The examples above show instance methods being called from String literals. Bear in mind that these methods can be called on any expression that results in an object value, not just literals! In fact, you will more often be calling instance methods from variable expressions. Instance method calls are also often composed with other instance method calls to form more complex expressions, just as we've done with static method calls and operators in previous examples. </p>
     <example>
         <title>Find the name that starts with a capital J</title>
-<programlisting>var names = "Mary. Sam. Joey. Abigail.";
+<program language="java"><input>var names = "Mary. Sam. Joey. Abigail.";
 var namesStartingAtJ = names.substring(names.indexOf('J'));
 var endOfName = namesStartingAtJ.indexOf('.');
 var nameStartingWithJ = namesStartingAtJ.substring(0, endOfName);
-</programlisting>
+</input></program>
         <p>In a String listing several capitalized names ending in periods, this code locates and isolates the first name that begins with a J. After each of the four statements are executed, the variable <c>nameStartingWithJ</c> will contain the value <c>"Joey"</c>.</p>
     </example>
 
@@ -1565,7 +1565,7 @@ var nameStartingWithJ = namesStartingAtJ.substring(0, endOfName);
     <subsection><title>String Escapes</title>
         <p>There are also some special values that strings (and characters) can hold, such as new lines (a character representing that the cursor drops to the next line), tabs (a character represeting that the tab key was pressed), and so on. These are insterted in to string (and character) literals by including a backslash (called an escape) before a special code. These special characters are interpreted when we print out strings. For example, consider the following print statement:
         </p>
-        <programlisting>print("A tab is \n\ta quite simple way \n\t\tto advance");</programlisting>
+        <program language="java"><input>print("A tab is \n\ta quite simple way \n\t\tto advance");</input></program>
 
         <p>...prints the following haiku to the console:</p>
 
@@ -1577,7 +1577,7 @@ to advance
         <p>It is important to note that because back slashes are interpreted as escapes, they can not be used as any other character would be in a string. However, you can include them by escaping them! For instance, the following code:
         </p>
 
-        <programlisting>print("here's a backslash: \\");</programlisting>
+        <program language="java"><input>print("here's a backslash: \\");</input></program>
         <p>prints the following to the standard output:</p>
         <console><output>here's a backslash: \</output></console>
     </subsection>
@@ -1600,21 +1600,21 @@ to advance
             <p>
                 If you have a variable of type <c>int</c> and copy its value to another variable, you can expect that the value is truly copied. For example:
 
-<programlisting>
+<program language="java"><input>
 int x = 5;
 int y = x;
 x = 10;
-</programlisting>
+</input></program>
 
                 Tracing through this example, the value 5 was first assigned to x, then copied from x to y. Thus, when the value 10 is assigned to x on the last line, the copy of the value 5 held by y remains. Evaluating y would still yield the value 5.
 
                 However, consider the following code:
 
-<programlisting>
+<program language="java"><input>
 int[] x = new int[] {5};
 int[] y = x;
 x[0] = 10;
-</programlisting>
+</input></program>
 
                 What would y[0] be? In this case, it would also be 10. Tracing through this example, in the first line, an array is created holding just one value, 5, and a reference to this array object is stored in the variable x. Next, the reference to this object is copied from x and stored in y. That is, both x and y are holding references to the same object! The third line changes the value inside of this array, meaning that both x and y are now referencing an array that contains the value 10!
 
@@ -1625,13 +1625,13 @@ x[0] = 10;
             <p>
                 In prior sections we've developed methods that take some kind of input, perform some calculations on the input, and produce an output without affecting the values that were passed in. Consider the following code:
 
-<programlisting>
+<program language="java"><input>
 int x = 5;
 int y = 10;
 System.out.println(Math.max(x, y));
 System.out.println(x);
 System.out.println(y);
-</programlisting>
+</input></program>
 
                 This code will print the values 10, 5, and 10 on three separate lines. In particular, we can rest assured that Math.max has no impact on the values that x and y hold. This is because Math.max has no <term>side effects</term>; that is, it does not have any impact on any part of a program calling it (other than its own local variables).
               </p>
@@ -1641,13 +1641,13 @@ System.out.println(y);
               <p>
                 Consider the following method:
 
-<programlisting>
+<program language="java"><input>
 void clearArray(int[] arr) {
     for(int i=0; i &lt; arr.length; i++) {
       arr[i] = 0;
     }
 }
-</programlisting>
+</input></program>
                     Note that the method above has no return value. It modifies the state of an array value that is passed in. This is another example of a potentially useful side effect. Clearly not all side effects are bad, but inadvertent or unexpected side effects are the source of many confusing and troublesome bugs in more complex programs.
             </p>
         </subsection>
@@ -1663,30 +1663,30 @@ void clearArray(int[] arr) {
     <p>Characters are a primitive type in Java, and the name of the type is <c>char</c>. Thus, just like <c>int</c> and <c>double</c>, you can create a variable of type <c>char</c>:
     </p>
 
-<programlisting>
+<program language="java"><input>
 char letterGrade;
-</programlisting>
+</input></program>
 
   <p>There is also a special format for character literals. You can surround a character with single-quotes and Java will interpret that as a literal character value. For instance:</p>
 
-<programlisting>
+<program language="java"><input>
 letterGrade = 'A';
-</programlisting>
+</input></program>
 
 <p>Since Java was designed to work on any available computing platform, naturally it should also support any language as well. Thus, the standard used for the characters in Java include codes not only for the letters used in English, but also all other natural languages (including those with many characters, such as Japanese)! This system is called Unicode:
     <uri>https://unicode.org/</uri></p>
 
 
-<p>The actual codes used for each character in Java can be looked up on the UTF-8 chart here: <uri>https://www.unicode.org/charts/</uri>  Note that you can convert between the character codes and character literals by casting them back and forth to other integer types. For example, the following expression: <programlisting>(int)'a'</programlisting> will evaluate to the integer value <c>97</c>, which was designated for this character in unicode. The rest of the lower-case characters in the basic latin alphabet are assigned to each of the following integers, so similarly evaluating the expression: <programlisting>(int)'b'</programlisting> will evaluate to <c>98</c></p>
+<p>The actual codes used for each character in Java can be looked up on the UTF-8 chart here: <uri>https://www.unicode.org/charts/</uri>  Note that you can convert between the character codes and character literals by casting them back and forth to other integer types. For example, the following expression: <program language="java"><input>(int)'a'</input></program> will evaluate to the integer value <c>97</c>, which was designated for this character in unicode. The rest of the lower-case characters in the basic latin alphabet are assigned to each of the following integers, so similarly evaluating the expression: <program language="java"><input>(int)'b'</input></program> will evaluate to <c>98</c></p>
 
 
     <subsection>
         <title>Methods for Characters</title>
         <p>Just as with mathematical functions, there are also some <em>built in</em> methods for working with characters. You can make them available in the REPL by typing in the following statement:
 
-<programlisting>
+<program language="java"><input>
 import static java.lang.Character.*;
-</programlisting>
+</input></program>
 
             A couple important ones are summarized below:
 
@@ -1716,20 +1716,20 @@ import static java.lang.Character.*;
         <!-- this will need to be covered after booleans are
         -        <p>Executing the following code:</p>
 -
--    <programlisting>
+-    <program language="java"><input>
 -char c = 'A';
 -if(Character.isUpperCase(c)) {
 -  c = 'a';
 -}
--    </programlisting>
+-    </input></program>
 -
 -    <p>would result in textit{c} holding the value 'a' at the end.  The following code would also produce the same result:
 -    </p>
 -
--    <programlisting>
+-    <program language="java"><input>
 -char c = 'A';
 -c = Character.toLowerCase(c);
--    </programlisting>
+-    </input></program>
 -->
     </subsection>
 </section>
@@ -1752,23 +1752,23 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
         <p> The syntax for an array type has two parts: the type of data held by the array, and a pair of square brackets indicating an array type. For example, the type <em>array of integers</em> would be written: <c>int[]</c>
         </p>
         <p> A variable named <c>arr</c> that could hold an array of integers is defined as follows:
-            <programlisting>int[] arr;</programlisting>
+            <program language="java"><input>int[] arr;</input></program>
         </p>
     </subsection>
     <subsection>
         <title>Creating Array Values</title>
         <p>Like strings, arrays are object types. Thus, variables with array types can be null:
 
-          <programlisting>int[] arr = null;</programlisting>
+          <program language="java"><input>int[] arr = null;</input></program>
 
             We also create array objects with the <c>new</c> keyword, although the syntax is a little different than it is for other constructor calls. Square brackets are used instead of parentheses and the size of the array is provided within the square brackets. The size is constant and cannot be changed over the lifetime of the array object you create. For example, the following code initializes <c>arr</c> to contain an array of 5 integers:
 
-          <programlisting>int[] arr = new int[5];</programlisting>
+          <program language="java"><input>int[] arr = new int[5];</input></program>
 
             Each of the integers in the array <c>arr</c> are initialized to zero in the previous example. However, we can initialize them to hold arbitrary values by enumerating those values within curly braces instead of providing the length of the array. For example, the following code initializes <c>arr</c> to hold the values 1 through 10:
 
 
-          <programlisting>int[] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};</programlisting>
+          <program language="java"><input>int[] arr = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};</input></program>
         </p>
     </subsection>
     <subsection>
@@ -1778,9 +1778,9 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
             <p>
                 The first operation to consider on arrays is how to determine the length of an array. This is similar to determining the length of a string, but instead of calling a method, the <c>length</c> field is accessed instead. For example, assuming the most recent definition of <c>arr</c>, the following expression will evaluate to <c>10</c>:
 
-          <programlisting>
+          <program language="java"><input>
                 arr.length
-          </programlisting>
+          </input></program>
 
                 It is a very common mistake to include parentheses at the end of <c>length</c> for an array or to leave off parentheses at the end of <c>length</c> for a string because of this unfortunate inconsistency.
             </p>
@@ -1789,17 +1789,17 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
             <title>Accessing an Array</title>
             <p> The most important operation on arrays is retrieving a value from an array. This is very similar to the <c>charAt</c> instance method we used with strings, but instead of calling a method, square brackets following an array value indicate the index of the value to be retrieved. For example, assuming the most recent definition of <c>arr</c>, the following expression will evaluate to <c>1</c>:
 
-<programlisting>arr[0]</programlisting>
+<program language="java"><input>arr[0]</input></program>
 
                 Note that the first index of an array is 0, just as with strings.</p>
         </subsubsection>
         <subsubsection>
             <title>Modifying an Array</title>
             <p>Though the size of an array can't change, the values it contains can. Think of an indexed array (an array value with an index following it in square brackets) as any other variable. In addition to evaluating it like a variable expression (above), we can also use it in an assignment statement. For example, the following statement will assign the value <c>100</c> to the first position in the array <c>arr</c>:
-<programlisting>arr[0] = 100;</programlisting>
+<program language="java"><input>arr[0] = 100;</input></program>
                 Following this assignment statement, the following expression will evaluate to <c>100</c>:
 
-          <programlisting>arr[0]</programlisting>
+          <program language="java"><input>arr[0]</input></program>
                       </p>
         </subsubsection>
         <subsubsection>
@@ -1807,13 +1807,13 @@ Strings are a collection of characters, but we haven't yet seen a way to handle 
             <p>
                 For loops are a very convenient way to process each element of an array. For example, the following code initializes <c>arr</c> to the values 1 through 10, but can be easily modified to have any upper limit:
 
-<programlisting>
+<program language="java"><input>
 int size = 10;
 int[] arr = new int[size];
 for(int i=0; i&lt;arr.length; i++) {
     arr[i] = (i + 1);
 }
-</programlisting>
+</input></program>
         </p>
         </subsubsection>
     </subsection>
@@ -1831,30 +1831,30 @@ for(int i=0; i&lt;arr.length; i++) {
         <title>Class and Static Method Definition Syntax</title>
         <p>A class definition begins with the keyword <c>class</c>, followed by the class name, and then a pair of curly braces. For example, here is a very simple class definition:
         </p>
-<programlisting>
+<program language="java"><input>
 <xi:include href="../../examples/code/simple-class.jsh" parse="text"/>
-</programlisting>
+</input></program>
         <p>A Java file must contain one class designated as public using the <c>public</c> keyword before the class definition. It's also important to note that the filename must match the name of the public class, with <em>.java</em> at the end (similar to how an HTML file has <em>.html</em> at the end). For example, if we were to produce a Java file called <em>ExampleClass.java</em>, it could have the following as its contents:
         </p>
 
-        <programlisting><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></programlisting>
+        <program language="java"><input><xi:include href="../../examples/code/ExampleClass.java" parse="text"/></input></program>
         <p>Inside of these curly braces is the class body in which its <term>members</term> are defined. Class members include method definitions, so we can include any of the method definitions we've been developing. If we make these methods static by including the <c>static</c> keyword before the method definition, we can use them like any other static method (such as <c>max</c> in the <c>Math</c> class). For instance, consider the following modification of the class definition above:
         </p>
-      <programlisting><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text"/></programlisting>
+      <program language="java"><input><xi:include href="../../examples/code/ExampleClassWithStaticMethod.java" parse="text"/></input></program>
         <p>Any other Java code we write, even in another file, could access this method as follows:
         </p>
-<programlisting>
+<program language="java"><input>
 ExampleClassWithStaticMethod.sayHello();
-</programlisting>
+</input></program>
   <p>And in JShell, we could first use an import and then omit the class name when calling the method:
   </p>
-<programlisting>
+<program language="java"><input>
 import static ExampleClassWithStaticMethod.sayHello;
 sayHello();
-</programlisting>
+</input></program>
 <p>If we want to use import statements in a Java file, they must all come before the class definitions (unlike JShell, where we could use import statements at any time). For example, if we want to use the <c>min</c> from the <c>Math</c> class in a method inside a class we define, we could import it at the top of the file:
 </p>
-<programlisting>
+<program language="java"><input>
 import static java.lang.Math.min;
 
 public class ExampleClassWithImport {
@@ -1862,22 +1862,22 @@ public class ExampleClassWithImport {
     return min(100, rawGrade);
   }
 }
-</programlisting>
+</input></program>
     </subsection>
     <subsection>
         <title>Static Fields</title>
         <p>Methods aren't the only members we can add to a class. Variables can also be members, in which case they are called <term>fields</term>. For example, we can create a variable called <c>greeting</c> to hold the message we use in the <c>sayHello</c> method. This allows us to more easily maintain consistency with other methods that greet the user in other ways. <c>greeting</c> must also be declared static to be used as a general purpose method:
         </p>
-        <programlisting><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text"/></programlisting>
+        <program language="java"><input><xi:include href="../../examples/code/ClassWithMultipleStaticMethods.java" parse="text"/></input></program>
     </subsection>
     <subsection>
         <title>Scope of Fields</title>
         <p>Note that the variable <c>greeting</c> in the previous example is accessible in both of the static methods in the class. That is because the <term>scope</term> of the variable is the entire class definition body. Note that unlike other scope-limited variables, we can access the static scope of a class by giving the class name and following it with the dot operator:
 
-<programlisting>
+<program language="java"><input>
 ClassWithMultipleStaticMethods.sayHello();
 ClassWithMultipleStaticMethods.sayHelloEmphatically();
-</programlisting>
+</input></program>
         </p>
 
         <subsubsection>
@@ -1885,14 +1885,14 @@ ClassWithMultipleStaticMethods.sayHelloEmphatically();
             <p>Because <c>greeting</c> is a member of the class, just like the <c>sayHello</c> method, it can be accessed from outside of the class as well. That means that the greeting could be modified from outside the class, such as in the following example:
             </p>
 
-<programlisting>
+<program language="java"><input>
 ClassWithMultipleStaticMethods.greeting = "Hey Jerk";
-</programlisting>
+</input></program>
 
             <p>If a field is never meant to be altered, it should be made in to a <term>constant</term> by using the <c>final</c> keyword in its definition. Here is the updated definition of the running example that prevents any changes to the greeting field:
             </p>
 
-          <programlisting><xi:include href="../../examples/code/ClassWithConstant.java" parse="text"/></programlisting>
+          <program language="java"><input><xi:include href="../../examples/code/ClassWithConstant.java" parse="text"/></input></program>
 
         </subsubsection>
     </subsection>
@@ -1937,20 +1937,20 @@ ClassWithMultipleStaticMethods.greeting = "Hey Jerk";
         <p>
             It's a fairly standard rule that you have no more than one statement on a line and always use a full line for a closing curly brace of a block, but there is some debate over whether you should open a curly brace for a block on the same line as an if statement or a method header, or whether you should open it on its own line. For instance:
         </p>
-<programlisting>
+<program language="java"><input>
 int addStuff(int x, int y) {
   return x + y;
 }
-</programlisting>
+</input></program>
 
         <p>and also</p>
 
-<programlisting>
+<program language="java"><input>
 int addStuff(int x, int y)
 {
   return x + y;
 }
-</programlisting>
+</input></program>
 
         <p>are both considered good style by many. Mostly it's important that you're consistent with your choice on where to place the opening brace. In this book, we'll consistently use the style of the first example because that's the way the author was raised (and by extension, also now you).
         </p>
@@ -1980,9 +1980,9 @@ int addStuff(int x, int y)
 
         <example>
             The following method definition has an appropriate Javadoc comment preceding it:
-        <programlisting>
+        <program language="java"><input>
 <xi:include href="../../examples/code/javadoc-method-basic.jsh" parse="text"/>
-        </programlisting>
+        </input></program>
         </example>
 
   </subsection>
