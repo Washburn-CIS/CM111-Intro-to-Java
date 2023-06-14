@@ -58,10 +58,7 @@
 
       <xi:include href="./complex-expressions.ptx"/>
 
-      <section xml:id="calling-methods">
-        <title>Method Call Expressions and Statements</title>
-        <p>Hello</p>
-      </section>
+      <xi:include href="./calling-methods.ptx"/>
 
       <section xml:id="variables">
         <title>Variable Definitions and Assignment</title>

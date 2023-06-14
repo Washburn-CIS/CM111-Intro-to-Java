@@ -1,0 +1,36 @@
+<section xml:id="calling-methods">
+        <title>Calling Methods</title>
+
+        <p>The arithmetic operators we've used thus far are simple. We can combine them together to create more complex operations, but that also makes our code more difficult to read. More complicated operations are often handled by <firstterm>methods</firstterm> which put a simple name to a potentially complex operation. This is an example of <firstterm>abstraction</firstterm> -- a very important concept in computer programming in which the complexities of operations are hidden to make programs easier to read, modify, and combine with other programs. Methods also allow Java to be <firstterm>extensible</firstterm>, in that you can create your own methods to perform custom tasks (we will see how to do this in future chapters). </p><p>We formed arithmetic expressions with arithmetic operators. Similarly, we can form <firstterm>method call</firstterm> expressions by providing arguments to a method (arguments, in this case, are values derived from other expressions -- similar to the operands we supplied to operators with arithmetic expressions). When the method call expression is evaluated, the method will calculate a value based on the arguments it was given. In this context, the term <firstterm>function</firstterm> is also applicable.</p>
+
+
+    <subsection><title>Method Call Expressions</title>
+
+
+    <p>You can use a method call expression to cause a method to execute. Method call expressions will evaluate to the method's <firstterm>return value</firstterm>, which can be seen as the result of the operation the method is performing. </p>
+
+    <p>To call a method, first provide the name of the method you wish to call. Following the name should be a pair of parenthesis, within which is a comma-separated list of expressions for each argument. In the last example, there was only one argument, but a method could take more than one argument, or could even take zero arguments.</p>
+
+    <figure xml:id="fig.method-call">
+        <title>Anatomy of a Method Call</title>
+        <mediaobject>
+            <imageobject condition="print">
+                <imagedata fileref="../../tmp/method-call.png"/>
+            </imageobject>
+            <imageobject condition="web">
+                <imagedata fileref="../../tmp/method-call.png"/>
+            </imageobject>
+            <textobject><phrase>Anatomy of a Method Call</phrase></textobject>
+        </mediaobject>
+    </figure>
+
+    <p>In the diagram above, a method named <varname>pow</varname> is being called. This method takes two arguments: the base and the power (both <type>double</type> values). The return value of this method is the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</p>
+<!-- TODO: add examples
+    <xi:include href="../../examples/call-sqrt.xml"/>
+    <xi:include href="../../examples/call-round.xml"/>
+   
+/-->
+    </subsection>
+</section>
+
+
