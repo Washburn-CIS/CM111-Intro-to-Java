@@ -75,14 +75,10 @@
         <title>Programming Errors</title>
         <p>Hello</p>
       </section>	
-   
 
       <xi:include href="./booleans.ptx"/>
-   
-      <section xml:id="if-else">
-        <title>Basic Conditional Statements</title>
-        <p>Hello</p>
-      </section>	
+
+      <xi:include href="./if.ptx"/>	
    
       <section xml:id="logic">
         <title>Logical Operators</title>
