@@ -2,40 +2,40 @@
         <title>Arithmetic Expressions</title>
     
     <p>
-        Expressions can be combined together to form a larger, more complex, compound expression. To combine two expressions, a <firstterm>binary operator</firstterm> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <firstterm>operands</firstterm>). For instance, + is a binary operator representing the addition operation. <literal>5</literal> is a numeric literal expression, and <code>5 + 5</code> is a more complex, compound expression using the addition operator that evaluates to the value <literal>10</literal>. 
+        Expressions can be combined together to form a larger, more complex, compound expression. To combine two expressions, a <firstterm>binary operator</firstterm> is placed between them. The operator performs some function over the values that the two expressions evaluate to (these values are called <firstterm>operands</firstterm>). For instance, + is a binary operator representing the addition operation. <literal>5</literal> is a numeric literal expression, and <c>5 + 5</c> is a more complex, compound expression using the addition operator that evaluates to the value <literal>10</literal>. 
     </p>
     
     <p>
     There are several binary arithmetic operators which work over numeric expressions in Java. Each is described below:
         <itemizedlist>
             <listitem>
-                <p>+ (the addition operator)</p>
+                <p><c>+</c> (the addition operator)</p>
             </listitem>
             <listitem>
-                <p>- (the subtraction operator)</p>
+                <p><c>-</c> (the subtraction operator)</p>
             </listitem>
             <listitem>
-                <p>* (the multiplication operator)</p>
+                <p><c>*</c> (the multiplication operator)</p>
             </listitem>
             <listitem>
-                <p>/ (the division operator)</p>
+                <p><c>/</c> (the division operator)</p>
             </listitem>
             <listitem>
-                <p>% (the modulus operator)</p>
+                <p><c>%</c> (the modulus operator)</p>
             </listitem>
     </itemizedlist>
 
-Note that, when using the <code>/</code> operator with integers, you get back the integer quotient (rather than a floating point value). Modulus gives you the remainder when performing integer division. 
+Note that, when using the <c>/</c> operator with integers, you get back the integer quotient (rather than a floating point value). Modulus gives you the remainder when performing integer division. 
     </p>
     
     <p>
-        There is also a unary operator in Java. This is an operator that works over only one operand rather than two. This is the negation operator, which, like subtraction, is represented with <code>-</code>. For instance, <literal>-5</literal> is a compound expression that is the negation of 5. 
+        There is also a unary operator in Java. This is an operator that works over only one operand rather than two. This is the negation operator, which, like subtraction, is represented with <c>-</c>. For instance, <literal>-5</literal> is a compound expression that is the negation of 5. 
     </p>
     
     <p>
-        Also similar to algebra, note that these operators follow the same order of precedence. Multiplication and division are evaluated before addition an subtraction. For example, <code>2 * 3 + 1</code> is equal to <literal>7</literal>, not <literal>8</literal>. 
+        Also similar to algebra, note that these operators follow the same order of precedence. Multiplication and division are evaluated before addition an subtraction. For example, <c>2 * 3 + 1</c> is equal to <literal>7</literal>, not <literal>8</literal>. 
     </p>
-    <p>You can also use parentheses to force a certain order of evaluation for your expressions, just as you did in algebra. For example, the expression <code>2 * (3 + 1)</code> does, in fact, evaluate to <literal>8</literal>.
+    <p>You can also use parentheses to force a certain order of evaluation for your expressions, just as you did in algebra. For example, the expression <c>2 * (3 + 1)</c> does, in fact, evaluate to <literal>8</literal>.
     </p>
     
     

@@ -48,7 +48,8 @@
 
     <chapter xml:id="programming-basics">
       <title>Unit 1: Programming Basics</title>
-
+      <introduction>TODO: write me</introduction>
+      
       <section xml:id="simple-programs">
         <title>Basics of Programming in Java</title>
         <p>Hello</p>
@@ -60,10 +61,7 @@
 
       <xi:include href="./calling-methods.ptx"/>
 
-      <section xml:id="variables">
-        <title>Variable Definitions and Assignment</title>
-        <p>Hello</p>
-      </section>	
+      <xi:include href="./variables.ptx"/>
     
       <section xml:id="import">
         <title>Importing Code from Packages</title>
@@ -129,6 +127,7 @@
 
     <chapter xml:id="modular-programming">
       <title>Unit 2: Modular Programming</title>
+      <introduction>TODO: write me</introduction>
 
       <section xml:id="characters">
         <title>Characters</title>
@@ -185,6 +184,7 @@
 
     <chapter xml:id="chapter-title">
       <title>Unit 3: Basic Data Structures</title>
+      <introduction>TODO: write me</introduction>
 
       <section xml:id="class-definitions">
         <title>Class Definitions</title>
