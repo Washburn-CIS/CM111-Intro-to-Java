@@ -76,10 +76,8 @@
         <p>Hello</p>
       </section>	
    
-      <section xml:id="booleans">
-        <title>The boolean Type and Comparison Operators</title>
-        <p>Hello</p>
-      </section>	
+
+      <xi:include href="./booleans.ptx"/>
    
       <section xml:id="if-else">
         <title>Basic Conditional Statements</title>
