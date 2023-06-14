@@ -67,10 +67,7 @@
 
       <xi:include href="./code-organization.ptx"/>
 
-      <section xml:id="object-basics">
-        <title>Creating Objects and Calling Methods</title>
-        <p>Hello</p>
-      </section>	
+      <xi:include href="./objects.ptx"/>
    
       <section xml:id="standard-input">
         <title>Reading Input from the Keyboard</title>
