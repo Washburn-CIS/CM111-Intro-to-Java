@@ -56,10 +56,7 @@
 
       <xi:include href="./basic-expressions.ptx"/>
 
-      <section xml:id="complex-expressions">
-        <title>Operators and Complex Expressions</title>
-        <p>Hello</p>
-      </section>
+      <xi:include href="./complex-expressions.ptx"/>
 
       <section xml:id="calling-methods">
         <title>Method Call Expressions and Statements</title>
