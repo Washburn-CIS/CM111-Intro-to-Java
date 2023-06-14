@@ -54,7 +54,7 @@
       
       <section xml:id="simple-programs">
         <title>Basics of Programming in Java</title>
-        <p>Hello</p>
+        <p>TODO: write me</p>
       </section>
 
       <xi:include href="./basic-expressions.ptx"/>
@@ -64,12 +64,9 @@
       <xi:include href="./calling-methods.ptx"/>
 
       <xi:include href="./variables.ptx"/>
-    
-      <section xml:id="import">
-        <title>Importing Code from Packages</title>
-        <p>Hello</p>
-      </section>	
-  
+
+      <xi:include href="./code-organization.ptx"/>
+
       <section xml:id="object-basics">
         <title>Creating Objects and Calling Methods</title>
         <p>Hello</p>
