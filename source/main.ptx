@@ -50,20 +50,16 @@
       <title>Unit 1: Programming Basics</title>
       <introduction>TODO: write me</introduction>
       
-      <xi:include href="./repls.ptx"/>
-      
       <section xml:id="simple-programs">
         <title>Basics of Programming in Java</title>
         <p>TODO: write me</p>
       </section>
+      
+      <xi:include href="./repls.ptx"/>
+      
+      <xi:include href="./expressions.ptx"/>
 
-      <xi:include href="./basic-expressions.ptx"/>
-
-      <xi:include href="./complex-expressions.ptx"/>
-
-      <xi:include href="./calling-methods.ptx"/>
-
-      <xi:include href="./variables.ptx"/>
+      <xi:include href="./statements.ptx"/>
 
       <xi:include href="./code-organization.ptx"/>
 
@@ -73,7 +69,7 @@
   
       <section xml:id="basic-errors">
         <title>Programming Errors</title>
-        <p>Hello</p>
+        <p>TODO: write me</p>
       </section>	
 
       <xi:include href="./booleans.ptx"/>
@@ -86,22 +82,19 @@
    
       <section xml:id="file-input">
         <title>Reading Input from a File</title>
-        <p>Hello</p>
+        <p>TODO: write me</p>
       </section>	
    
-      <section xml:id="conditional-expressions">
-        <title>Conditional Expressions</title>
-        <p>Hello</p>
-      </section>	
+      <xi:include href="./conditional-expressions.ptx"/>
    
       <section xml:id="random-numbers">
         <title>Random Numbers</title>
-        <p>Hello</p>
+        <p>TODO: write me</p>
       </section>
    
       <section xml:id="debugging">
         <title>Debugging</title>
-        <p>Hello</p>
+        <p>TODO: write me</p>
       </section>
     </chapter>
 
