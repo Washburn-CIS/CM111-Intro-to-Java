@@ -1,4 +1,4 @@
-<section xml:id="for-loops">
+<subsection xml:id="for-loops">
     
         <title>For Loops</title>
     
@@ -23,7 +23,7 @@ Since nearly every while loop that we write contains these three components, and
     <figure>
         <title>for-loop</title>
         <caption>Anatomy of a For Loop</caption>
-        <image source="figures/for-loop.png"/>
+        <image width="60%" source="figures/for-loop.png"/>
     </figure>
 
 <p><term>for loops</term> start with the <c>for</c> keyword and a pair of parentheses, just like a while loop, but inside the parentheses is first an expression (ending in a semicolon) that is executed before the loop starts, secondly a boolean expression (the same as the looping condition for the while loop), also ending in a semicolon, and finally a statement that is executed at the end of each loop (typically incrementing a variable). The last statement doesn't have a semicolon following it, but all three should be within the parentheses. The rest is identical to a while loop. </p>
@@ -63,5 +63,5 @@ for(int i=0; i &lt; message.length(); i = i + 1) {
 </input></program>
 </example>
 
-</section>
+</subsection>
 

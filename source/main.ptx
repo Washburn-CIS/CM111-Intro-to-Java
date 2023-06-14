@@ -107,23 +107,25 @@
 
       <section xml:id="advanced-loops">
         <title>Advanced Loops</title>
-        <p>Hello</p>
+        <p>A <c>while</c> loop is versitile and all you need to write any Java program. However, there are often multiple statements involved with managing a while loop that could be easier to maintain with more complex but powerful syntax. This section introduces a few new types of loops that provide special-purpose loops to help make your code more manageable.</p>
+        
+        <xi:include href="./for.ptx"/>
+        
+        <subsection>
+          <title>do-while Loops</title>
+          <p>TODO: write me</p>
+        </subsection>
+      
+        <subsection>
+          <title>nested Loops</title>
+          <p>TODO: write me</p>
+        </subsection>
       </section>	
 
-      <section xml:id="method-definitions">
-        <title>Method Definitions</title>
-        <p>Hello</p>
-      </section>	
+      <xi:include href="./method-def.ptx"/>
 
-      <section xml:id="nested-loops">
-        <title>Advanced Loops</title>
-        <p>Hello</p>
-      </section>
+      <xi:include href="./arrays.ptx"/>
 
-      <section xml:id="arrays">
-        <title>Arrays</title>
-        <p>Hello</p>
-      </section>	
 
       <section xml:id="for-each">
         <title>For-Each Loops</title>
