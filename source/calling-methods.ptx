@@ -11,17 +11,10 @@
 
     <p>To call a method, first provide the name of the method you wish to call. Following the name should be a pair of parenthesis, within which is a comma-separated list of expressions for each argument. In the last example, there was only one argument, but a method could take more than one argument, or could even take zero arguments.</p>
 
-    <figure xml:id="fig.method-call">
-        <title>Anatomy of a Method Call</title>
-        <mediaobject>
-            <imageobject condition="print">
-                <imagedata fileref="../../tmp/method-call.png"/>
-            </imageobject>
-            <imageobject condition="web">
-                <imagedata fileref="../../tmp/method-call.png"/>
-            </imageobject>
-            <textobject><phrase>Anatomy of a Method Call</phrase></textobject>
-        </mediaobject>
+    <figure>
+    	<title>method-call</title>
+        <caption>Anatomy of a Method Call</caption>
+         <image width="35%" source="figures/method-call.png"/>
     </figure>
 
     <p>In the diagram above, a method named <c>pow</c> is being called. This method takes two arguments: the base and the power (both <c>double</c> values). The return value of this method is the result of raising the specified base to the specified power (that is to say, this expression evaluates to the value 100).</p>
