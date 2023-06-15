@@ -1,5 +1,5 @@
 
-<section xml:id="varargs">
+<subsection xml:id="varargs">
     
         <title>Variable Number of Arguments</title>
     
@@ -59,4 +59,4 @@ Since Java 5, variable number of arguments has been supported in Java, allowing 
   sum(a, b, c)
 </input></program>
 </example>
-</section>
+</subsection>

@@ -1,5 +1,5 @@
 
-<section xml:id="continue-statements">
+<subsection xml:id="continue-statements">
     
         <title>Continue Statements</title>
     
@@ -58,4 +58,4 @@ Error: enter a positive number.
 provide a positive, even number:
 </console>
       </example>
-</section>
+</subsection>

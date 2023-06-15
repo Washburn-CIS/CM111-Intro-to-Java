@@ -1,4 +1,4 @@
-<section xml:id="conditional-expressions">
+<subsection xml:id="conditional-expressions">
         <title>Conditional Expressions</title>
 
 
@@ -32,6 +32,6 @@
     x > y ? x : y
 </input></program>
 
-</section>
+</subsection>
 
 

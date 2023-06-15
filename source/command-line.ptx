@@ -1,5 +1,5 @@
 
-<section xml:id="command-line-arguments">
+<section xml:id="command-line">
     
         <title>Command-Line Arguments</title>
     
@@ -10,7 +10,13 @@ Though you should understand what the type <c>String[]</c> means at this point (
 Consider the following example program:
     </p>
 <program language="java"><input>
-<xi:include href="../../examples/code/CommandLineDemo.java" parse="text"/>
+public class CommandLineDemo {
+  public static void main(String[] args) {
+    for(int i=0; i&lt;args.length; i++) {
+      System.out.println(args[i]);
+    }
+  }
+}
 </input></program>
 
     <p>

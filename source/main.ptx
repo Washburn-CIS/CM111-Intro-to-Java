@@ -11,7 +11,7 @@
     </latex-image-preamble>
   </docinfo>
 
-  <book xml:id="my-great-book">
+  <book xml:id="cm111-intro-to-java">
     <title>CM111 Introduction to Java</title>
     <subtitle>A free textbook to accompany CM111 Introduction to Structured Programming at Washburn University</subtitle>
 
@@ -85,8 +85,6 @@
         <p>TODO: write me</p>
       </section>	
    
-      <xi:include href="./conditional-expressions.ptx"/>
-   
       <section xml:id="random-numbers">
         <title>Random Numbers</title>
         <p>TODO: write me</p>
@@ -107,7 +105,7 @@
 
       <section xml:id="advanced-loops">
         <title>Advanced Loops</title>
-        <p>A <c>while</c> loop is versitile and all you need to write any Java program. However, there are often multiple statements involved with managing a while loop that could be easier to maintain with more complex but powerful syntax. This section introduces a few new types of loops that provide special-purpose loops to help make your code more manageable.</p>
+        <introduction>A <c>while</c> loop is versitile and all you need to write any Java program. However, there are often multiple statements involved with managing a while loop that could be easier to maintain with more complex but powerful syntax. This section introduces a few new types of loops that provide special-purpose loops to help make your code more manageable.</introduction>
         
         <xi:include href="./for.ptx"/>
         
@@ -127,24 +125,24 @@
       <xi:include href="./arrays.ptx"/>
 
 
-      <section xml:id="for-each">
-        <title>For-Each Loops</title>
-        <p>Hello</p>
-      </section>	
 
-      <section xml:id="void-method">
-        <title>Void Methods</title>
-        <p>Hello</p>
-      </section>	
 
-      <section xml:id="static-methods">
+      <section xml:id="advanced-methods">
+        <title>More With Methods</title>
+        <introduction>You've seen the general syntax for defining methods earlier in this chapter but only for a particular type of method. This section will examine several new types of methods you can write as well as common algorithmic strategies for small tasks a method might be written to tackle. </introduction>
+        
+      
+      <xi:include href="./void.ptx"/>	
+
+      <subsection xml:id="static-methods">
         <title>Static and Instance Methods</title>
-        <p>Hello</p>
-      </section>
+          <p>TODO: write me</p>
+      </subsection>
 
-      <section xml:id="method-patterns">
+      <subsection xml:id="method-patterns">
         <title>Method Development Patterns</title>
-        <p>Hello</p>
+          <p>TODO: write me</p>
+      </subsection>	
       </section>	
     
     </chapter>
@@ -154,44 +152,40 @@
       <title>Unit 3: Basic Data Structures</title>
       <introduction>TODO: write me</introduction>
 
-      <section xml:id="class-definitions">
-        <title>Class Definitions</title>
-        <p>Hello</p>
-      </section>
-      
-      <section xml:id="scope">
-        <title>Scope</title>
-        <p>Hello</p>
-      </section>
-      
-      <section xml:id="references">
-        <title>References</title>
-        <p>Hello</p>
-      </section>
+      <xi:include href="./class-def.ptx"/>	
+
+      <xi:include href="./references.ptx"/>	
       
       <section xml:id="exceptions">
         <title>Exception Handling</title>
-        <p>Hello</p>
+          <p>TODO: write me</p>
       </section>
       
       <section xml:id="file-output">
         <title>File Output</title>
-        <p>Hello</p>
+          <p>TODO: write me</p>
       </section>
       
       <section xml:id="syntactic-sugar">
         <title>Syntactic Sugar</title>
-        <p>Hello</p>
-      </section>
+        
+      <xi:include href="./overloading.ptx"/>
+        
+      <xi:include href="./varargs.ptx"/>
+        
+      <xi:include href="./break.ptx"/>
+      	
+      <xi:include href="./continue.ptx"/>	
       
-      <section xml:id="command-line-applications">
-        <title>Command-Line Applications</title>
-        <p>Hello</p>
+      <xi:include href="./conditional-expressions.ptx"/>
+        
       </section>
+
+      <xi:include href="./command-line.ptx"/>	
    
       <section xml:id="recursion">
         <title>Recursion</title>
-        <p>Hello</p>
+          <p>TODO: write me</p>
       </section>
       
       

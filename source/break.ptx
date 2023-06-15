@@ -1,5 +1,5 @@
 
-<section xml:id="break-statements">
+<subsection xml:id="break-statements">
     
         <title>Break Statements</title>
     
@@ -32,5 +32,5 @@ for(; i&lt; arr.length; i++) {
       </p>
   </example>
 
-</section>
+</subsection>
 
