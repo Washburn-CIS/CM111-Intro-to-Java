@@ -27,6 +27,7 @@
         </date>
       </titlepage>
 
+
       <colophon>
 
         <website>
@@ -40,9 +41,18 @@
           <year>2023<ndash />2023</year>
           <holder>Joseph Kendall-Morwick</holder>
           <shortlicense> 
-            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+            This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
           </shortlicense>
         </copyright>
+        
+        
+        <p>This textbook was developed by Joseph Kendall-Morwick for CM111 Introduction to Structured Programming at Washburn University. It was developed from multiple sources. Most content comes from "CS1 in Java" by the same author (Joseph Kendall-Morwick). Select chapters, exercises, and some other small sections of text (such as the next two paragraphs) were modified and integrated from the 2022 interactive edition of JavaJavaJava by Ralph Morelli, Ralph Walde, and Beryl Hoffman. Sections incorporating material from JavaJavaJava are noted in comments in the source code and comments on the commits in this github repository. All contributions to this book were released under the same open-source license as the book itself: Creative Commons Attribution 4.0 International (CC BY 4.0).</p>
+
+<!-- NOTE: the next two paragraphs are integrated from JavaJavaJava introduction version 0a3c7b2 /-->
+<p>Java, Java, Java first edition (2000) and second edition (2003) were published by Prentice-Hall, and the third edition (2006) by Pearson Education, Inc. In 2010 Pearson Education, Inc. reassigned the copyright to the authors, Ralph Morelli and Ralph Walde. The authors made the 4th edition book PDF available under an open source license in 2016. In 2017, David G. Cooper (West Chester University) contributed changes to replace applets with java.awt.Canvas code for graphics.</p>
+<p>In 2022, authors Ralph Morelli (Trinity College, emeritus), Ralph Walde (Trinity College, emeritus), joined by Beryl Hoffman (Elms College), created the 
+interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapahoe Community College) helped review some of the book's graphical interfaces.</p>
+
       </colophon>
     </frontmatter>
 
@@ -109,17 +119,12 @@
         
         <xi:include href="./for.ptx"/>
         
-        <subsection>
-          <title>do-while Loops</title>
-          <p>TODO: write me</p>
-        </subsection>
+        <xi:include href="./do-while.ptx"/>
+        
+        <xi:include href="./nested-loops.ptx"/>	
+        
+      </section>
       
-        <subsection>
-          <title>nested Loops</title>
-          <p>TODO: write me</p>
-        </subsection>
-      </section>	
-
       <xi:include href="./method-def.ptx"/>
 
       <xi:include href="./arrays.ptx"/>
@@ -182,12 +187,8 @@
       </section>
 
       <xi:include href="./command-line.ptx"/>	
-   
-      <section xml:id="recursion">
-        <title>Recursion</title>
-          <p>TODO: write me</p>
-      </section>
-      
+      	
+      <xi:include href="./recursion.ptx"/>	
       
     </chapter>
 
