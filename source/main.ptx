@@ -58,15 +58,15 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
 
     <chapter xml:id="programming-basics">
       <title>Unit 1: Programming Basics</title>
-      <introduction>TODO: write me</introduction>
+      <!--<introduction>TODO: write me</introduction>
       
       <section xml:id="simple-programs">
         <title>Basics of Programming in Java</title>
         <p>TODO: write me</p>
+        <xi:include href="./repls.ptx"/>
       </section>
       
-      <xi:include href="./repls.ptx"/>
-      
+      /-->
       <xi:include href="./expressions.ptx"/>
 
       <xi:include href="./statements.ptx"/>
@@ -76,12 +76,12 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       <xi:include href="./objects.ptx"/>
 
       <xi:include href="./standard-io.ptx"/>
-  
+  <!--
       <section xml:id="basic-errors">
         <title>Programming Errors</title>
         <p>TODO: write me</p>
       </section>	
-
+/-->
       <xi:include href="./booleans.ptx"/>
 
       <xi:include href="./if.ptx"/>	
@@ -92,24 +92,24 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
    
       <section xml:id="file-input">
         <title>Reading Input from a File</title>
-        <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </section>	
    
       <section xml:id="random-numbers">
         <title>Random Numbers</title>
-        <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </section>
    
       <section xml:id="debugging">
         <title>Debugging</title>
-        <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </section>
     </chapter>
 
 
     <chapter xml:id="modular-programming">
       <title>Unit 2: Modular Programming</title>
-      <introduction>TODO: write me</introduction>
+    <!--  <introduction>TODO: write me</introduction>  /-->
 
       <xi:include href="./strings.ptx"/>
 
@@ -141,12 +141,12 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
 
       <subsection xml:id="static-methods">
         <title>Static and Instance Methods</title>
-          <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </subsection>
 
       <subsection xml:id="method-patterns">
         <title>Method Development Patterns</title>
-          <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </subsection>	
       </section>	
     
@@ -155,7 +155,7 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
 
     <chapter xml:id="chapter-title">
       <title>Unit 3: Basic Data Structures</title>
-      <introduction>TODO: write me</introduction>
+     <!-- <introduction>TODO: write me</introduction>  /-->
 
       <xi:include href="./class-def.ptx"/>	
 
@@ -163,12 +163,12 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       
       <section xml:id="exceptions">
         <title>Exception Handling</title>
-          <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </section>
       
       <section xml:id="file-output">
         <title>File Output</title>
-          <p>TODO: write me</p>
+        <p>Coming Soon</p>
       </section>
       
       <section xml:id="syntactic-sugar">

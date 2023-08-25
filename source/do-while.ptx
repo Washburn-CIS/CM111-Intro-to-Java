@@ -12,9 +12,9 @@
       
       A do-while loop begins with the <code>do</code> keyword followed by a block of code surrounded by curly braces. At the end of the curly braces is
       the <code>while</code> keyword followed by a boolean expression (the looping condition) in parentheses. Unlike many other loops, a semicolon is required to terminate the statement.
-      
+<!--      
       TODO: Inject anatomy of do-while figure 
-      
+    /-->  
       </p>
     <p>
       The <c>do-while</c> structure takes the following form:

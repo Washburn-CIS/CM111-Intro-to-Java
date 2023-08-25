@@ -1,4 +1,4 @@
-<section xml:id="repls">
+<subsection xml:id="repls">
 	<title>Working With Java's JShell REPL</title>
 
     
@@ -20,4 +20,4 @@
     <p>
         There are many commands you can enter at the command prompt that are not Java code snippets but are unique to using JShell. A very important one is the <c>/help</c> command. Typing in this command causes JShell to report on all the other special commands available to you. Another important command is <c>/exit</c>, which terminates JShell. We will see other commands as they become relevant in later sections. 
     </p>
-</section>
+</subsection>
