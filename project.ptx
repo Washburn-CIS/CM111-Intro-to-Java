@@ -6,11 +6,10 @@
 -->
 <project>
   <targets>
-    <!-- To build this target, run `pretext build web` -->
-    <target name="web">
+    <target name="web">   <!-- To build this target, run `pretext build web` -->
       <format>html</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>publication/publication-web.ptx</publication>
       <output-dir>output/web</output-dir>
     </target>
     <target name="print" pdf-method="xelatex">
@@ -22,7 +21,7 @@
     <target name="print-latex">
       <format>latex</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>publication/publication-print.ptx</publication>
       <output-dir>output/print-latex</output-dir>
     </target>
     <target name="subset">

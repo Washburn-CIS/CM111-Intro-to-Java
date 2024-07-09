@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the publication file for a newly generated PreTeXt book.     -->
+<!-- By changing the values of attributes here, you can change how        -->
+<!-- the output looks and functions.  For the complete documentation      -->
+<!-- of publication-file options, see                                     -->
+<!-- https://pretextbook.org/doc/guide/html/publisher-file-reference.html -->
+
+<publication>
+
+
+  <!-- Set where external assets and generated assets will be   -->
+  <!-- stored or created.  Directories are relative to the main -->
+  <!-- source PreTeXt file                                      -->
+  <source>
+    <directories external="../assets" generated="../generated-assets" />
+    <!-- Set which marked elements are included in this version: -->
+    <!-- See
+    https://pretextbook.org/doc/guide/html/publication-file-source.html#publication-file-source-version -->
+    <!-- <version include="videos labs"/> -->
+  </source>
+
+  <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
+  <!-- for printing; set @sides="two" if the printing woudl be two- -->
+  <!-- sided.  @pageref="yes/no" controls whether page number are   -->
+  <!-- included in cross-references                                 -->
+  <latex print="no" sides="one" font-size="10" draft="no">
+    <!-- Control text justification and bottom page behavior: -->
+    <page right-alignment="flush" bottom-alignment="ragged" />
+    <!-- Add content to \geometry{}: -->
+    <!-- <geometry></geometry> -->
+    <!-- The asymptote/@links set to "yes" would produce  -->
+    <!-- links the html version of asymptote graphics.    -->
+    <asymptote links="no" />
+    <!-- Set @formatted to "no" to remove formatting on worksheets: -->
+    <worksheets formatted="yes" />
+  </latex>
+</publication>

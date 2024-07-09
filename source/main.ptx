@@ -58,15 +58,7 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
 
     <chapter xml:id="programming-basics">
       <title>Unit 1: Programming Basics</title>
-      <!--<introduction>TODO: write me</introduction>
-      
-      <section xml:id="simple-programs">
-        <title>Basics of Programming in Java</title>
-        <p>TODO: write me</p>
-        <xi:include href="./repls.ptx"/>
-      </section>
-      
-      /-->
+
       <xi:include href="./expressions.ptx"/>
 
       <xi:include href="./statements.ptx"/>
@@ -90,20 +82,11 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
 
       <xi:include href="./advanced-conditionals.ptx"/>	
    
-      <section xml:id="file-input">
-        <title>Reading Input from a File</title>
-        <p>Coming Soon</p>
-      </section>	
-   
       <section xml:id="random-numbers">
         <title>Random Numbers</title>
         <p>Coming Soon</p>
       </section>
    
-      <section xml:id="debugging">
-        <title>Debugging</title>
-        <p>Coming Soon</p>
-      </section>
     </chapter>
 
 
@@ -128,9 +111,6 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       <xi:include href="./method-def.ptx"/>
 
       <xi:include href="./arrays.ptx"/>
-
-
-
 
       <section xml:id="advanced-methods">
         <title>More With Methods</title>
@@ -157,6 +137,8 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       <title>Unit 3: Basic Data Structures</title>
      <!-- <introduction>TODO: write me</introduction>  /-->
 
+
+
       <xi:include href="./class-def.ptx"/>	
 
       <xi:include href="./references.ptx"/>	
@@ -167,7 +149,7 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       </section>
       
       <section xml:id="file-output">
-        <title>File Output</title>
+        <title>File Input and Output</title>
         <p>Coming Soon</p>
       </section>
       

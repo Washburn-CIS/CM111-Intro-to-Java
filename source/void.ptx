@@ -20,45 +20,5 @@ void methodWithNoReturnStatement() {
 </input></program>
 
     </subsection>
-    <subsection>
-        <title>Printing to Standard Output</title>
-        <p>We've received messages back from the REPL each time we evaluate an expression, but perhaps we would like a message to be delivered somewhere during the execution of our program. Many ``text-based'' applications interact with their users solely through messages printed to a console (such as the REPL itself). Java has a special function for printing such messages to what is called \textit{standard output} or \textit{the console}. In the case of jshell, standard output is simply the jshell screen, so any messages you print while using jshell will show up there.
-        </p>
-        
-        <p>The method we will use to print to standard output is unfortunately (and infamously) somewhat complicated looking. Technically, it is an instance method that we call from a PrintWriter object. The PrintWriter object in question is a static variable in the \textbf{System} class called \textbf{out}, and the instance method we'll call from this object is called textbf{println}. So all together, we'll be calling this method by calling \textbf{System.out.println}. If the last sentence is all you remember from this paragraph, that's all you'll need for the rest of the semester. 
-            
-        </p>
-        
-        <p>This method will take one argument -- whatever we want printed to standard output. So, if we want to print the number 5 to our jshell screen, we can use the following method call:
-        </p>
-        
-        <program language="java"><input>
-System.out.println(5);
-        </input></program>
-        
-        <p>Note that this method doesn't return anything. It will take any type of expression we give it, however. So the following code:
-        </p>
-        
-        <program language="java"><input>
-System.out.println("Joseph Kendall-Morwick");            
-        </input></program>
-        
-        <p>prints my name to standard output, and the following code:</p>
-        
-        <program language="java"><input>System.out.println(1 + 1 == 2);</input></program>
-        
-        <p>
-            prints the value \textit{true} to standard output.  Note that if you don't want a newline printed, you can use System.out.print instead. This allows you to make multiple calls without continuing to the next line. For instance:
-        </p>
-        
-        
-<program language="java"><input>
-System.out.print("hi");
-System.out.print(" ");
-System.out.print("there");
-</input></program>
-        <p>would print:</p>
-        
-<console><output>hi there</output></console>
-    </subsection>
+    
 </section>
