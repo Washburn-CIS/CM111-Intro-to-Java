@@ -81,11 +81,9 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       <xi:include href="./logic.ptx"/>	
 
       <xi:include href="./advanced-conditionals.ptx"/>	
+
+      <xi:include href="./random.ptx"/>	
    
-      <section xml:id="random-numbers">
-        <title>Random Numbers</title>
-        <p>Coming Soon</p>
-      </section>
    
     </chapter>
 
