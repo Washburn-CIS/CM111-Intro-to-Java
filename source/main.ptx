@@ -135,21 +135,14 @@ interactive e-book edition of Java, Java, Java on Runestone. Doug Lundin (Arapah
       <title>Unit 3: Basic Data Structures</title>
      <!-- <introduction>TODO: write me</introduction>  /-->
 
-
-
       <xi:include href="./class-def.ptx"/>	
 
       <xi:include href="./references.ptx"/>	
+
+      <xi:include href="./exceptions.ptx"/>	
+
+      <xi:include href="./fileio.ptx"/>	
       
-      <section xml:id="exceptions">
-        <title>Exception Handling</title>
-        <p>Coming Soon</p>
-      </section>
-      
-      <section xml:id="file-output">
-        <title>File Input and Output</title>
-        <p>Coming Soon</p>
-      </section>
       
       <section xml:id="syntactic-sugar">
         <title>Syntactic Sugar</title>
