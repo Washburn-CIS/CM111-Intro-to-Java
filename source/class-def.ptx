@@ -1,5 +1,5 @@
 
-<section xml:id="ex.classes">
+<section xml:id="classes">
     <title>Basic Class Definitions</title>
 
     <p>Every object type has a class definition associated with it, but classes in Java are also used for other special purposes, such as creating a collection of static methods (for example, the Math class) or for creating a Java application. Classes are the primary definition you'll find in a typical Java source-code file. These files end with the extension .java (rather than .txt or .jsh). 
@@ -83,7 +83,7 @@ public class ClassWithMultipleStaticMethods {
     </p>
 
 
-    <example  xml:id="ex.basic-scope"
+    <example  xml:id="basic-scope"
         >
         <title>Basic Scope Example</title>
         <p>Considering the following code:
@@ -112,8 +112,7 @@ System.out.println(x);  // error, x is not defined in this scope
     </p>
 
 
-    <example  xml:id="ex.for-loop-error"
-        >
+    <example  xml:id="for-loop-error">
         <title>Common Scope Error with For Loops</title>
         <p>Considering the following code:
 <program language="java"><input>
